@@ -11,6 +11,6 @@ class Controller extends BaseController
     use AuthorizesRequests, ValidatesRequests;
     public function loginView()
     {
-        return view('index');
+        return view('welcome');
     }
 }
