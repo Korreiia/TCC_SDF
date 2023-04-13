@@ -8,15 +8,18 @@
     <title>SDF</title>
 </head>
 <body>
+
     <header>
-            <IMg class="logo" src="img/logo_alternativa.png" alt="fabião"></IMg>
+            <img class="logo" src="img/logo_alternativa.png" alt="fabião"></img>
         <nav>
-            <div class="icon"><a href="http://#"target="_self"type="Empresa"hreflang="pt-br"><img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
-            <div class="icon"><a href="http://#"target="_self"type="Produtos"hreflang="pt-br"><img class="icon" src="/img/icon_inven.png" alt="">Inventário</a></div>
-            <div class="icon"><a href="http://#"target="_self"type="quem somos"hreflang="pt-br"><img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div>
-            <div class="icon"><a href="FAQ.HTML"target="_self"type="FAQ"hreflang="pt-br"><img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
-            <div class="icon"><a href="FAQ.HTML"target="_self"type="FAQ"hreflang="pt-br"><img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div>
-            <div class="icon"><a href="FAQ.HTML"target="_self"type="FAQ"hreflang="pt-br"><img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
+            <div><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
+            <div><a href=""> <img class="icon" src="/img/icon_inven.png" alt="">Inventário</a></div>
+            <div><a href=""> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div>
+            <div><a href="/solicitacao"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
+            <div><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div>
+            <div><a href=""> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
         </nav>
+    </header>
+    
 </body>
 </html>

@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
-use App\Http\Controllers\godaroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
