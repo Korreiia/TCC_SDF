@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
+use App\Http\Controllers\godaroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +20,6 @@ Route::get('/', function () {
 
 Route::get('/login', [usuarioController::class, 'loginView']);
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [usuarioController::class, 'loginView']);
 
-Route::get('/solicitacao', function () {
-    return view('solicitacao');
-});
+Route::get('/solicitacao', [usuarioController::class, 'loginView']);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class usuarioController extends Controller
+class gordaoController extends Controller
 {
     public function loginView()
     {
@@ -15,22 +15,26 @@ class usuarioController extends Controller
 
 	public function login(Request $request)
 	{
-		$email = $request->input('email');
-		$senha = $request->input('senha');
-		dd($email, $senha);
+		$from = $request->all();
+		dd($from);
 	}
 
-    public function verSolicitacao()
+    public function listar()
 	{
 	
 	}
 
-	public function criarSolicitacao()
+	public function criar()
 	{
 	
 	}
 
-	public function excluirSolicitacao()
+	public function alterar()
+	{
+	
+	}
+
+	public function excluir()
 	{
 	
 	}
