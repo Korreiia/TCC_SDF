@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/login', [usuarioController::class, 'loginView']);
 
+Route::get('/criar_conta', [usuarioController::class, 'loginView']);
+
 Route::get('/home', [usuarioController::class, 'loginView']);
 
 Route::get('/solicitacao', [usuarioController::class, 'loginView']);
