@@ -1,9 +1,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style_login.css">
     <title>Tela de Login</title>
   </head>
   <body>
+    <div class="container">
       <div class="login">
 
         <img class="logo" src="img/logo_alternativa.png" alt="fabião">
@@ -15,6 +17,7 @@
             @csrf
         </form>
 
+      </div>
       </div>
   </body>
 </html>
