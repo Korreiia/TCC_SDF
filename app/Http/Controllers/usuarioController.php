@@ -9,9 +9,21 @@ class usuarioController extends Controller
     public function loginView()
     {
         return view('login');
+    }
+
+    public function criarView()
+    {
         return view('criar_conta');
-		return view('home');
-		return view('solicitacao');
+    }
+
+    public function homeView()
+    {
+        return view('home');
+    }
+
+    public function soliciView()
+    {
+        return view('solicitacao');
     }
 
 	public function login(Request $request)
