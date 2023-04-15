@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
+use App\Http\Controllers\solicitacaoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +27,8 @@ Route::post('/criar_conta', [usuarioController::class, 'criarUsuario']);
 
 Route::get('/home', [usuarioController::class, 'homeView']);
 
-Route::get('/solicitacao', [usuarioController::class, 'soliciView']);
+//
+Route::get('/solicitacao', [solicitacaoController::class, 'soliciView']);
+Route::get('/criar_solicitacao', [solicitacaoController::class, 'criar_soliciView']);
+Route::post('/criar_solicitacao', [solicitacaoController::class, 'criarSolicitacao']);
+//

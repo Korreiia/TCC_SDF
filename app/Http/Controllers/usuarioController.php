@@ -14,27 +14,18 @@ class usuarioController extends Controller
         return view('login');
     }
 
-    public function criarView()
-    {
-        return view('criar_conta');
-    }
-
-    public function homeView()
-    {
-        return view('home');
-    }
-
-    public function soliciView()
-    {
-        return view('solicitacao');
-    }
-
-	public function login(Request $request)
+    public function login(Request $request)
 	{
 		$email = $request->input('email');
 		$senha = $request->input('senha');
 		dd($email, $senha);
 	}
+
+
+    public function criarView()
+    {
+        return view('criar_conta');
+    }
 
     public function criarUsuario(Request $request)
     {
@@ -49,11 +40,17 @@ class usuarioController extends Controller
         {
             exit ("Senhas diferentes");
         }
+        
+        usuario::created($request->all);
 
         return redirect('/login');
     }
 
 
+    public function homeView()
+    {
+        return view('home');
+    }
 
     /**
      * Display the specified resource.
