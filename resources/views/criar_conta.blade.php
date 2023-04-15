@@ -14,10 +14,10 @@
 
         <img class="logo" src="img/logo_alternativa.png" alt="fabião">
         
-        <form action="create" method="get">
+        <form action="/criar_conta" method="post">
             <input type="text" name="email" placeholder="Email" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <input type="password" name="senha" placeholder="Repita a senha" required>
+            <input type="password" name="senha1" placeholder="Senha" required>
+            <input type="password" name="senha2" placeholder="Repita a senha" required>
             <button type="submit">Criar Conta</button>
             @csrf
         </form>

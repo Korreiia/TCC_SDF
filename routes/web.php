@@ -19,7 +19,10 @@ Route::get('/', function () {
 
 Route::get('/login', [usuarioController::class, 'loginView']);
 
+//
 Route::get('/criar_conta', [usuarioController::class, 'criarView']);
+Route::post('/criar_conta', [usuarioController::class, 'criarUsuario']);
+//
 
 Route::get('/home', [usuarioController::class, 'homeView']);
 
