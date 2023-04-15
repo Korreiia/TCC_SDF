@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Models\usuarioModel;
+use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
 
 class usuarioController extends Controller
@@ -38,26 +38,22 @@ class usuarioController extends Controller
 
     public function criarUsuario(Request $request)
     {
+        $usuarios = usuario::all();
         $email = $request->input('email');
-		$senha1 = $request->input('senha1');
+        $senha1 = $request->input('senha1');
         $senha2 = $request->input('senha2');
+
+        //dd($email, $senha1, $senha2);
 
         if ($senha1 != $senha2)
         {
-            exit("senhas diferentes");
-        } 
-
-		dd($email, $senha1, $senha2);
-    }
-
-    public function cadastro(Request $request): RedirectResponse
-    {
-        $usuarioController = new UsuarioController;
-
-        $usuarioController->email = $request->email;
+            exit ("Senhas diferentes");
+        }
 
         return redirect('/login');
     }
+
+
 
     /**
      * Display the specified resource.

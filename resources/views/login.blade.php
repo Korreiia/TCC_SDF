@@ -18,7 +18,7 @@
             @csrf
         </form>
 
-        <button type="button" href="/criar_conta">Criar conta</button>
+        <button type="submit" href="/criar_conta">Criar conta</button>
         
       </div>
       </div>
