@@ -55,3 +55,13 @@ body {
     margin-right: auto;
     width: 50%;
   }
+
+  a{
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

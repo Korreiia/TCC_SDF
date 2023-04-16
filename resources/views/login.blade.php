@@ -14,11 +14,11 @@
         <form action="/login" method="get">
             <input type="text" name="email" placeholder="Email" required>
             <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit" href="/home">Login</button>
+            <button type="submit">Login</button>
             @csrf
         </form>
-
-        <button type="submit" href="/criar_conta">Criar conta</button>
+        
+        <a href="/criar_conta">Criar Conta</a>
         
       </div>
       </div>

@@ -16,9 +16,9 @@ class usuarioController extends Controller
 
     public function login(Request $request)
 	{
-		$email = $request->input('email');
-		$senha = $request->input('senha');
-		dd($email, $senha);
+		$usuarios = usuario::all();
+		
+        return redirect('home');
 	}
 
 
@@ -30,20 +30,9 @@ class usuarioController extends Controller
     public function criarUsuario(Request $request)
     {
         $usuarios = usuario::all();
-        $email = $request->input('email');
-        $senha1 = $request->input('senha1');
-        $senha2 = $request->input('senha2');
-
-        //dd($email, $senha1, $senha2);
-
-        if ($senha1 != $senha2)
-        {
-            exit ("Senhas diferentes");
-        }
-        
         usuario::created($request->all);
 
-        return redirect('/login');
+        return redirect('login');
     }
 
 
