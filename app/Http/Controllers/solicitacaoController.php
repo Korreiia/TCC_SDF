@@ -11,7 +11,7 @@ class solicitacaoController extends Controller
     public function soliciView()
     {
         $solicitacaos = solicitacao::all();
-        //dd($solicitacaos);
+        
         return view('solicitacao', ['solicitacaos' => $solicitacaos]);
     }
 

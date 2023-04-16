@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
 use App\Http\Controllers\solicitacaoController;
+use App\Http\Controllers\inventarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,13 @@ Route::post('/criar_conta', [usuarioController::class, 'criarUsuario']);
 //
 
 Route::get('/home', [usuarioController::class, 'homeView']);
+
+//
+Route::get('/inventario', [inventarioController::class, 'inventarioView']);
+Route::get('/criar_inventario', [inventarioController::class, 'criarinventarioView']);
+Route::post('/criar_inventario', [inventarioController::class, 'criarInventario']);
+
+//
 
 //
 Route::get('/solicitacao', [solicitacaoController::class, 'soliciView']);

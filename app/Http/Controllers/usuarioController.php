@@ -14,23 +14,21 @@ class usuarioController extends Controller
         return view('login');
     }
 
-    public function login(Request $request)
+    public function login()
 	{
-		$usuarios = usuario::all();
-		
         return redirect('home');
 	}
 
 
     public function criarView()
     {
-        return view('criar_conta');
+        $usuarios = usuario::all();
+        return view('criar_conta', ['usuarios' => $usuarios]);
     }
 
     public function criarUsuario(Request $request)
     {
-        $usuarios = usuario::all();
-        usuario::created($request->all);
+        usuario::create($request->all());
 
         return redirect('login');
     }
