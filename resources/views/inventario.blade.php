@@ -15,7 +15,7 @@
                     <th scope="col">Localização</th>
                     <th scope="col">Remetente</th>
                     <th scope="col">Quantidade</th>
-                    <th scope="col">...</th>
+                    <th scope="col">...Ação...</th>
                 </tr>
             </thead>
 
@@ -32,8 +32,19 @@
                     <th>{{ $inventario ->quantidade }}</th>
                     <th>
                         <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}">Editar</a>
-                        <!-- // {{ route('editarInventario', ['id'=>$inventario->id]) }}  -->
+
+                        <form action="{{ route('deletarInventario', ['id'=>$inventario->id]) }}" method="post">
+                        
+                        @csrf 
+                        @method('delete')
+                        <button type="submit">Deletar</button>
+
+                        </form>
+
                     </th>
+
+                    
+
                 </tr>
             @endforeach
             </tbody>

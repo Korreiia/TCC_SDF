@@ -56,4 +56,11 @@ class inventarioController extends Controller
 
         return redirect('inventario');
     }
+
+    public function deletarInventario($id)
+    {
+        inventario::where('id',$id)->delete();
+
+        return redirect('inventario');
+    }
 }
