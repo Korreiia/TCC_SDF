@@ -1,6 +1,6 @@
 <x-layout>
 
-<h1>Adicionar Novo Iten</h1>
+<h1>Adicionar Novo Item</h1>
 
 <div class="formulario">
         <form action="/criar_inventario" method="post">
