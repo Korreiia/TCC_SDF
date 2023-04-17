@@ -17,6 +17,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Curso</th>
                     <th scope="col">RM</th>
+                    <th scope="col">...Ação...</th>
                 </tr>
             </thead>
 
@@ -32,6 +33,18 @@
                     <th>{{ $solicitacao ->email }}</th>
                     <th>{{ $solicitacao ->curso }}</th>
                     <th>{{ $solicitacao ->rm }}</th>
+                    <th>
+                        <a href="{{ route('editarSolicitacao', ['id'=>$solicitacao->id]) }}">Editar</a>
+
+                        <form action="{{ route('deletarSolicitacao', ['id'=>$solicitacao->id]) }}" method="post">
+                        
+                        @csrf 
+                        @method('delete')
+                        <button type="submit">Deletar</button>
+
+                        </form>
+
+                    </th>
                 </tr>
             @endforeach
             </tbody>

@@ -42,9 +42,6 @@
                         </form>
 
                     </th>
-
-                    
-
                 </tr>
             @endforeach
             </tbody>
