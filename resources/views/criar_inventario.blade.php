@@ -1,5 +1,7 @@
 <x-layout>
 
+<h1>Adicionar Novo Iten</h1>
+
 <div class="formulario">
         <form action="/criar_inventario" method="post">
             <input type="text" name="estadofuncionamento" placeholder="Está Funcionando?" required>

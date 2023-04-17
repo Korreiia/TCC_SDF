@@ -26,4 +26,34 @@ class inventarioController extends Controller
 
         return redirect('inventario');
     }
+
+    public function editarInventario($id)
+    {
+        $inventarios = inventario::where('id', $id)->first();
+
+        if(!empty($inventarios))
+        {
+            return view('editar_inventario', ['inventarios'=>$inventarios]);
+        }
+
+        return redirect('inventario');
+    }
+
+    public function atualizarInventario(Request $request, $id)
+    {
+        $data = [
+            'estadofuncionamento' => $request->estadofuncionamento,
+            'dataentrada' => $request->dataentrada,
+            'descricao' => $request->descricao,
+            'estadoconservacao' => $request->estadoconservacao,
+            'categoria' => $request->categoria,
+            'localizacao' => $request->localizacao,
+            'remetente' => $request->remetente,
+            'quantidade' => $request->quantidade,
+        ];
+
+        inventario::where('id',$id)->update($data);
+
+        return redirect('inventario');
+    }
 }

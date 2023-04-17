@@ -15,6 +15,7 @@
                     <th scope="col">Localização</th>
                     <th scope="col">Remetente</th>
                     <th scope="col">Quantidade</th>
+                    <th scope="col">...</th>
                 </tr>
             </thead>
 
@@ -29,6 +30,10 @@
                     <th>{{ $inventario ->localizacao }}</th>
                     <th>{{ $inventario ->remetente }}</th>
                     <th>{{ $inventario ->quantidade }}</th>
+                    <th>
+                        <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}">Editar</a>
+                        <!-- // {{ route('editarInventario', ['id'=>$inventario->id]) }}  -->
+                    </th>
                 </tr>
             @endforeach
             </tbody>

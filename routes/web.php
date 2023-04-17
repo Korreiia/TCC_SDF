@@ -32,7 +32,8 @@ Route::get('/home', [usuarioController::class, 'homeView']);
 Route::get('/inventario', [inventarioController::class, 'inventarioView']);
 Route::get('/criar_inventario', [inventarioController::class, 'criarinventarioView']);
 Route::post('/criar_inventario', [inventarioController::class, 'criarInventario']);
-
+Route::get('/{id}/editar_inventario', [inventarioController::class, 'editarInventario'])->where('id', '[0-9]+')->name('editarInventario');
+Route::put('/{id}/atualizar_inventario', [inventarioController::class, 'atualizarInventario'])->where('id', '[0-9]+')->name('atualizarInventario');
 //
 
 //
