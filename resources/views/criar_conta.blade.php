@@ -14,8 +14,14 @@
 
         <img class="logo" src="img/logo_alternativa.png" alt="fabião">
         
+            @if(session('danger'))
+              <div>
+                {{ session('danger') }}
+              </div>
+            @endif
+
         <form action="/criar_conta" method="post">
-            <input type="text" name="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="E-mail" required>
             <input type="password" name="senha1" placeholder="Senha" required>
             <input type="password" name="senha2" placeholder="Repita a senha" required>
             <button type="submit">Criar Conta</button>
