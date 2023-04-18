@@ -18,8 +18,10 @@ use App\Http\Controllers\inventarioController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//
 Route::get('/login', [usuarioController::class, 'loginView']);
+Route::post('/fazer_login', [usuarioController::class, 'fazerLogin'])->name('fazerLogin');
+//
 
 //
 Route::get('/criar_conta', [usuarioController::class, 'criarView']);
