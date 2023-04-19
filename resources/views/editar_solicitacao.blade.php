@@ -14,7 +14,7 @@
             <input type="text" name="curso" value="{{ $solicitacaos->curso }}" placeholder="Curso">
             <input type="number" name="rm" value="{{ $solicitacaos->rm }}" placeholder="RM">
             <input type="number" name="rm" value="{{ $solicitacaos->rm }}" placeholder="RM">
-            <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="descpedido" required>
+            <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required>
             <button type="submit">Atualizar</button>
             @csrf
         </form>
