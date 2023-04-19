@@ -13,7 +13,7 @@
             <input type="text" name="localizacao" value="{{ $inventarios->localizacao }}" placeholder="Localização" required>
             <input type="text" name="remetente" value="{{ $inventarios->remetente }}" placeholder="Remetente" required>
             <input type="number" name="quantidade" value="{{ $inventarios->quantidade }}" placeholder="Quantidade" required>
-            <button type="submit">Atualizar</button>
+            <button type="submit">Salvar</button>
             @csrf
         </form>
       </div>
