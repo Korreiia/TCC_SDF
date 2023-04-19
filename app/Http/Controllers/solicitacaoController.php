@@ -50,6 +50,7 @@ class solicitacaoController extends Controller
             'email' => $request->email,
             'curso' => $request->curso,
             'rm' => $request->rm,
+            'descpedido' => $request->descpedido,
         ];
 
         solicitacao::where('id',$id)->update($data);

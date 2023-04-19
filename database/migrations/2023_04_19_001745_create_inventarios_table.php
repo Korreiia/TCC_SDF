@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('estadofuncionamento',200);
             $table->date('dataentrada',);
             $table->string('descricao',500);
-            $table->string('estadoconservacao',200);
-            $table->string('categoria',150);
+            $table->string('estadoconservacao',200)->nullable();
+            $table->string('categoria',150)->nullable();
             $table->string('localizacao',200);
             $table->string('remetente',200);
             $table->string('quantidade',10000);

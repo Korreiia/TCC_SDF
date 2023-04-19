@@ -18,5 +18,6 @@ class solicitacao extends Model
         'email',
         'curso',
         'rm',
+        'descpedido',
     ];
 }

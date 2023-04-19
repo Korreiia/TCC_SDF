@@ -10,6 +10,7 @@ class usuario extends Model
     use HasFactory;
 
     protected $fillable = [
+            'nome',
             'email',
             'senha1',
             'senha2',

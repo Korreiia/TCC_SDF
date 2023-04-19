@@ -17,6 +17,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Curso</th>
                     <th scope="col">RM</th>
+                    <th scope="col">Descrição do Pedido</th>
                     <th scope="col">...Ação...</th>
                 </tr>
             </thead>
@@ -33,6 +34,7 @@
                     <th>{{ $solicitacao ->email }}</th>
                     <th>{{ $solicitacao ->curso }}</th>
                     <th>{{ $solicitacao ->rm }}</th>
+                    <th>{{ $solicitacao->descpedido }}</th>
                     <th>
                         <a href="{{ route('editarSolicitacao', ['id'=>$solicitacao->id]) }}">Editar</a>
 

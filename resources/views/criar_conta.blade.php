@@ -21,6 +21,7 @@
             @endif
 
         <form action="/criar_conta" method="post">
+            <input type="text" name="nome" placeholder="Nome" required>
             <input type="email" name="email" placeholder="E-mail" required>
             <input type="password" name="senha1" placeholder="Senha" required>
             <input type="password" name="senha2" placeholder="Repita a senha" required>

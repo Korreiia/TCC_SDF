@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\usuario;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class usuarioController extends Controller
 {
@@ -17,23 +18,21 @@ class usuarioController extends Controller
 
     public function fazerLogin(Request $request)
     {
-        $this->validate($request,[
-            'email' => 'required',
-            'senha1' => 'required'
-        ],[
-            'email.required' => 'E-mail é obrigatório',
-            'senha1.required' => 'Senha é obrigatório'
-        ]);
+            $email = $request->input('email');
+            $senha1 = $request->input('senha1');
 
-        if(Auth::attempt(['email' => $request->email, 'senha1' => $request->senha1]))
-        {
-            return redirect('home');
-        }
+            $usuario =usuario::where('email', '=', $email)
+                            ->where('senha1', '=', $senha1)
+                            ->first();
 
-        else
+        if($usuario == null)
         {
             return redirect()->back()->with('danger', 'E-mail ou senha invalida');
         }
+
+        Session::put('login_usuario', $usuario);
+        
+        return redirect('home');
     }
 
     public function criarView()
@@ -44,17 +43,17 @@ class usuarioController extends Controller
 
     public function criarUsuario(Request $request)
     {
-        if ('senha1' != 'senha2')
+        $senha1 = $request->input('senha1');
+        $senha2 = $request->input('senha2');
+
+        if ($senha1 != $senha2)
         {
             return redirect()->back()->with('danger', 'Senhas Diferentes');
         }
 
-        else
-        {
         usuario::create($request->all());
 
         return redirect('login');
-        }
     }
 
     public function homeView()
