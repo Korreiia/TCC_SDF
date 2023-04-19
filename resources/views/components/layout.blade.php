@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport"content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="/css/sytle_home.css">
-    <title>SDF</title>
+    <title>Doa ETEC</title>
 </head>
 <body>
 
     <header>
-            <img class="logo" src="img/logo_alternativa.png" alt="fabião"></img>
+            <img class="logo" src="img/doa-etec-logo-lado.png" alt="logo"></img>
 
         <form action="{{ route('fazer_logout') }}" method="post">
             @csrf

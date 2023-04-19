@@ -2,14 +2,14 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style_login.css">
-    <title>SDF Login</title>
+    <title>Doa ETEC</title>
   </head>
   <body>
     
     <div class="container">
       <div class="login">
 
-        <img class="logo" src="img/logo_alternativa.png" alt="fabião">
+        <img class="logo" src="img/doa-etec-logo-lado.png" alt="logo">
             
             @if ($errors->any())
               <div class="alert alert-danger">
