@@ -11,6 +11,12 @@
 
     <header>
             <img class="logo" src="img/logo_alternativa.png" alt="fabião"></img>
+
+        <form action="{{ route('fazer_logout') }}" method="post">
+            @csrf
+            <input type="submit" value="logout">
+        </form>
+
         <nav>
             <div class="icon"><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
             <div class="icon"><a href="/inventario"> <img class="icon" src="/img/icon_inven.png" alt="">Inventário</a></div>
@@ -19,6 +25,7 @@
             <div class="icon"><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div>
             <div class="icon"><a href=""> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
         </nav>
+        
     </header>
 
         <div>
