@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
+
+
 class usuarioController extends Controller
 {
     public function loginView()
@@ -33,6 +35,12 @@ class usuarioController extends Controller
         Session::put('login_usuario', $usuario);
         
         return redirect('home');
+    }
+
+    public function fazer_logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('login');
     }
 
     public function criarView()

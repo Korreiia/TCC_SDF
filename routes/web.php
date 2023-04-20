@@ -21,6 +21,7 @@ Route::get('/', function () {
 //
 Route::get('/login', [usuarioController::class, 'loginView']);
 Route::post('/fazer_login', [usuarioController::class, 'fazerLogin'])->name('fazerLogin');
+Route::post('/fazer_logout',[usuarioController::class, 'fazer_logout'])->name('fazer_logout');
 //
 
 //
