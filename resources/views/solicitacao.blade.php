@@ -8,7 +8,6 @@
             <thead>
             <br>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Telefone</th>
                     <th scope="col">Telefone de Recado</th>
@@ -26,7 +25,6 @@
             <tbody>
             @foreach($solicitacaos as $solicitacao)
                 <tr>
-                    <th>{{ $solicitacao ->id }}</th>
                     <th>{{ $solicitacao ->nome}}</th>
                     <th>{{ $solicitacao ->telefone1 }}</th>
                     <th>{{ $solicitacao ->telefone2 }}</th>

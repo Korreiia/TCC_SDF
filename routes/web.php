@@ -16,20 +16,16 @@ use App\Http\Controllers\inventarioController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 //
 Route::get('/login', [usuarioController::class, 'loginView']);
 Route::post('/fazer_login', [usuarioController::class, 'fazerLogin'])->name('fazerLogin');
 Route::post('/fazer_logout',[usuarioController::class, 'fazer_logout'])->name('fazer_logout');
-//
-
-//
 Route::get('/criar_conta', [usuarioController::class, 'criarView']);
 Route::post('/criar_conta', [usuarioController::class, 'criarUsuario']);
-//
-
 Route::get('/home', [usuarioController::class, 'homeView']);
+//
 
 //
 Route::get('/inventario', [inventarioController::class, 'inventarioView']);
@@ -38,7 +34,6 @@ Route::post('/criar_inventario', [inventarioController::class, 'criarInventario'
 Route::get('/{id}/editar_inventario', [inventarioController::class, 'editarInventario'])->where('id', '[0-9]+')->name('editarInventario');
 Route::put('/{id}/atualizar_inventario', [inventarioController::class, 'atualizarInventario'])->where('id', '[0-9]+')->name('atualizarInventario');
 Route::delete('/{id}/deletar_inventario', [inventarioController::class, 'deletarInventario'])->where('id', '[0-9]+')->name('deletarInventario');
-
 //
 
 //
@@ -48,5 +43,4 @@ Route::post('/criar_solicitacao', [solicitacaoController::class, 'criarSolicitac
 Route::get('/{id}/editar_solicitacao', [solicitacaoController::class, 'editarSolicitacao'])->where('id', '[0-9]+')->name('editarSolicitacao');
 Route::put('/{id}/atualizar_solicitacao', [solicitacaoController::class, 'atualizarSolicitacao'])->where('id', '[0-9]+')->name('atualizarSolicitacao');
 Route::delete('/{id}/deletar_solicitacao', [solicitacaoController::class, 'deletarSolicitacao'])->where('id', '[0-9]+')->name('deletarSolicitacao');
-
 //

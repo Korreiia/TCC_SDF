@@ -10,7 +10,11 @@
 <body>
 
     <header>
-            <img class="logo" src="img/doa-etec-logo-lado.png" alt="logo"></img>
+            <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
+
+        <form action="/login">
+            <input type="submit" value="login">
+        </form>
 
         <form action="{{ route('fazer_logout') }}" method="post">
             @csrf

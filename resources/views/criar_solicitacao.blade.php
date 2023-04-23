@@ -1,17 +1,38 @@
     <x-layout>
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
+    <h1>Nova Solicitação</h1>
+
     <div class="formulario">
         <form action="/criar_solicitacao" method="post">
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="number" name="telefone1" placeholder="Telefone" required>
-            <input type="number" name="telefone2" placeholder="Telefone de Recado">
-            <input type="text" name="endereco" placeholder="Endereço">
-            <input type="number" name="cpf" placeholder="CPF" required>
-            <input type="text" name="email" placeholder="Email">
-            <input type="text" name="curso" placeholder="Curso">
-            <input type="number" name="rm" placeholder="RM">
-            <input type="text" name="descpedido" placeholder="Descrição do Pedido" required>
+          <hr>
+            <h1>Nome</h1>
+            <input type="text" name="nome" placeholder="Campo Obrigatório" required>
+
+            <h1>Telefone</h1>
+            <input type="number" name="telefone1" placeholder="Campo Obrigatório" required>
+
+            <h1>Telefone de Recado</h1>
+            <input type="number" name="telefone2">
+
+            <h1>Endereço</h1>
+            <input type="text" name="endereco">
+
+            <h1>CPF</h1>
+            <input type="number" name="cpf" placeholder="Campo Obrigatório" required>
+
+            <h1>E-mail</h1>
+            <input type="text" name="email">
+
+            <h1>Curso</h1>
+            <input type="text" name="curso">
+
+            <h1>RM</h1>
+            <input type="number" name="rm">
+
+            <h1>Descrição do Pedido</h1>
+            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+          <hr>
             <button type="submit">Salvar</button>
             @csrf
         </form>

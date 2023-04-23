@@ -5,16 +5,35 @@
 <div class="formulario">
         <form action="{{ route('atualizarSolicitacao',['id'=>$solicitacaos->id]) }}" method="post">
           @method('put')
-            <input type="text" name="nome" value="{{ $solicitacaos->nome }}" placeholder="Nome" required>
-            <input type="number" name="telefone1" value="{{ $solicitacaos->telefone1 }}" placeholder="Telefone" required>
-            <input type="number" name="telefone2" value="{{ $solicitacaos->telefone2 }}" placeholder="Telefone de Recado">
-            <input type="text" name="endereco" value="{{ $solicitacaos->endereco }}" placeholder="Endereço">
-            <input type="number" name="cpf" value="{{ $solicitacaos->cpf }}" placeholder="CPF" required>
-            <input type="text" name="email" value="{{ $solicitacaos->email }}" placeholder="Email">
-            <input type="text" name="curso" value="{{ $solicitacaos->curso }}" placeholder="Curso">
-            <input type="number" name="rm" value="{{ $solicitacaos->rm }}" placeholder="RM">
-            <input type="number" name="rm" value="{{ $solicitacaos->rm }}" placeholder="RM">
-            <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required>
+          <hr>
+            <h1>Nome</h1>
+            <input type="text" name="nome" value="{{ $solicitacaos->nome }}" placeholder="Campo Obrigatório" required>
+
+            <h1>Telefone</h1>
+            <input type="number" name="telefone1" value="{{ $solicitacaos->telefone1 }}" placeholder="Campo Obrigatório" required>
+
+            <h1>Telefone de Recado</h1>
+            <input type="number" name="telefone2" value="{{ $solicitacaos->telefone2 }}">
+
+            <h1>Endereço</h1>
+            <input type="text" name="endereco" value="{{ $solicitacaos->endereco }}">
+
+            <h1>CPF</h1>
+            <input type="number" name="cpf" value="{{ $solicitacaos->cpf }}" placeholder="Campo Obrigatório" required>
+
+            <h1>E-mail</h1>
+            <input type="text" name="email" value="{{ $solicitacaos->email }}">
+
+            <h1>Curso</h1>
+            <input type="text" name="curso" value="{{ $solicitacaos->curso }}">
+
+            <h1>RM</h1>
+            <input type="number" name="rm" value="{{ $solicitacaos->rm }}">
+
+            <h1>Descrição do Pedido</h1>
+            <!-- <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required> -->
+            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+          <hr>
             <button type="submit">Salvar</button>
             @csrf
         </form>

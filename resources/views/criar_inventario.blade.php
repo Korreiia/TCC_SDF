@@ -4,14 +4,31 @@
 
 <div class="formulario">
         <form action="/criar_inventario" method="post">
-            <input type="text" name="estadofuncionamento" placeholder="Está Funcionando?" required>
-            <input type="date" name="dataentrada" placeholder="Data de Entrada" required>
-            <input type="text" name="descricao" placeholder="Descricao" required>
-            <input type="text" name="estadoconservacao" placeholder="Estado de Conservação">
-            <input type="text" name="categoria" placeholder="Categoria" >
-            <input type="text" name="localizacao" placeholder="Localização" required>
-            <input type="text" name="remetente" placeholder="Remetente" required>
-            <input type="number" name="quantidade" placeholder="Quantidade" required>
+          <hr>
+            <h1>Está Funcionando?</h1>
+            <input type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
+
+            <h1>Data de Entrada</h1>
+            <input type="date" name="dataentrada" required>
+
+            <h1>Descrição do item</h1>
+            <textarea name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+
+            <h1>Estado de Conservação</h1>
+            <input type="text" name="estadoconservacao">
+
+            <h1>Categoria</h1>
+            <input type="text" name="categoria">
+
+            <h1>Localização</h1>
+            <input type="text" name="localizacao" placeholder="Campo Obrigatório" required>
+
+            <h1>Remetente</h1>
+            <input type="text" name="remetente" placeholder="Campo Obrigatório" required>
+
+            <h1>Quantidade</h1>
+            <input type="number" name="quantidade" placeholder="Campo Obrigatório" required>
+          <hr>
             <button type="submit">Salvar</button>
             @csrf
         </form>
