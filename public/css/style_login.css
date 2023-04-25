@@ -46,7 +46,12 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition:0.3s ease;
+    box-shadow: 0px 0px 10px #888888;
+  }
+
+  button[type=submit]:hover{
+    background-color: #006c91;
   }
   
   .logo{
@@ -57,11 +62,19 @@ body {
   }
 
   a{
-    background-color: #008CBA;
-    color: #fff;
-    padding: 10px;
+    text-decoration: none;
+    color:#0077ff;   
+    padding: 5px;
+    padding-left:6%;
+    padding-right:6%;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 1s;
+
+  }
+
+  a:hover{
+    color:#008CBA;
+    background-color: rgb(224, 224, 224);
   }

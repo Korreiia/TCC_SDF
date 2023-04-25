@@ -1,12 +1,14 @@
 <x-layout>
+
+<link rel="stylesheet" href="/css/style_inventario.css">
     
-<a href="/criar_inventario">Criar novo cadastro</a>
+<a class="criar_cadastro" href="/criar_inventario">Criar novo cadastro</a>
 
 <h1>Inventario</h1>
         <table class="table">
             <thead>
             <br>
-                <tr>
+                <tr class="tr">
                     <th scope="col">Está Funcionando?</th>
                     <th scope="col">Data de Entrada</th>
                     <th scope="col">Descrição</th>
