@@ -1,5 +1,7 @@
 <x-layout>
 
+<link rel="stylesheet" href="/css/style_cdst_inventario.css">
+
 <h1>Editar Inventario</h1>
 
 <div class="formulario">
