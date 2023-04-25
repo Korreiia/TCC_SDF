@@ -68,4 +68,10 @@ class usuarioController extends Controller
     {
         return view('home');
     }
+
+    protected function authenticated(Request $request, $user)
+{
+    session(['role' => $user->role]);
+}
+
 }

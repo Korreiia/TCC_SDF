@@ -14,5 +14,7 @@ class usuario extends Model
             'email',
             'senha1',
             'senha2',
+            'usuario',
+            'admin',
     ];
 }

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email',200);
             $table->string('senha1',200);
             $table->string('senha2',200);
+            $table->boolean('usuario')->default(1);
+            $table->boolean('admin')->nullable();
             $table->timestamps();
         });
     }
