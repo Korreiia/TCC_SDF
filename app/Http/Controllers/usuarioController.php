@@ -39,7 +39,7 @@ class usuarioController extends Controller
 
     public function fazer_logout(Request $request)
     {
-        Auth::logout();
+        Session::get('login_usuario');
         return redirect('login');
     }
 
@@ -68,10 +68,4 @@ class usuarioController extends Controller
     {
         return view('home');
     }
-
-    protected function authenticated(Request $request, $user)
-{
-    session(['role' => $user->role]);
-}
-
 }
