@@ -11,9 +11,7 @@ class solicitacaoController extends Controller
 {
     public static function restringirAcesso() {
         $usuarioLogado = Session::get("login_usuario");
-        if($usuarioLogado->id_tipo != 1){
-        return redirect('solicitacao');
-        }
+        return ($usuarioLogado->id_tipo != 1);
     }
 
     public function soliciView()
@@ -38,7 +36,7 @@ class solicitacaoController extends Controller
     public function editarSolicitacao($id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         $solicitacaos = solicitacao::where('id', $id)->first();
@@ -54,7 +52,7 @@ class solicitacaoController extends Controller
     public function atualizarSolicitacao(Request $request, $id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         $data = [
@@ -77,7 +75,7 @@ class solicitacaoController extends Controller
     public function deletarSolicitacao($id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         solicitacao::where('id',$id)->delete();

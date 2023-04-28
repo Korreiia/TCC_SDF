@@ -33,6 +33,7 @@ return new class extends Migration
         DB::statement("
             ALTER TABLE usuarios ADD CONSTRAINT fk_tipo_id FOREIGN KEY (id_tipo) REFERENCES tipo_de_usuario (id);
         ");
+
     }
 
     /**
