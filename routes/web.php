@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
 use App\Http\Controllers\solicitacaoController;
 use App\Http\Controllers\inventarioController;
-use App\Tools\Access;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +36,6 @@ Route::post('/criar_inventario', [inventarioController::class, 'criarInventario'
 Route::get('/{id}/editar_inventario', [inventarioController::class, 'editarInventario'])->where('id', '[0-9]+')->name('editarInventario');
 Route::put('/{id}/atualizar_inventario', [inventarioController::class, 'atualizarInventario'])->where('id', '[0-9]+')->name('atualizarInventario');
 Route::delete('/{id}/deletar_inventario', [inventarioController::class, 'deletarInventario'])->where('id', '[0-9]+')->name('deletarInventario');
-Route::get('/', [Access::class, 'restringirAcesso']);
 //
 
 //

@@ -1,20 +1,30 @@
+<?
+
+use Illuminate\Support\Facades\Session;
+
+$usuario = Session::get('login_usuario');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="/css/sytle_home.css">
     <title>Doa ETEC</title>
 </head>
+
 <body>
 
     <header>
-            <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
+        <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
 
+        @if($usuario == null)
         <form action="/login">
             <input type="submit" value="login">
         </form>
+        @endif
 
         <form action="{{ route('fazer_logout') }}" method="post">
             @csrf
@@ -29,15 +39,16 @@
             <div class="icon"><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div>
             <div class="icon"><a href=""> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
         </nav>
-        
+
     </header>
 
-        <div>
-            {{ $slot }}
-        </div>    
+    <div>
+        {{ $slot }}
+    </div>
 
     <footer>
 
     </footer>
 </body>
+
 </html>

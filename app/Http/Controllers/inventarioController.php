@@ -12,15 +12,13 @@ class inventarioController extends Controller
 {
     public static function restringirAcesso() {
         $usuarioLogado = Session::get("login_usuario");
-        if($usuarioLogado->id_tipo != 1){
-        return redirect('home');
-        }
+        return ($usuarioLogado->id_tipo != 1);
     }
 
     public function inventarioView()
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         $inventarios = inventario::all();
@@ -31,7 +29,7 @@ class inventarioController extends Controller
     public function criarinventarioView()
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         return view('criar_inventario');
@@ -40,7 +38,7 @@ class inventarioController extends Controller
     public function criarInventario(Request $request)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         inventario::create($request->all());
@@ -51,7 +49,7 @@ class inventarioController extends Controller
     public function editarInventario($id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         $inventarios = inventario::where('id', $id)->first();
@@ -67,7 +65,7 @@ class inventarioController extends Controller
     public function atualizarInventario(Request $request, $id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         $data = [
@@ -89,7 +87,7 @@ class inventarioController extends Controller
     public function deletarInventario($id)
     {
         if ($this->restringirAcesso()) {
-            return $this->restringirAcesso();
+            return redirect('/');
         }
 
         inventario::where('id',$id)->delete();
