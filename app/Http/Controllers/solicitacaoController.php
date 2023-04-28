@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\solicitacao;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class solicitacaoController extends Controller
 {
+    public static function restringirAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        if($usuarioLogado->id_tipo != 1){
+        return redirect('solicitacao');
+        }
+    }
+
     public function soliciView()
     {
         $solicitacaos = solicitacao::all();
@@ -29,6 +37,10 @@ class solicitacaoController extends Controller
 
     public function editarSolicitacao($id)
     {
+        if ($this->restringirAcesso()) {
+            return $this->restringirAcesso();
+        }
+
         $solicitacaos = solicitacao::where('id', $id)->first();
 
         if(!empty($solicitacaos))
@@ -41,6 +53,10 @@ class solicitacaoController extends Controller
 
     public function atualizarSolicitacao(Request $request, $id)
     {
+        if ($this->restringirAcesso()) {
+            return $this->restringirAcesso();
+        }
+
         $data = [
             'nome' => $request->nome,
             'telefone1' => $request->telefone1,
@@ -60,6 +76,10 @@ class solicitacaoController extends Controller
 
     public function deletarSolicitacao($id)
     {
+        if ($this->restringirAcesso()) {
+            return $this->restringirAcesso();
+        }
+
         solicitacao::where('id',$id)->delete();
 
         return redirect('solicitacao');
