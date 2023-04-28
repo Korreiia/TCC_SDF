@@ -23,7 +23,7 @@
 
             <tbody>
             @foreach($inventarios as $inventario)
-                <tr>
+                <tr class="tr">
                     <th>{{ $inventario ->estadofuncionamento }}</th>
                     <th>{{ $inventario ->dataentrada }}</th>
                     <th>{{ $inventario ->descricao }}</th>

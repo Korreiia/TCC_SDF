@@ -1,10 +1,12 @@
 <x-layout>
 
+<link rel="stylesheet" href="/css/style_cdst_inventario.css">
+
 <h1>Adicionar Novo Item</h1>
 
 <div class="formulario">
         <form action="/criar_inventario" method="post">
-          <hr>
+          <hr class="hr">
             <h1>Está Funcionando?</h1>
             <input type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
 

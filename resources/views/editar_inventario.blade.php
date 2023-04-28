@@ -1,13 +1,13 @@
 <x-layout>
 
-<link rel="stylesheet" href="/css/style_cdst_inventario.css">
+<link rel="stylesheet" href="public/css/style_cdst_inventario.css">
 
 <h1>Editar Inventario</h1>
 
 <div class="formulario">
         <form action="{{ route('atualizarInventario',['id'=>$inventarios->id]) }}" method="post">
           @method('put')
-          <hr>
+          <hr class="hr">
             <h1>Está Funcionando?</h1>
             <input type="text" name="estadofuncionamento" value="{{ $inventarios->estadofuncionamento }}" placeholder="Campo Obrigatório" required>
 
