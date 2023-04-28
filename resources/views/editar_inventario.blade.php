@@ -1,6 +1,6 @@
 <x-layout>
 
-<link rel="stylesheet" href="/css/style_cdst_inventario.css">
+<link rel="stylesheet" href="public/css/style_cdst_inventario.css">
 
 <h1>Editar Inventario</h1>
 
