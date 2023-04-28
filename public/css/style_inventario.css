@@ -3,7 +3,7 @@
     padding-right:2%;
     color: #141414;
     border-radius: 6px;
-    background-color:  #9b9999;
+    background-color: #c3e3fd;
     box-shadow: 0px 0px 5px #888;
 }
 
@@ -18,11 +18,25 @@ th{
     border-radius: 8px; 
     height: 6vh;
     padding: 10px;
+    width: 25%;
+    
+}
+td{
+    width: 75%;
 }
 
 .table{
     height: 18vh;
-    background: linear-gradient( #801824, #A3291E, #431A0C );
+    background: linear-gradient(#e8f5ff, #c3e3fd, #9acef8, #6eb8f5, #2196f3 );
     box-shadow: 0px 0px 10px #888888;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
 }
