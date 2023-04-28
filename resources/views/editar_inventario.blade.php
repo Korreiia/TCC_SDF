@@ -7,7 +7,7 @@
 <div class="formulario">
         <form action="{{ route('atualizarInventario',['id'=>$inventarios->id]) }}" method="post">
           @method('put')
-          <hr>
+          <hr class="hr">
             <h1>Está Funcionando?</h1>
             <input type="text" name="estadofuncionamento" value="{{ $inventarios->estadofuncionamento }}" placeholder="Campo Obrigatório" required>
 
