@@ -1,8 +1,8 @@
-<?
+<?php
+    use Illuminate\Support\Facades\Session;
 
-use Illuminate\Support\Facades\Session;
+    $usuario = Session::get('login_usuario');
 
-$usuario = Session::get('login_usuario');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
