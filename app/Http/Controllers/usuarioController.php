@@ -39,8 +39,9 @@ class usuarioController extends Controller
 
     public function fazer_logout(Request $request)
     {
-        Session::get('login_usuario');
-        return redirect('login');
+        // Session::get('login_usuario');
+        $request->session()->forget('login_usuario');
+        return redirect('home');
     }
 
     public function criarView()
@@ -66,6 +67,7 @@ class usuarioController extends Controller
 
     public function homeView()
     {
+
         return view('home');
     }
 }
