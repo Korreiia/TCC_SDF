@@ -39,7 +39,7 @@ class usuarioController extends Controller
 
     public function fazer_logout(Request $request)
     {
-        Auth::logout();
+        Session::get('login_usuario');
         return redirect('login');
     }
 

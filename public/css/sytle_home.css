@@ -15,7 +15,7 @@ header{
 }
 
 nav{
-    background-color: rgb(155, 153, 153);
+    background: linear-gradient( #801824, #A3291E, #431A0C );
     padding: 8px;
     border-radius: 8px;
 }

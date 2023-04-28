@@ -4,12 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\inventario;
+use App\Tools\Access;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class inventarioController extends Controller
 {
+    public static function restringirAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        if($usuarioLogado->id_tipo != 1);
+        return redirect('Home');
+    }
+
     public function inventarioView()
     {
+        
+
         $inventarios = inventario::all();
         
         return view('inventario', ['inventarios' => $inventarios]);
@@ -17,11 +27,15 @@ class inventarioController extends Controller
 
     public function criarinventarioView()
     {
+        $this->restringirAcesso();
+
         return view('criar_inventario');
     }
 
     public function criarInventario(Request $request)
     {
+        $this->restringirAcesso();
+
         inventario::create($request->all());
 
         return redirect('inventario');
