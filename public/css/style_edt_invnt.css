@@ -3,7 +3,15 @@ h1{
 }
 
 .hr{
-    background: linear-gradient( #c3e3fd, #9acef8, #6eb8f5);
-    border-radius: 10px;
+    background: linear-gradient( #e2f2ff,  #95cfff, #65b4f5);
+    padding: 10px;
+    border-radius: 14px;
     box-shadow: 0px 0px 10px #888;
+    display: inline-block;
 }
+.container{
+    display: flex;
+    align-items: center;
+}
+
+

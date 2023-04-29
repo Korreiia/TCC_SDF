@@ -3,7 +3,7 @@
     padding-right:2%;
     color: #141414;
     border-radius: 6px;
-    background-color: #c3e3fd;
+    background-color: #a8d8ff;
     box-shadow: 0px 0px 5px #888;
 }
 
@@ -27,7 +27,7 @@ td{
 
 .table{
     height: 18vh;
-    background: linear-gradient(#e8f5ff, #c3e3fd, #9acef8, #6eb8f5, #2196f3 );
+    background: linear-gradient(#d8eeff, #abd9ff, #8bcafd, #4daaf7);
     box-shadow: 0px 0px 10px #888888;
     border-radius: 10px;
     margin-left: auto;
