@@ -1,7 +1,7 @@
     <x-layout>
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
-        <a href="/criar_solicitacao">Criar Solicitação</a>
+        <a class="criar_solicitacao" href="/criar_solicitacao">Criar Solicitação</a>
 
         <h1>Lista de Solicitações</h1>
         <table class="table">
