@@ -1,4 +1,10 @@
+<?php
+    use Illuminate\Support\Facades\Session;
+
+    $usuario = Session::get('login_usuario');
+?>
     <x-layout>
+
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
         <a class="criar_solicitacao" href="/criar_solicitacao">Criar Solicitação</a>
@@ -36,14 +42,18 @@
                     <th>{{ $solicitacao->descpedido }}</th>
                     <th>{{ $solicitacao->created_at }}</th>
                     <th>
+
+                        @if($usuario->id_tipo == 1)
                         <a href="{{ route('editarSolicitacao', ['id'=>$solicitacao->id]) }}">Editar</a>
+                        @endif
 
                         <form action="{{ route('deletarSolicitacao', ['id'=>$solicitacao->id]) }}" method="post">
                         
                         @csrf 
                         @method('delete')
+                        @if($usuario->id_tipo == 1)
                         <button type="submit">Deletar</button>
-
+                        @endif
                         </form>
 
                     </th>
