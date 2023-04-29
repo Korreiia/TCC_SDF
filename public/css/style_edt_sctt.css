@@ -1,0 +1,22 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hr{
+    background: linear-gradient( #c3e3fd, #9acef8, #6eb8f5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #888;
+}
+
+.dados{
+    background-color: f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #888888;
+    transition: 0.3s ;
+}
+.dados:hover{
+    
+}

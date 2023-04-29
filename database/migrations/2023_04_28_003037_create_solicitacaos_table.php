@@ -14,15 +14,15 @@ return new class extends Migration
     {
         Schema::create('solicitacaos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',150);
-            $table->string('telefone1',11);
-            $table->string('telefone2',11)->nullable();
-            $table->string('endereco',200)->nullable();
-            $table->string('cpf',11);
-            $table->string('email',200)->nullable();
-            $table->string('curso',150)->nullable();
-            $table->string('rm',10)->nullable();
-            $table->string('descpedido',1000);
+            $table->string('nome', 150);
+            $table->string('telefone1', 11);
+            $table->string('telefone2', 11)->nullable();
+            $table->string('endereco', 200)->nullable();
+            $table->string('cpf', 11);
+            $table->string('email', 200)->nullable();
+            $table->string('curso', 150)->nullable();
+            $table->string('rm', 10)->nullable();
+            $table->string('descpedido', 1000);
             $table->timestamps();
         });
 
@@ -31,7 +31,7 @@ return new class extends Migration
 
     ");
 
-         DB::statement("
+        DB::statement("
         ALTER TABLE solicitacaos ADD CONSTRAINT fk_usuario_id FOREIGN KEY (id_usuario) REFERENCES usuarios (id);
     ");
     }

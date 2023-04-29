@@ -1,5 +1,7 @@
 <x-layout>
 
+<link rel="stylesheet" href="/css/style_edt_sctt.css">
+
 <h1>Editar Solicitação</h1>
 
 <div class="formulario">
