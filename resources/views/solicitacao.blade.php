@@ -24,7 +24,9 @@
                     <th scope="col">RM</th>
                     <th scope="col">Descrição do Pedido</th>
                     <th scope="col">Data de Criação</th>
+                    @if($usuario->id_tipo == 1)
                     <th scope="col">...Ação...</th>
+                    @endif
                 </tr>
             </thead>
 
