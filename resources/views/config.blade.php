@@ -11,7 +11,7 @@
             @csrf
         </form>
 
-        <hr>
+        <br>
 
         <form action="{{ route('atualizarUsuario2',['id'=>$usuarios->id]) }}" method="post">
         @method('put')
@@ -21,6 +21,15 @@
         <hr>
             <button type="submit">Atualizar Senha</button>
             @csrf
+        </form>
+
+        <br>
+
+        <h1>Deletar Conta</h1>
+        <form action="{{ route('deletarUsuario', ['id'=>$usuarios->id]) }}" method="post">           
+            @csrf 
+            @method('delete')
+            <button type="submit">Deletar</button>
         </form>
 
 </x-layout>
