@@ -1,5 +1,5 @@
 body{
-    background-color: #def0ff ;
+    background-color: #d0f0c0 ;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
     
@@ -15,10 +15,13 @@ header{
 }
 
 nav{
-    background: linear-gradient( #e2f2ff, #bee1fd, #95cfff, #65b4f5);
+    background-color:  #4cbb17;
     padding: 8px;
     border-radius: 8px;
+    box-shadow: 0px 0px 10px #888;
+    
 }
+
 
 .icon{
     width: 3%;
