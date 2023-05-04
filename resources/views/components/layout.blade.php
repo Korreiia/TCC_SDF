@@ -50,7 +50,7 @@
 
             @if($usuario != null)
 
-            <div class="icon"><a href=""> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
+            <div class="icon"><a href="/config"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
         </nav>
 

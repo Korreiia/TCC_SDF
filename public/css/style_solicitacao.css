@@ -9,7 +9,7 @@
     padding-right:3%;
     color: #141414;
     border-radius: 6px;
-    background-color: #c3e3fd;
+    background-color: #98fb98;
     box-shadow: 0px 0px 5px #888;
 }
 
@@ -69,6 +69,7 @@ th{
 }
 
 .table{
+<<<<<<< HEAD
   height:18vh;
   background:linear-gradient(#e8f5ff,#c3e3fd,#9acef8,#6eb8f5,#2196f3);
   box-shadow:0px 0px 10px #888888;
@@ -76,6 +77,15 @@ th{
   margin-left:auto;
   margin-right:auto;
   border-collapse:separate;
+=======
+  height: 18vh;
+  background: linear-gradient(#effff6, #75d882, #29bb59, #2b8b1f, #006400 );
+  box-shadow: 0px 0px 10px #888888;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+>>>>>>> 5e95b1ec497ed6da9daba7dc83106ad52e9df57a
   border-spacing: 10px;
 }
 ::-webkit-scrollbar{
