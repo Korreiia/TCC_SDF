@@ -78,3 +78,13 @@ body {
     color:#008CBA;
     background-color: rgb(224, 224, 224);
   }
+  ::-webkit-scrollbar{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#6eb8f5;
+    width:5.9px;
+    height: 9px;
+  }

@@ -11,45 +11,45 @@
 
       <div class="hr">
         <h1>Está Funcionando?</h1>
-        <input type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
+        <input class="dados" type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
       </div>
 
       <div class="hr">
       <h1>Data de Entrada</h1>
-      <input type="date" name="dataentrada" required>
+      <input class="dados" type="date" name="dataentrada" required>
       </div>
 
       <div class="hr">
       <h1>Descrição do item</h1>
-      <textarea name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+      <textarea class="dados" name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
       </div>
 
       <div class="hr">
       <h1>Estado de Conservação</h1>
-      <input type="text" name="estadoconservacao">
+      <input class="dados" type="text" name="estadoconservacao">
       </div>
 
       <div class="hr">
       <h1>Categoria</h1>
-      <input type="text" name="categoria">
+      <input class="dados" type="text" name="categoria">
       </div>
 
       <div class="hr">
       <h1>Localização</h1>
-      <input type="text" name="localizacao" placeholder="Campo Obrigatório" required>
+      <input class="dados" type="text" name="localizacao" placeholder="Campo Obrigatório" required>
       </div>
 
       <div class="hr">
       <h1>Remetente</h1>
-      <input type="text" name="remetente" placeholder="Campo Obrigatório" required>
+      <input class="dados" type="text" name="remetente" placeholder="Campo Obrigatório" required>
       </div>
 
       <div class="hr">
       <h1>Quantidade</h1>
-      <input type="number" name="quantidade" placeholder="Campo Obrigatório" required>
+      <input class="dados" type="number" name="quantidade" placeholder="Campo Obrigatório" required>
       </div>
 
-      <button type="submit">Salvar</button>
+      <button class="bottom" type="submit">Salvar</button>
       @csrf
     </form>
   </div>

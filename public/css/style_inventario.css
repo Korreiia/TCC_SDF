@@ -1,6 +1,6 @@
 .criar_cadastro{
     padding-left: 2%;
-    padding-right:2%;
+    padding-right:3%;
     color: #141414;
     border-radius: 6px;
     background-color: #a8d8ff;
@@ -44,3 +44,13 @@ td{
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
+::-webkit-scrollbar{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#6eb8f5;
+    width:5.9px;
+    height: 9px;
+  }

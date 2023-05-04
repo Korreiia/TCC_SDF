@@ -28,12 +28,12 @@
             <input class="dados" type="text" name="curso">
 
             <h1>RM</h1>
-            <inpu class="dados"t type="number" name="rm">
+            <input class="dados" type="number" name="rm">
 
             <h1>Descrição do Pedido</h1>
             <textarea class="dados" name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
           <hr>
-            <button type="submit">Salvar</button>
+            <button class="bottom" type="submit">Salvar</button>
             @csrf
         </form>
       </div>
