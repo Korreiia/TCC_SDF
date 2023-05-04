@@ -1,5 +1,5 @@
 body {
-    background-color: #f2f2f2; 
+    background-color: #d0f0c0; 
   }
   .container{
     margin: auto;
@@ -40,7 +40,7 @@ body {
   }
   
   button[type=submit] {
-    background-color: #008CBA;
+    background-color: #4cbb17;
     color: #fff;
     padding: 10px;
     border: none;
@@ -51,7 +51,7 @@ body {
   }
 
   button[type=submit]:hover{
-    background-color: #006c91;
+    background-color: #4bbb1798;
   }
   
   .logo{

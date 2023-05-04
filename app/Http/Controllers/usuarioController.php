@@ -109,4 +109,8 @@ class usuarioController extends Controller
         return redirect('home');
     }
 
+    public function saibamaisView()
+    {
+        return view('saibamais');
+    }
 }

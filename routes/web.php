@@ -31,6 +31,7 @@ Route::get('/{id}/config', [usuarioController::class, 'configView'])->where('id'
 Route::put('/{id}/atualizar_usuario1', [usuarioController::class, 'atualizarUsuario1'])->where('id', '[0-9]+')->name('atualizarUsuario1');
 Route::put('/{id}/atualizar_usuario2', [usuarioController::class, 'atualizarUsuario2'])->where('id', '[0-9]+')->name('atualizarUsuario2');
 Route::delete('/{id}/deletar_usuario', [usuarioController::class, 'deletarUsuario'])->where('id', '[0-9]+')->name('deletarUsuario');
+Route::get('/saibamais', [usuarioController::class, 'saibamaisView']);
 //
 
 //
