@@ -74,12 +74,7 @@ class usuarioController extends Controller
     {
         $usuarios = usuario::where('id', $id)->first();
 
-        if(!empty($usuarios))
-        {
-            return view('config', ['usuarios'=>$usuarios]);
-        }
-
-        return view('config');
+        return view('config', ['usuarios'=>$usuarios]);
     }
 
     public function atualizarUsuario1(Request $request, $id)
@@ -90,7 +85,7 @@ class usuarioController extends Controller
 
         usuario::where('id',$id)->update($data);
 
-        return redirect('config');
+        return redirect('home');
     }
 
     public function atualizarUsuario2(Request $request, $id)
@@ -102,7 +97,20 @@ class usuarioController extends Controller
 
         usuario::where('id',$id)->update($data);
 
-        return redirect('config');
+        return redirect('home');
     }
 
+    public function deletarUsuario(Request $request,$id)
+    {
+        usuario::where('id',$id)->delete();
+
+        $request->session()->forget('login_usuario');
+
+        return redirect('home');
+    }
+
+    public function saibamaisView()
+    {
+        return view('saibamais');
+    }
 }
