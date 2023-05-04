@@ -67,7 +67,42 @@ class usuarioController extends Controller
 
     public function homeView()
     {
-
         return view('home');
     }
+
+    public function configView($id)
+    {
+        $usuarios = usuario::where('id', $id)->first();
+
+        if(!empty($usuarios))
+        {
+            return view('config', ['usuarios'=>$usuarios]);
+        }
+
+        return view('config');
+    }
+
+    public function atualizarUsuario1(Request $request, $id)
+    {
+        $data = [
+            'email' => $request->email,
+        ];
+
+        usuario::where('id',$id)->update($data);
+
+        return redirect('config');
+    }
+
+    public function atualizarUsuario2(Request $request, $id)
+    {
+        $data = [
+            'senha1' => $request->senha1,
+            'senha2' => $request->senha2,
+        ];
+
+        usuario::where('id',$id)->update($data);
+
+        return redirect('config');
+    }
+
 }

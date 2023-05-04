@@ -1,3 +1,9 @@
+<?php
+    use Illuminate\Support\Facades\Session;
+
+    $usuario = Session::get('login_usuario');
+?>
+
 <x-layout>
 
 <link rel="stylesheet" href="/css/style_edt_sctt.css">
@@ -36,7 +42,9 @@
             <!-- <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required> -->
             <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
           <hr>
+            @if($usuario->id_tipo == 1)
             <button type="submit">Salvar</button>
+            @endif
             @csrf
         </form>
       </div>

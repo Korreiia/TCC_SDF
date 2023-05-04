@@ -35,10 +35,6 @@ class solicitacaoController extends Controller
 
     public function editarSolicitacao($id)
     {
-        if ($this->restringirAcesso()) {
-            return redirect('/');
-        }
-
         $solicitacaos = solicitacao::where('id', $id)->first();
 
         if(!empty($solicitacaos))
