@@ -29,7 +29,7 @@
             
         <form action="{{ route('fazerLogin') }}" method="post">
             <input type="email" name="email" placeholder="E-mail">
-            <input type="password" name="senha1" placeholder="Senha">
+            <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Login</button>
             @csrf
         </form>

@@ -16,8 +16,8 @@
         <form action="{{ route('atualizarUsuario2',['id'=>$usuarios->id]) }}" method="post">
         @method('put')
             <h1>Atualizar Senha</h1>
-            <input type="password" name="senha1" placeholder="Senha" required>
-            <input type="password" name="senha2" placeholder="Repita a senha" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha1" placeholder="Repita a senha" required>
         <hr>
             <button type="submit">Atualizar Senha</button>
             @csrf

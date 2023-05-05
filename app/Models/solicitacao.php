@@ -10,14 +10,7 @@ class solicitacao extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome',
-        'telefone1',
-        'telefone2',
-        'endereco',
-        'cpf',
-        'email',
-        'curso',
-        'rm',
         'descpedido',
+        'quantidade',
     ];
 }

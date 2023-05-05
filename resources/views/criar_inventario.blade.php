@@ -30,21 +30,6 @@
       </div>
 
       <div class="hr">
-      <h1>Categoria</h1>
-      <input class="dados" type="text" name="categoria">
-      </div>
-
-      <div class="hr">
-      <h1>Localização</h1>
-      <input class="dados" type="text" name="localizacao" placeholder="Campo Obrigatório" required>
-      </div>
-
-      <div class="hr">
-      <h1>Remetente</h1>
-      <input class="dados" type="text" name="remetente" placeholder="Campo Obrigatório" required>
-      </div>
-
-      <div class="hr">
       <h1>Quantidade</h1>
       <input class="dados" type="number" name="quantidade" placeholder="Campo Obrigatório" required>
       </div>

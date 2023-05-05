@@ -73,9 +73,6 @@ class inventarioController extends Controller
             'dataentrada' => $request->dataentrada,
             'descricao' => $request->descricao,
             'estadoconservacao' => $request->estadoconservacao,
-            'categoria' => $request->categoria,
-            'localizacao' => $request->localizacao,
-            'remetente' => $request->remetente,
             'quantidade' => $request->quantidade,
         ];
 
