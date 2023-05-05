@@ -1,11 +1,15 @@
     <x-layout>
-        <link rel="stylesheet" href="/css/style_home_div.css">
+        <div class="layout">
+            <link rel="stylesheet" href="/css/style_home.css">
+    
+            <img class="logoh1" src="img/doa_tec.png" alt="logo">
+            <div>
+                <a href="saibamais">Saiba Mais</a>
 
-        <img class="logoh1" src="img/doa_tec.png" alt="logo">
+                <br>
 
-        <a href="saibamais">Saiba Mais</a>
-        
-        <br>
-
-        <a href="login">Faça uma conta</a>
+                <a href="login">Faça uma conta</a>
+            </div>
+        </div>
     </x-layout>
+    
