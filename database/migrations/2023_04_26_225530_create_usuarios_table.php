@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('nome',200);
+            $table->string('cpf', 11);
+            $table->string('telefone', 11);
+            $table->string('endereco', 200);
             $table->string('email',200);
-            $table->string('senha1',200);
-            $table->string('senha2',200);
+            $table->string('senha',200);
             $table->timestamps();
         });
     }

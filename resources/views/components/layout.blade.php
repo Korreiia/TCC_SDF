@@ -22,14 +22,14 @@
 
         @if($usuario == null)
         <form action="/login">
-            <input class="bnt_login" type="submit" value="login">
+            <input type="submit" value="login">
         </form>
         @endif
 
         @if($usuario != null)
         <form action="{{ route('fazer_logout') }}" method="post">
             @csrf
-            <input class="bnt_login" type="submit" value="logout">
+            <input type="submit" value="logout">
         </form>
         @endif
 
@@ -52,6 +52,20 @@
 
             <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
+
+                @if($usuario == null)
+            <form action="/login">
+                <input type="submit" value="login">
+            </form>
+            @endif
+
+            @if($usuario != null)
+            <form action="{{ route('fazer_logout') }}" method="post">
+                @csrf
+                <input type="submit" value="logout">
+            </form>
+            @endif
+
         </nav>
 
     </header>
