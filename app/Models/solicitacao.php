@@ -14,9 +14,4 @@ class solicitacao extends Model
         'quantidade',
         'id_usuario',
     ];
-
-    public function usuario()
-    {
-        return $this->belongsTo(usuario::class, 'id_usuario');
-    }
 }

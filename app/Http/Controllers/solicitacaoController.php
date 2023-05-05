@@ -24,50 +24,62 @@ class solicitacaoController extends Controller
         return view('solicitacao', ['solicitacaos' => $solicitacaos, 'usuarios' => $usuarios]);
     }
 
-    public function criar_soliciView()
+    public function criar_soliciView($id)
     {
-        return view('criar_solicitacao');
+        $usuario = usuario::find($id);
+
+        if(!$usuario)
+        {
+            return redirect()->route('solicitacao');
+        }
+
+        return view('criar_solicitacao', compact('usuario'));
     }
 
-    public function criarSolicitacao(Request $request)
+    public function criarSolicitacao(Request $request, $id)
     {
-        solicitacao::create($request->all());
+        // $request->validate([
+        //     'descpedido' => 'required',
+        //     'quantidade' => 'numeric'
+        // ]);
 
-        $this->validate($request, [
-        'descpedido' => 'required',
-        'quantidade' => 'required'
-    ]);
+        // solicitacao::create($request->all());
 
-    $solicitacao = auth()->user()->solicitacaos()->create([
-        'descpedido' => $request->get('descpedido'),
-        'quantidade' => $request->get('quantidade'),
-    ]);
+        // return redirect('solicitacao');
 
-    return redirect('solicitacao');
+        $usuario = Usuario::find($id);
+
+        if (!$usuario) {
+            return redirect()->route('solicitacao');
+        }
+    
+        $request->validate([
+            'descpedido' => 'required',
+            'quantidade' => 'numeric'
+        ]);
+    
+        $solicitacao = new Solicitacao();
+        $solicitacao->id_usuario = $usuario->id;
+        $solicitacao->descpedido = $request->input('descpedido');
+        $solicitacao->quantidade = $request->input('quantidade');
+        $solicitacao->save();
+    
+        return redirect()->route('criar_solicitacao', ['id' => $usuario->id]);
     }
 
     public function editarSolicitacao($id)
     {
         $solicitacao = solicitacao::where('id', $id)->first();
-        $usuario = usuario::find($solicitacao->id_usuario);
+        $usuario = usuario::where('id', $id)->first();
+
         dd($solicitacao->id_usuario);
+
         if($this->verificarPermissao() && $usuario)
         {
             return view('editar_solicitacao', ['solicitacao' => $solicitacao, 'usuario' => $usuario]);
         }
         
         // return redirect('solicitacao');
-    }
-
-    public function verificarPermissao()
-    {
-        $user = Auth::user();
-
-        if ($user && $user->id_tipo == 1) { // Verifica se o usuário está autenticado e se é um administrador (id_tipo == 1)
-            return true;
-        } else {
-            return false;
-        }
     }
 
     public function atualizarSolicitacao(Request $request, $id)

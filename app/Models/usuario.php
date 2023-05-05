@@ -22,9 +22,4 @@ class usuario extends Model
             'usuario',
             'admin',
     ];
-
-    public function usuario()
-    {
-        return $this->belongsTo(User::class);
-    }
 }
