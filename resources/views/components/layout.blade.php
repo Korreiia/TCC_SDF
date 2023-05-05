@@ -20,19 +20,6 @@
     <header>
         <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
 
-        @if($usuario == null)
-        <form action="/login">
-            <input type="submit" value="login">
-        </form>
-        @endif
-
-        @if($usuario != null)
-        <form action="{{ route('fazer_logout') }}" method="post">
-            @csrf
-            <input type="submit" value="logout">
-        </form>
-        @endif
-
         <nav>
             <div class="icon"><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
 
@@ -52,6 +39,20 @@
 
             <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
+
+                @if($usuario == null)
+            <form action="/login">
+                <input type="submit" value="login">
+            </form>
+            @endif
+
+            @if($usuario != null)
+            <form action="{{ route('fazer_logout') }}" method="post">
+                @csrf
+                <input type="submit" value="logout">
+            </form>
+            @endif
+
         </nav>
 
     </header>
