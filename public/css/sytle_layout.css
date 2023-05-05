@@ -61,8 +61,8 @@ a:hover{
 .bnt_login{
     border:none;
     box-shadow:0px 0px 10px #888;
-    background:#4cbb17;/* <---- cor aqui ó */
-    border-radius:2px;
+    background:#aae08e;/* <---- cor aqui ó */
+    border-radius:4px;
     padding:5px;
     padding-left:15px;
     padding-right:15px;
@@ -70,7 +70,7 @@ a:hover{
     transition:0.3s ease;
 }
 .bnt_login:hover{
-    background: #d0f0c0;
+    background:#4cbb17 ;
     padding-left:8px;
     padding-right:8px;
 }

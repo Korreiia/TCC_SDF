@@ -20,19 +20,6 @@
     <header>
         <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
 
-        @if($usuario == null)
-        <form action="/login">
-            <input type="submit" value="login">
-        </form>
-        @endif
-
-        @if($usuario != null)
-        <form action="{{ route('fazer_logout') }}" method="post">
-            @csrf
-            <input type="submit" value="logout">
-        </form>
-        @endif
-
         <nav>
             <div class="icon"><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
 
@@ -55,14 +42,14 @@
 
                 @if($usuario == null)
             <form action="/login">
-                <input type="submit" value="login">
+                <input class="bnt_login" type="submit" value="Login">
             </form>
             @endif
 
             @if($usuario != null)
             <form action="{{ route('fazer_logout') }}" method="post">
                 @csrf
-                <input type="submit" value="logout">
+                <input class="bnt_login" type="submit" value="Logout">
             </form>
             @endif
 

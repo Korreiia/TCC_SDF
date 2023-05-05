@@ -1,7 +1,9 @@
     <x-layout>
-        <div class="layout">
+        <div class="layout"><!--parte das abas(navegação) -->
             <link rel="stylesheet" href="/css/style_home.css">
     
+        </div>
+        <div class="layout2"> <!--conteudo-->    
             <img class="logoh1" src="img/doa_tec.png" alt="logo">
             <div>
                 <a href="saibamais">Saiba Mais</a>
