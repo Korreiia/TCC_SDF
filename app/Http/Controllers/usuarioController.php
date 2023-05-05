@@ -21,10 +21,10 @@ class usuarioController extends Controller
     public function fazerLogin(Request $request)
     {
             $email = $request->input('email');
-            $senha1 = $request->input('senha1');
+            $senha = $request->input('senha');
 
             $usuario =usuario::where('email', '=', $email)
-                            ->where('senha1', '=', $senha1)
+                            ->where('senha', '=', $senha)
                             ->first();
 
         if($usuario == null)
@@ -52,10 +52,10 @@ class usuarioController extends Controller
 
     public function criarUsuario(Request $request)
     {
+        $senha = $request->input('senha');
         $senha1 = $request->input('senha1');
-        $senha2 = $request->input('senha2');
 
-        if ($senha1 != $senha2)
+        if ($senha != $senha1)
         {
             return redirect()->back()->with('danger', 'Senhas Diferentes');
         }
@@ -91,8 +91,8 @@ class usuarioController extends Controller
     public function atualizarUsuario2(Request $request, $id)
     {
         $data = [
+            'senha' => $request->senha,
             'senha1' => $request->senha1,
-            'senha2' => $request->senha2,
         ];
 
         usuario::where('id',$id)->update($data);

@@ -11,9 +11,11 @@ class usuario extends Model
 
     protected $fillable = [
             'nome',
+            'cpf',
+            'telefone',
+            'endereco',
             'email',
-            'senha1',
-            'senha2',
+            'senha',
             'usuario',
             'admin',
     ];

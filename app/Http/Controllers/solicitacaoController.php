@@ -52,15 +52,8 @@ class solicitacaoController extends Controller
         }
 
         $data = [
-            'nome' => $request->nome,
-            'telefone1' => $request->telefone1,
-            'telefone2' => $request->telefone2,
-            'endereco' => $request->endereco,
-            'cpf' => $request->cpf,
-            'email' => $request->email,
-            'curso' => $request->curso,
-            'rm' => $request->rm,
             'descpedido' => $request->descpedido,
+            'quantidade' => $request->quantidade,
         ];
 
         solicitacao::where('id',$id)->update($data);

@@ -22,9 +22,12 @@
 
         <form action="/criar_conta" method="post">
             <input type="text" name="nome" placeholder="Nome" required>
+            <input type="number" name="cpf" placeholder="CPF" required>
+            <input type="number" name="telefone" placeholder="Telefone/Celular" required>
+            <input type="text" name="endereco" placeholder="Endereço" required>
             <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="senha1" placeholder="Senha" required>
-            <input type="password" name="senha2" placeholder="Repita a senha" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha1" placeholder="Repita a senha" required>
             <button type="submit">Criar Conta</button>
             @csrf
         </form>
