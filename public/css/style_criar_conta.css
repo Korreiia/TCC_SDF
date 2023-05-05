@@ -1,5 +1,5 @@
 body {
-    background-color:#d0f0c0; 
+    background: linear-gradient(#3C6255,#61876E,#A6BB8D,#EAE7B1);
   }
   .container{
     margin: auto;
@@ -51,7 +51,7 @@ body {
   }
 
   button[type=submit]:hover{
-    background-color: #006c91;
+    background-color: #286b09;
   }
   
   .logo{
