@@ -8,15 +8,30 @@
 
 <link rel="stylesheet" href="/css/style_edt_sctt.css">
 
-<h1>Editar Solicitação</h1>
+<h1>Detalhes da Solicitação</h1>
 
 <div class="formulario">
-        <form action="{{ route('atualizarSolicitacao',['id'=>$solicitacaos->id]) }}" method="post">
+        <form action="{{ route('atualizarSolicitacao', $solicitacao->id) }}" method="post">
           @method('put')
           <hr>
+            <h1>Nome</h1>
+            <input type="text" name="nome" value="{{ $usuarios_->nome }}" required>
+
+            <h1>CPF</h1>
+            <input type="number" name="cpf" value="{{ $usuarios->cpf }}" required>
+
+            <h1>Telefone/Celular</h1>
+            <input type="number" name="telefone" value="{{ $usuarios->telefone }}" required>
+
+            <h1>Endereço</h1>
+            <input type="text" name="endereco" value="{{ $usuarios->endereco }}" required>
+
+            <h1>E-mail</h1>
+            <input type="email" name="email" value="{{ $usuarios->email }}" required>
+
             <h1>Descrição do Pedido</h1>
             <!-- <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required> -->
-            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required>{{ $solicitacaos->descpedido }}</textarea>
 
             <h1>Quantidade</h1>
             <input type="number" name="quantidade" value="{{ $solicitacaos->quantidade }}">

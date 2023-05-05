@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
+        @if($usuario->id_tipo == 2)
         <a class="criar_solicitacao" href="/criar_solicitacao">Criar Solicitação</a>
+        @endif
 
         <h1>Lista de Solicitações</h1>
         <table class="table">
@@ -33,31 +35,28 @@
             @foreach($solicitacaos as $solicitacao)
                 <tr>
                     <th>{{ $solicitacao ->id}}</th>
-                    <!-- @if($usuario->id_tipo == 1)
-                    @endif -->
+
+                        @if($usuario->id_tipo == 1)
+                        <th>{{ $usuario->nome }}</th>
+                        <th>{{ $usuario->telefone }}</th>
+                        <th>{{ $usuario->endereco }}</th>
+                        <th>{{ $usuario->cpf }}</th>
+                        <th>{{ $usuario->email }}</th>
+                        @endif
+
                     <th>{{ $solicitacao->descpedido }}</th>
                     <th>{{ $solicitacao->quantidade }}</th>
                     <th>{{ $solicitacao->created_at }}</th>
-
                     <th>
-
-                        @if($usuario->id_tipo == 1)
-                        <a href="{{ route('editarSolicitacao', ['id'=>$solicitacao->id]) }}">Editar</a>
-                        @endif
-
-                        @if($usuario->id_tipo == 2)
                         <a href="{{ route('editarSolicitacao', ['id'=>$solicitacao->id]) }}">Ver mais</a>
-                        @endif
 
                         <form action="{{ route('deletarSolicitacao', ['id'=>$solicitacao->id]) }}" method="post">
-                        
-                        @csrf 
-                        @method('delete')
-                        @if($usuario->id_tipo == 1)
-                        <button type="submit">Deletar</button>
-                        @endif
+                         @csrf 
+                          @method('delete')
+                           @if($usuario->id_tipo == 1)
+                            <button type="submit">Deletar</button>
+                           @endif
                         </form>
-
                     </th>
                 </tr>
             @endforeach

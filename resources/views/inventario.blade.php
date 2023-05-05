@@ -9,6 +9,7 @@
             <thead>
             <br>
                 <tr class="tr">
+                    <th scope="col">ID</th>
                     <th scope="col">Está Funcionando?</th>
                     <th scope="col">Data de Entrada</th>
                     <th scope="col">Descrição</th>
@@ -21,6 +22,7 @@
             <tbody>
             @foreach($inventarios as $inventario)
                 <tr class="tr">
+                    <th>{{ $inventario ->id }}</th>
                     <th>{{ $inventario ->estadofuncionamento }}</th>
                     <th>{{ $inventario ->dataentrada }}</th>
                     <th>{{ $inventario ->descricao }}</th>

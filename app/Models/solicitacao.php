@@ -12,5 +12,11 @@ class solicitacao extends Model
     protected $fillable = [
         'descpedido',
         'quantidade',
+        'id_usuario',
     ];
+
+    public function usuario()
+    {
+        return $this->belongsTo(usuario::class, 'id_usuario');
+    }
 }

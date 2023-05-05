@@ -48,6 +48,6 @@ Route::get('/solicitacao', [solicitacaoController::class, 'soliciView']);
 Route::get('/criar_solicitacao', [solicitacaoController::class, 'criar_soliciView']);
 Route::post('/criar_solicitacao', [solicitacaoController::class, 'criarSolicitacao']);
 Route::get('/{id}/editar_solicitacao', [solicitacaoController::class, 'editarSolicitacao'])->where('id', '[0-9]+')->name('editarSolicitacao');
-Route::put('/{id}/atualizar_solicitacao', [solicitacaoController::class, 'atualizarSolicitacao'])->where('id', '[0-9]+')->name('atualizarSolicitacao');
+Route::put('/solicitacoes/atualizar/{id}', [solicitacaoController::class, 'atualizarSolicitacao'])->name('atualizarSolicitacao');
 Route::delete('/{id}/deletar_solicitacao', [solicitacaoController::class, 'deletarSolicitacao'])->where('id', '[0-9]+')->name('deletarSolicitacao');
 //
