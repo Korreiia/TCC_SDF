@@ -27,6 +27,11 @@ Route::post('/fazer_logout',[usuarioController::class, 'fazer_logout'])->name('f
 Route::get('/criar_conta', [usuarioController::class, 'criarView']);
 Route::post('/criar_conta', [usuarioController::class, 'criarUsuario']);
 Route::get('/home', [usuarioController::class, 'homeView']);
+Route::get('/{id}/config', [usuarioController::class, 'configView'])->where('id', '[0-9]+')->name('configView');
+Route::put('/{id}/atualizar_usuario1', [usuarioController::class, 'atualizarUsuario1'])->where('id', '[0-9]+')->name('atualizarUsuario1');
+Route::put('/{id}/atualizar_usuario2', [usuarioController::class, 'atualizarUsuario2'])->where('id', '[0-9]+')->name('atualizarUsuario2');
+Route::delete('/{id}/deletar_usuario', [usuarioController::class, 'deletarUsuario'])->where('id', '[0-9]+')->name('deletarUsuario');
+Route::get('/saibamais', [usuarioController::class, 'saibamaisView']);
 //
 
 //

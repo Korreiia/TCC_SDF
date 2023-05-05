@@ -6,7 +6,7 @@
   
   .criar_solicitacao{
     padding-left: 2%;
-    padding-right:2%;
+    padding-right:3%;
     color: #141414;
     border-radius: 6px;
     background-color: #98fb98;
@@ -19,10 +19,25 @@
     background-color:  #6eb8f5;
 }
   
-  .bottom {
+  .bottom{
     display: flex;
     flex-direction: row;
     height: calc(100% - 120px);
+    background-color: #008CBA;
+    color: #fff;
+    border:none;
+    box-shadow:0px 0px 10px #888;
+    border-radius: 4px;
+    padding: 5px;
+    padding-left:10px;
+    padding-right: 10px;
+    transition: 0.3s ease; 
+  }
+  .bottom:hover{
+    background-color: #006c91;
+    padding-left:20px;
+    padding-right:20px;
+    
   }
   
   .column {
@@ -54,6 +69,15 @@ th{
 }
 
 .table{
+<<<<<<< HEAD
+  height:18vh;
+  background:linear-gradient(#e8f5ff,#c3e3fd,#9acef8,#6eb8f5,#2196f3);
+  box-shadow:0px 0px 10px #888888;
+  border-radius:10px;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse:separate;
+=======
   height: 18vh;
   background: linear-gradient(#CCF62C,#98C74E,#60A261,#357A5B);
   box-shadow: 0px 0px 10px #888888;
@@ -61,5 +85,25 @@ th{
   margin-left: auto;
   margin-right: auto;
   border-collapse: separate;
+>>>>>>> 5e95b1ec497ed6da9daba7dc83106ad52e9df57a
   border-spacing: 10px;
+}
+::-webkit-scrollbar{
+  width:5.9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius:30px;
+  background:#6eb8f5;
+  width:5.9px;
+  height: 9px;
+}
+.dados{
+  border-radius:10px;
+  box-shadow:0px 0px 10px#888;
+  border: none;
+  trAnsition: 0.3s ease;
+}
+.dados:hover{
+  background:#e0e0e0;
 }

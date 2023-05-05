@@ -6,34 +6,13 @@
     <div class="formulario">
         <form action="/criar_solicitacao" method="post">
           <hr>
-            <h1>Nome</h1>
-            <input class="dados" type="text" name="nome" placeholder="Campo Obrigatório" required>
-
-            <h1>Telefone</h1>
-            <input class="dados" type="number" name="telefone1" placeholder="Campo Obrigatório" required>
-
-            <h1>Telefone de Recado</h1>
-            <input class="dados" type="number" name="telefone2">
-
-            <h1>Endereço</h1>
-            <input class="dados" type="text" name="endereco">
-
-            <h1>CPF</h1>
-            <input class="dados" type="number" name="cpf" placeholder="Campo Obrigatório" required>
-
-            <h1>E-mail</h1>
-            <input class="dados" type="text" name="email">
-
-            <h1>Curso</h1>
-            <input class="dados" type="text" name="curso">
-
-            <h1>RM</h1>
-            <inpu class="dados"t type="number" name="rm">
-
             <h1>Descrição do Pedido</h1>
             <textarea class="dados" name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+
+            <h1>Quantidade</h1>
+            <input class="dados" type="number" name="quantidade">
           <hr>
-            <button type="submit">Salvar</button>
+            <button class="bottom" type="submit">Salvar</button>
             @csrf
         </form>
       </div>

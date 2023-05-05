@@ -1,0 +1,32 @@
+.logoh1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height:100px;
+}
+::-webkit-scrollbar{
+  width:5.9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius:30px;
+  background:#6eb8f5;
+  width:5.9px;
+  height: 9px;
+}
+.layout{
+  background-color:#d0f0c0;
+  border-radius:10px 10px 0px 0px;
+
+}
+.layout2{
+  background-color:#d0f0c0;
+  border-radius:0px 0px 10px 10px;
+  width:70%;
+  margin: auto;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height:598px;
+}

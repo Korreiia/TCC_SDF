@@ -14,9 +14,6 @@ class inventario extends Model
         'dataentrada',
         'descricao',
         'estadoconservacao',
-        'categoria',
-        'localizacao',
-        'remetente',
         'quantidade',
     ];
 }

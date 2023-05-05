@@ -21,15 +21,6 @@
             <h1>Estado de Conservação</h1>
             <input type="text" name="estadoconservacao" value="{{ $inventarios->estadoconservacao }}">
 
-            <h1>Categoria</h1>
-            <input type="text" name="categoria" value="{{ $inventarios->categoria }}">
-
-            <h1>Localização</h1>
-            <input type="text" name="localizacao" value="{{ $inventarios->localizacao }}" placeholder="Campo Obrigatório" required>
-
-            <h1>Remetente</h1>
-            <input type="text" name="remetente" value="{{ $inventarios->remetente }}" placeholder="Campo Obrigatório" required>
-
             <h1>Quantidade</h1>
             <input type="number" name="quantidade" value="{{ $inventarios->quantidade }}" placeholder="Campo Obrigatório" required>
           <hr>

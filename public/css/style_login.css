@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
     background:linear-gradient(#EAE7B1,#A6BB8D,#61876E,#3C6255); 
+=======
+    background-color: #d0f0c0; 
+>>>>>>> 492df8dddfd1de41f6d549604f3508e87222cb87
   }
   .container{
     margin: auto;
@@ -51,7 +55,11 @@ body {
   }
 
   button[type=submit]:hover{
+<<<<<<< HEAD
     background-color: #286b09;
+=======
+    background-color: #4bbb1798;
+>>>>>>> 492df8dddfd1de41f6d549604f3508e87222cb87
   }
   
   .logo{
@@ -77,4 +85,14 @@ body {
   a:hover{
     color:#008CBA;
     background-color: rgb(224, 224, 224);
+  }
+  ::-webkit-scrollbar{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#6eb8f5;
+    width:5.9px;
+    height: 9px;
   }

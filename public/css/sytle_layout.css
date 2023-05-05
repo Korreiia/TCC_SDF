@@ -1,5 +1,5 @@
 body{
-    background-color: #d0f0c0 ;
+    background-color: #729f5b ;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
     
@@ -47,4 +47,37 @@ a:hover{
     color: #fff;
     padding-right: 1.5%;
     padding-left: 1.5%; 
+}
+::-webkit-scrollbar{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#6eb8f5;
+    width:5.9px;
+    height: 9px;
+  }
+.bnt_login{
+    border:none;
+    box-shadow:0px 0px 10px #888;
+    background:#aae08e;/* <---- cor aqui ó */
+    border-radius:4px;
+    padding:5px;
+    padding-left:15px;
+    padding-right:15px;
+    margin:5px;
+    transition:0.3s ease;
+}
+.bnt_login:hover{
+    background:#4cbb17 ;
+    padding-left:8px;
+    padding-right:8px;
+}
+.layout{
+    width:70%;
+    margin: auto;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -35,7 +35,7 @@ body {
   }
 
   input[type=email]:hover, input[type=text]:hover, input[type=password]:hover {
-    background-color: rgb(224, 224, 224);
+    background-color: #e0e0e0;
     transition: 0.3 ease;
   }
   
@@ -51,7 +51,11 @@ body {
   }
 
   button[type=submit]:hover{
+<<<<<<< HEAD
     background-color: #286b09;
+=======
+    background-color: #4bbb1798;
+>>>>>>> 492df8dddfd1de41f6d549604f3508e87222cb87
   }
   
   .logo{
@@ -59,4 +63,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+  }
+  ::-webkit-scrollbar{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#6eb8f5;
+    width:5.9px;
+    height: 9px;
   }
