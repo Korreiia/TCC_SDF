@@ -18,7 +18,7 @@
 <body>
     <div class="layout">
     <header>
-        <img class="logo" src="img/doa_tec_side.png" alt="logo"></img>
+        <img class="logo" src="img/logoR.png" alt="logo"></img>
 
         <nav>
             <div class="icon"><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
