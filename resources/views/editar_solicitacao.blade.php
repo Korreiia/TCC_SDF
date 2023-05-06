@@ -15,7 +15,7 @@
           @method('put')
           <hr>
             <h1>Nome</h1>
-            <input type="text" name="nome" value="{{ $usuarios_->nome }}" required>
+            <input type="text" name="nome" value="{{ $usuarios->nome }}" required>
 
             <h1>CPF</h1>
             <input type="number" name="cpf" value="{{ $usuarios->cpf }}" required>
@@ -30,11 +30,10 @@
             <input type="email" name="email" value="{{ $usuarios->email }}" required>
 
             <h1>Descrição do Pedido</h1>
-            <!-- <input type="text" name="descpedido" value="{{ $solicitacaos->descpedido }}" placeholder="Descrição do Pedido" required> -->
-            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required>{{ $solicitacaos->descpedido }}</textarea>
+            <textarea name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required>{{ $solicitacao->descpedido }}</textarea>
 
             <h1>Quantidade</h1>
-            <input type="number" name="quantidade" value="{{ $solicitacaos->quantidade }}">
+            <input type="number" name="quantidade" value="{{ $solicitacao->quantidade }}">
           <hr>
             @if($usuario->id_tipo == 1)
             <button type="submit">Salvar</button>

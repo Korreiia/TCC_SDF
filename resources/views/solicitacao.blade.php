@@ -32,6 +32,7 @@
             </thead>
 
             <tbody>
+                @if(!empty($solicitacaos))
             @foreach($solicitacaos as $solicitacao)
                 <tr>
                     <th>{{ $solicitacao ->id}}</th>
@@ -60,6 +61,7 @@
                     </th>
                 </tr>
             @endforeach
+            @endif
             </tbody>
 
         </table>
