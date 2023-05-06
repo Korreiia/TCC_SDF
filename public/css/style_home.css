@@ -5,16 +5,28 @@
     width: 20%;
     height:120px;
 }
+
+.saibamais{
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}   
+
 ::-webkit-scrollbar{
   width:5.9px;
   height: 9px;
 }
+
 ::-webkit-scrollbar-thumb{
   border-radius:30px;
   background:#6eb8f5;
   width:5.9px;
   height: 9px;
 }
+
 .layout2{
     background-color:#d0f0c0;
     border-radius:0px 0px 10px 10px;
