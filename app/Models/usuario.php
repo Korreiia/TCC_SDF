@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class usuario extends Model
 {
@@ -22,4 +22,9 @@ class usuario extends Model
             'usuario',
             'admin',
     ];
+
+    public function solicitacao(): HasMany
+    {
+        return $this->hasMany(solicitacao::class, 'id_usuario');
+    }
 }

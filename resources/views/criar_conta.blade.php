@@ -12,7 +12,7 @@
 <div class="container">
       <div class="formulario">
 
-        <img class="logo" src="img/doa_tec_side.png" alt="logo">
+        <img class="logo" src="img/logoR.png" alt="logo">
         
             @if(session('danger'))
               <div>

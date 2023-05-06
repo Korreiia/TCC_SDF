@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
         @if($usuario->id_tipo == 2)
-        <!-- <a class="criar_solicitacao" href="{{ url('/usuarios/' . $usuario->id . 'criar_solicitacao') }}">Criar Solicitação</a> -->
-        <form action="{{ route('criar_solicitacao', ['id' => $usuario->id]) }}" method="POST">
-            <button type="submit">Criar Solicitação</button>
-            @csrf
-            @method('POST')
-        </form>
+        <a class="criar_solicitacao" href="/criar_solicitacao">Criar Solicitação</a>
         @endif
 
         <h1>Lista de Solicitações</h1>
