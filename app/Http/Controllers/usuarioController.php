@@ -72,6 +72,7 @@ class usuarioController extends Controller
 
     public function configView($id)
     {
+        $usuarios = usuario::all();
         $usuarios = usuario::where('id', $id)->first();
 
         return view('config', ['usuarios'=>$usuarios]);
@@ -93,6 +94,20 @@ class usuarioController extends Controller
         $data = [
             'senha' => $request->senha,
             'senha1' => $request->senha1,
+        ];
+
+        usuario::where('id',$id)->update($data);
+
+        return redirect('home');
+    }
+
+    public function atualizarUsuario3(Request $request, $id)
+    {
+        $data = [
+            'nome' => $request->nome,
+            'cpf' => $request->cpf,
+            'telefone' => $request->telefone,
+            'endereco' => $request->endereco,
         ];
 
         usuario::where('id',$id)->update($data);
