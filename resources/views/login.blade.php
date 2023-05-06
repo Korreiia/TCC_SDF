@@ -9,7 +9,7 @@
     <div class="container">
       <div class="login">
 
-        <img class="logo" src="img/doa_tec_side.png" alt="logo">
+        <img class="logo" src="img/logoR.png" alt="logo">
             
             @if ($errors->any())
               <div class="alert alert-danger">

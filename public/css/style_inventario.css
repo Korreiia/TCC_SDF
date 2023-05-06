@@ -13,7 +13,7 @@
     background-color:  #6eb8f5;
 }
 
-th{
+.th{
     font-family: Arial, Helvetica, sans-serif;
     background: #f8f8f8;
     border-radius: 8px; 
@@ -22,8 +22,8 @@ th{
     width: 25%;
     
 }
-td{
-    width: 75%;
+.tr{
+    width: 25%;
 }
 
 .table{
@@ -35,6 +35,8 @@ td{
     margin-right: auto;
     border-collapse: separate;
     border-spacing: 10px;
+    width: 25%;
+
 }
 
 .container{
@@ -53,4 +55,14 @@ h1{
     background:#6eb8f5;
     width:5.9px;
     height: 9px;
+  }
+  .layout2{
+    background-color:#d0f0c0;
+    border-radius:0px 0px 10px 10px;
+    width:70%;
+    margin: auto; 
+    height:598px;
+    justify-content: center;
+    box-shadow:0px 4px 10px #888; 
+    
   }

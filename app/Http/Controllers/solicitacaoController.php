@@ -18,53 +18,30 @@ class solicitacaoController extends Controller
 
     public function soliciView()
     {
+        $usuario = Session::get("login_usuario");
         $solicitacaos = solicitacao::all();
-        $usuarios = usuario::all();
-        
-        return view('solicitacao', ['solicitacaos' => $solicitacaos, 'usuarios' => $usuarios]);
+        $usuario->solicitacaos;
+    
+        return view('solicitacao', ['solicitacaos' => $solicitacaos]);
     }
 
-    public function criar_soliciView($id)
+    public function criar_soliciView()
     {
-        $usuario = usuario::find($id);
+        $usuario = Session::get("login_usuario");
 
         if(!$usuario)
         {
-            return redirect()->route('solicitacao');
+            return redirect('/');
         }
 
-        return view('criar_solicitacao', compact('usuario'));
+        return view('criar_solicitacao', ['usuario' => $usuario]);
     }
 
-    public function criarSolicitacao(Request $request, $id)
+    public function criarSolicitacao(Request $request)
     {
-        // $request->validate([
-        //     'descpedido' => 'required',
-        //     'quantidade' => 'numeric'
-        // ]);
+        solicitacao::create($request->all());
 
-        // solicitacao::create($request->all());
-
-        // return redirect('solicitacao');
-
-        $usuario = Usuario::find($id);
-
-        if (!$usuario) {
-            return redirect()->route('solicitacao');
-        }
-    
-        $request->validate([
-            'descpedido' => 'required',
-            'quantidade' => 'numeric'
-        ]);
-    
-        $solicitacao = new Solicitacao();
-        $solicitacao->id_usuario = $usuario->id;
-        $solicitacao->descpedido = $request->input('descpedido');
-        $solicitacao->quantidade = $request->input('quantidade');
-        $solicitacao->save();
-    
-        return redirect()->route('criar_solicitacao', ['id' => $usuario->id]);
+        return redirect('solicitacao');
     }
 
     public function editarSolicitacao($id)
