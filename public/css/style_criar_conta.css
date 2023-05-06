@@ -25,7 +25,7 @@ body {
     margin: 20px;
   }
   
-  input[type=email], input[type=text], input[type=password] {
+  input[type=email], input[type="number"], input[type=text], input[type=password] {
     padding: 10px;
     margin-bottom: 20px;
     border: none;
@@ -51,11 +51,7 @@ body {
   }
 
   button[type=submit]:hover{
-<<<<<<< HEAD
     background-color: #286b09;
-=======
-    background-color: #4bbb1798;
->>>>>>> 492df8dddfd1de41f6d549604f3508e87222cb87
   }
   
   .logo{
