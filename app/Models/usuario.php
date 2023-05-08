@@ -25,6 +25,6 @@ class usuario extends Model
 
     public function solicitacao(): HasMany
     {
-        return $this->hasMany(solicitacao::class, 'id_usuario');
+        return $this->hasMany(solicitacao::class);
     }
 }

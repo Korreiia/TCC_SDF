@@ -15,8 +15,7 @@
             <input type="date" name="dataentrada" value="{{ $inventarios->dataentrada }}" required>
 
             <h1>Descrição</h1>
-            <!-- <input type="text" name="descricao" value="{{ $inventarios->descricao }}" placeholder="Campo Obrigatório" required> -->
-            <textarea name="descricao" value="{{ $inventarios->descricao }}" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+            <textarea name="descricao" cols="40" rows="5" placeholder="Campo Obrigatório" required>{{ $inventarios->descricao }}</textarea>
 
             <h1>Estado de Conservação</h1>
             <input type="text" name="estadoconservacao" value="{{ $inventarios->estadoconservacao }}">

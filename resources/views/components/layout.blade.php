@@ -29,8 +29,12 @@
 
             <!-- <div class="icon"><a href=""> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div> -->
 
-            @if($usuario != null)
+            @if(!empty($usuario) && $usuario->id_tipo == 2)
             <div class="icon"><a href="/solicitacao"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
+            @endif
+
+            @if(!empty($usuario) && $usuario->id_tipo == 1)
+            <div class="icon"><a href="/solicitacaoADM"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
             @endif
 
             <!-- <div class="icon"><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div> -->

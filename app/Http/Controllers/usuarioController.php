@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\usuario;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -39,9 +37,8 @@ class usuarioController extends Controller
 
     public function fazer_logout(Request $request)
     {
-        // Session::get('login_usuario');
         $request->session()->forget('login_usuario');
-        return redirect('home');
+        return redirect('login');
     }
 
     public function criarView()

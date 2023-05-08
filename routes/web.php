@@ -46,9 +46,9 @@ Route::delete('/{id}/deletar_inventario', [inventarioController::class, 'deletar
 
 //
 Route::get('/solicitacao', [solicitacaoController::class, 'soliciView']);
+Route::get('/solicitacaoADM', [solicitacaoController::class, 'soliciadmView']);
 Route::get('/criar_solicitacao', [solicitacaoController::class, 'criar_soliciView']);
 Route::post('/usuarios/{id}/criar_solicitacao', [solicitacaoController::class, 'criarSolicitacao'])->name('criar_solicitacao');
-Route::get('/{id}/editar_solicitacao', [solicitacaoController::class, 'editarSolicitacao'])->where('id', '[0-9]+')->name('editarSolicitacao');
-Route::put('/solicitacoes/atualizar/{id}', [solicitacaoController::class, 'atualizarSolicitacao'])->where('id', '[0-9]+')->name('atualizarSolicitacao');
+Route::get('/{id}/ver_solicitacao', [solicitacaoController::class, 'verSolicitacao'])->where('id', '[0-9]+')->name('verSolicitacao');
 Route::delete('/{id}/deletar_solicitacao', [solicitacaoController::class, 'deletarSolicitacao'])->where('id', '[0-9]+')->name('deletarSolicitacao');
 //
