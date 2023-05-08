@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('solicitacaos', function (Blueprint $table) {
             $table->id();
             $table->string('descpedido', 1000);
-            $table->string('quantidade', 100);
+            $table->string('quantidade', 1000);
             $table->timestamps();
         });
 
