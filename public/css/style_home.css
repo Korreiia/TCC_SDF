@@ -1,8 +1,8 @@
 .logoh1{
     display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+    margin-left:auto;
+    margin-right:300px;
+    width:20%;
     height:120px;
 }
 
@@ -12,10 +12,21 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
-  
-}   
-
+  width: 80%;
+  border-radius:5px;
+}
+.login{
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  border-radius:5px;
+}
+a:hover{
+  text-shadow:0px 0px 10px#888;
+}
 ::-webkit-scrollbar{
   width:5.9px;
   height: 9px;
@@ -29,6 +40,8 @@
 }
 
 .layout2{
+    background-size:contain;
+    background-attachment:fixed;
     background-color:#d0f0c0;
     border-radius:0px 0px 10px 10px;
     width:70%;

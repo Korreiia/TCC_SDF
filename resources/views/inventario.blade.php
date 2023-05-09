@@ -10,7 +10,7 @@
 <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa">
 </a>
     </div> 
-</div>
+
         <h1>Inventario</h1>
                 <table class="table">
                     
@@ -50,7 +50,7 @@
                             </th>
                         </tr>
     </div>
-            @endforeach
+               @endforeach
             </tbody>
 
         </table>

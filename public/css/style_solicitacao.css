@@ -3,7 +3,15 @@
     flex-direction: column;
     height: 95vh;
   }
-  
+  .layout2{
+    background-color:#d0f0c0;
+    border-radius:0px 0px 10px 10px;
+    width:70%;
+    margin: auto; 
+    height:598px;
+    justify-content: center;
+    box-shadow:0px 4px 10px #888;
+  }
   .criar_solicitacao{
     padding-left: 2%;
     padding-right:3%;
