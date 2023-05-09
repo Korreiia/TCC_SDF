@@ -43,10 +43,12 @@ class solicitacaoController extends Controller
     public function criar_soliciView()
     {
         $usuario = Session::get("login_usuario");
-
-        if(!$usuario)
+       
+ 
+        if($usuario != "2") //===============================================================================
         {
-            return redirect('/');
+           dd($usuario);
+           return redirect('/');
         }
 
         return view('criar_solicitacao', ['usuario' => $usuario]);
@@ -74,9 +76,12 @@ class solicitacaoController extends Controller
 
     public function deletarSolicitacao($id)
     {
-        if ($this->restringirAcesso()) {
-            return redirect('/');
-        }
+        // $usuario = Session::get("login_usuario");
+
+        // if(!$usuario) 
+        // {
+        //     return redirect('/');
+        // }
 
         solicitacao::where('id',$id)->delete();
 

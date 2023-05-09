@@ -16,7 +16,10 @@ class inventarioController extends Controller
 
     public function inventarioView()
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+        
+        if($usuario == "1")
+        {
             return redirect('/');
         }
 
@@ -27,19 +30,26 @@ class inventarioController extends Controller
 
     public function criarinventarioView()
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+        
+        if($usuario == "2")
+        {
             return redirect('/');
         }
+        
 
         return view('criar_inventario');
     }
 
     public function criarInventario(Request $request)
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+        
+        if(!$usuario)
+        {
             return redirect('/');
         }
-
+        
         inventario::create($request->all());
 
         return redirect('inventario');
@@ -47,9 +57,13 @@ class inventarioController extends Controller
 
     public function editarInventario($id)
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+        
+        if(!$usuario)
+        {
             return redirect('/');
         }
+        
 
         $inventarios = inventario::where('id', $id)->first();
 
@@ -63,9 +77,13 @@ class inventarioController extends Controller
 
     public function atualizarInventario(Request $request, $id)
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+        
+        if(!$usuario)
+        {
             return redirect('/');
         }
+        
 
         $data = [
             'estadofuncionamento' => $request->estadofuncionamento,
@@ -82,9 +100,13 @@ class inventarioController extends Controller
 
     public function deletarInventario($id)
     {
-        if ($this->restringirAcesso()) {
+        $usuario = Session::get("login_usuario");
+
+        if(!$usuario)
+        {
             return redirect('/');
         }
+        
 
         inventario::where('id',$id)->delete();
 
