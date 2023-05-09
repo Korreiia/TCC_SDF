@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Session;
 
 class usuarioController extends Controller
 {
+    public static function restringirAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        return ($usuarioLogado->id_tipo != 1);
+    }
+    
     public function loginView()
     {
         return view('login');
@@ -69,8 +74,14 @@ class usuarioController extends Controller
 
     public function configView($id)
     {
+        $usuario = Session::get("login_usuario");
         $usuarios = usuario::all();
         $usuarios = usuario::where('id', $id)->first();
+         
+        if(!$usuario) 
+        {
+            return redirect('/');
+        }
 
         return view('config', ['usuarios'=>$usuarios]);
     }
