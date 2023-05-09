@@ -4,7 +4,6 @@
     <div class="layout2">
         <a class="criar_cadastro" href="/criar_inventario">Criar novo cadastro</a>
         
-<<<<<<< HEAD
 <div class="search-box">
 <input type="text" class="search-txt" placeholder="Pesquisar">
 <a href="#" class="search-btn">
@@ -12,14 +11,6 @@
 </a>
     </div> 
 
-=======
-    <div class="search-box">
-    <input type="text" class="search-txt" placeholder="Pesquisar">
-    <a href="#" class="search-btn"> <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa"> </a>
-    </div>
-    
-</div>
->>>>>>> f9995b52a516025e20f7ffbf12eca38885a2216a
         <h1>Inventario</h1>
                 <table class="table">
                     
