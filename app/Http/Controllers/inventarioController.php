@@ -11,20 +11,21 @@ class inventarioController extends Controller
 {
     public static function restringirAcesso() {
         $usuarioLogado = Session::get("login_usuario");
-        return ($usuarioLogado->id_tipo != 1);
+        return ($usuarioLogado->id_tipo == 2);
+    }
+
+    public static function restringirnullAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        return (!$usuarioLogado);
     }
 
     public function inventarioView()
     {
-        $usuario = Session::get("login_usuario");
-        
-        if(!$usuario)
-        {
-           return redirect('/');
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
         }
 
-        if($usuario->id_tipo == 2)
-        {
+        if ($this->restringirAcesso()) {
             return redirect('/');
         }
 
@@ -35,19 +36,14 @@ class inventarioController extends Controller
 
     public function criarinventarioView()
     {
-        $usuario = Session::get("login_usuario");
-        
-        if(!$usuario)
-        {
-           return redirect('/');
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
         }
 
-        if($usuario->id_tipo == 2)
-        {
+        if ($this->restringirAcesso()) {
             return redirect('/');
         }
         
-
         return view('criar_inventario');
     }
 
@@ -60,15 +56,11 @@ class inventarioController extends Controller
 
     public function editarInventario($id)
     {
-        $usuario = Session::get("login_usuario");
-        
-        if(!$usuario)
-        {
-           return redirect('/');
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
         }
 
-        if($usuario->id_tipo == 2)
-        {
+        if ($this->restringirAcesso()) {
             return redirect('/');
         }
 
