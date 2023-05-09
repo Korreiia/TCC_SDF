@@ -73,11 +73,11 @@ h1{
 }
 .search-box{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 27%;
+    left: 75%;
     transform: translate(-50%,-50%);
-    background: #0a1b2d;
-    height: 40px;
+    background: #ffffff;
+    height: 25px;
     padding: 10px;
     border-radius: 40px;
     display: flex;
@@ -89,32 +89,11 @@ h1{
     background: none;
     outline: none;
     padding: 0;
-    color:#fbfdff ;
+    color:#0b0c0c ;
     font-size: 16px;
     line-height: 40px;
-    width: 0;
-    transition: .5s;
 }
-::-webkit-input-placeholder{
-    color: #255181;
-}
-.search-btn{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #0a1b2d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s ;
-} 
-.search-box:hover>.search-txt{
-    width:240px ;
-    padding: 0 6px;
-}
-.search-box:hover> .search-btn{
-    background: #fbfdff;
-}
+    
 .lupa{
     height: 20px;
     width: 20px;
