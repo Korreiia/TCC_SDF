@@ -75,10 +75,9 @@ class usuarioController extends Controller
     public function configView($id)
     {
         $usuario = Session::get("login_usuario");
-        $usuarios = usuario::all();
-        $usuarios = usuario::where('id', $id)->first();
+        $usuarios = usuario::find($id);
          
-        if(!$usuario) 
+        if(!$usuario || $usuario->id != $id) 
         {
             return redirect('/');
         }
