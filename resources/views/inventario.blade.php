@@ -3,7 +3,14 @@
 <link rel="stylesheet" href="/css/style_inventario.css">
     <div class="layout2">
         <a class="criar_cadastro" href="/criar_inventario">Criar novo cadastro</a>
-
+        
+<div class="search-box">
+<input type="text" class="search-txt" placeholder="Pesquisar">
+<a href="#" class="search-btn">
+<img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa">
+</a>
+    </div> 
+</div>
         <h1>Inventario</h1>
                 <table class="table">
                     
