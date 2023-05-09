@@ -26,21 +26,17 @@ class solicitacaoController extends Controller
 
     public function soliciView()
     {
-        // if ($this->restringirnullAcesso()) {
-        //     return redirect('/');
-        // }
-
-        // if ($this->restringiradmAcesso()) {
-        //     return redirect('/');
-        // }
-
         $usuario = Session::get("login_usuario");
-        $solicitacaos = solicitacao::where('id_usuario', $usuario->id)->get();
         
-        if(!$usuario)
-        {
+        if ($this->restringirnullAcesso()) {
             return redirect('/');
         }
+
+        if ($this->restringiradmAcesso()) {
+            return redirect('/');
+        }
+
+        $solicitacaos = solicitacao::where('id_usuario', $usuario->id)->get();
 
         return view('solicitacao', ['solicitacaos' => $solicitacaos]);
     }
@@ -62,27 +58,16 @@ class solicitacaoController extends Controller
 
     public function criar_soliciView()
     {
-        // if ($this->restringirnullAcesso()) {
-        //     return redirect('/');
-        // }
-
-        // if ($this->restringiradmAcesso()) {
-        //     return redirect('/');
-        // }
-
         $usuario = Session::get("login_usuario");
-    
-        if(!$usuario)
-        {
-           return redirect('/');
-        }
 
-        if($usuario->id_tipo == 1)
-        {
+        if ($this->restringirnullAcesso()) {
             return redirect('/');
         }
 
-        //a variavel $usuario é utilizada para pegar o id da sessão atual para fazer a solicitacao
+        if ($this->restringiradmAcesso()) {
+            return redirect('/');
+        }
+
 
         return view('criar_solicitacao', ['usuario' => $usuario]);
     }
@@ -100,9 +85,22 @@ class solicitacaoController extends Controller
             return redirect('/');
         }
 
-        // qualquer usuario consegue ver as demais solicitaçoes, só trocando o id da url
-        
-        $solicitacao = Solicitacao::with('usuario')->findOrFail($id);
+        $usuario = Session::get("login_usuario");
+
+        if($usuario->id_tipo == 2)
+        {
+            $solicitacao = solicitacao::where('id_usuario', $usuario->id)->where('id', $id)->first();
+        }
+
+        if($usuario->id_tipo == 1)
+        {
+            $solicitacao = solicitacao::where('id', $id)->first();
+        }
+
+        if($solicitacao == null)
+        {
+            return redirect('/');
+        }
         
         return view('ver_solicitacao', ['solicitacao' => $solicitacao]);
     }
