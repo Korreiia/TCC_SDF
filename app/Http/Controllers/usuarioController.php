@@ -130,4 +130,12 @@ class usuarioController extends Controller
     {
         return view('saibamais');
     }
+
+    public function procurar(Request $request)
+    {
+        $pesquisar = $request->input('pesquisar');
+        $results = [];
+
+        return redirect('inventario', compact('results'));
+    }
 }
