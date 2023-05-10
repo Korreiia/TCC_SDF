@@ -13,18 +13,6 @@ h1{
     display: flex;
     align-items: center;
 }
-  
-::-webkit-scrollbar{
-  width:5.9px;
-  height: 9px;
-}
-::-webkit-scrollbar-thumb{
-  border-radius:30px;
-  background:#6eb8f5;
-  width:5.9px;
-  height: 9px;
-}
-
   .dados{
     border-radius:10px;
     box-shadow:0px 0px 10px#888;
