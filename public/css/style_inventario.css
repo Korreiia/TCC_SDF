@@ -49,29 +49,26 @@ h1{
 }
 
 ::-webkit-scrollbar{
-  width:5.9px;
-  height: 9px;
-}
-  
-::-webkit-scrollbar-thumb{
-  border-radius:30px;
-  background:#6eb8f5;
-  width:5.9px;
-  height: 9px;
-}
-
-.layout2{
-  background-color:#d0f0c0;
-  border-radius:0px 0px 10px 10px;
-  width:70%;
-  margin: auto; 
-  height:598px;
-  justify-content: center;
-  box-shadow:0px 4px 10px #888; 
-  
-}
-
-body{
+    width:5.9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#4cd87b;
+    width:5.9px;
+    height: 9px;
+  }
+  .layout2{
+    background-color:#d0f0c0;
+    border-radius:0px 0px 10px 10px;
+    width:70%;
+    margin: auto; 
+    height:598px;
+    justify-content: center;
+    box-shadow:0px 4px 10px #888; 
+    
+  }
+  body{
     margin: 0;
     height: 100vh;
     width: 100vw;
