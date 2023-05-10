@@ -15,7 +15,7 @@
         </thead>
         <tbody>
             @if(!empty($solicitacaos))
-        @foreach($solicitacaos as $solicitacao)
+             @foreach($solicitacaos as $solicitacao)
             <tr>
                 <th>{{ $solicitacao ->id}}</th>
                 <th>{{ $solicitacao->descpedido }}</th>
@@ -25,8 +25,8 @@
                     <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}">Ver mais</a>
                 </th>
             </tr>
-        @endforeach
-        @endif
+             @endforeach
+            @endif
         </tbody>
     </table>
     
