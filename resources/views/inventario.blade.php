@@ -5,7 +5,7 @@
 
         <a class="criar_cadastro" href="/criar_inventario">Criar novo cadastro</a>
         
-        <form class="search-box" action="/procurar" method="post">
+        <form class="search-box" action="/procurarInventario" method="post">
             @csrf
             <input type="text" class="search-txt" name="pesquisar" placeholder="Pesquisar">
             <button type="submit"> <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa"> </button>
@@ -28,7 +28,7 @@
                     </thead>
 
                     <tbody>
-                    @foreach($inventarios as $inventario)
+                    @foreach(isset($results) ? $results : $inventarios as $inventario)
                         <tr class="tr">
                             <th>{{ $inventario ->id }}</th>
                             <th>{{ $inventario ->estadofuncionamento }}</th>
@@ -50,7 +50,7 @@
                             </th>
                         </tr>
     </div>
-               @endforeach
+                    @endforeach
             </tbody>
 
         </table>

@@ -35,7 +35,7 @@ class solicitacaoController extends Controller
         if ($this->restringiradmAcesso()) {
             return redirect('/');
         }
-
+        
         $solicitacaos = solicitacao::where('id_usuario', $usuario->id)->get();
 
         return view('solicitacao', ['solicitacaos' => $solicitacaos]);
@@ -53,7 +53,7 @@ class solicitacaoController extends Controller
 
         $solicitacaos = Solicitacao::with('usuario')->get();
 
-        return view('solicitacaoADM', ['solicitacaos' => $solicitacaos]);
+        return view('solicitacaoADM', compact('solicitacaos'), ['solicitacaos' => $solicitacaos]);
     }
 
     public function criar_soliciView()

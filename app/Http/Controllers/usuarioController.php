@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\inventario;
+use App\Models\solicitacao;
 use Illuminate\Http\Request;
 use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
@@ -132,21 +133,60 @@ class usuarioController extends Controller
         return view('saibamais');
     }
 
-    public function procurar(Request $request)
+    public function procurarInventario(Request $request)
     {
         $pesquisar = $request->input('pesquisar');
         $results = [];
 
-        if (!empty($pesquisar)) {
-            $results = inventario::where('id', 'like', '%'.$pesquisar.'%')
-                ->orWhere('estadofuncionamento', 'like', '%'.$pesquisar.'%')
+        if (is_numeric($pesquisar))
+        {
+            $results = inventario::where('id', $pesquisar)->get();
+            $results = inventario::where('quantidade', 'like', '%'.$pesquisar.'%')->get();
+        }
+
+        else
+        {
+            $results = inventario::where('estadofuncionamento', 'like', '%'.$pesquisar.'%')
                 ->orWhere('dataentrada', 'like', '%'.$pesquisar.'%')
                 ->orWhere('descricao', 'like', '%'.$pesquisar.'%')
                 ->orWhere('estadoconservacao', 'like', '%'.$pesquisar.'%')
-                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
                 ->get();
         }
 
         return view('inventario', compact('results'));
+    }
+
+    public function procurarSolicitacao(Request $request)
+    {
+        $pesquisar = $request->input('pesquisar');
+        $results = [];
+
+        if (is_numeric($pesquisar))
+        {
+            $results = solicitacao::where('id', $pesquisar)->get();
+            $results = solicitacao::where('quantidade', 'like', '%'.$pesquisar.'%')
+                ->orWhere('created_at', 'like', '%'.$pesquisar.'%')
+                ->get();
+
+            $resultsUsuario = usuario::where('telefone', 'like', '%'.$pesquisar.'%')
+                ->orWhere('cpf', 'like', '%'.$pesquisar.'%')
+                ->get();
+
+            $results = $results->merge($resultsUsuario);
+        }
+
+        else
+        {
+            $results = usuario::where('nome', 'like', '%'.$pesquisar.'%')
+                ->orWhere('endereco', 'like', '%'.$pesquisar.'%')
+                ->orWhere('email', 'like', '%'.$pesquisar.'%')
+                ->get();
+
+            $resultsSolicitacao = solicitacao::where('descpedido', 'like', '%'.$pesquisar.'%')->get();
+
+            $results = $results->merge($resultsSolicitacao);
+        }
+
+        return view('solicitacaoADM', compact('results'));
     }
 }

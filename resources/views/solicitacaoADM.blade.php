@@ -4,7 +4,7 @@
         <h1>Lista de Solicitações</h1>
         <table class="table">
 
-            <form class="search-box" action="/procurar" method="post">
+            <form class="search-box" action="/procurarSolicitacao" method="post">
                 @csrf
                 <input type="text" class="search-txt" name="pesquisar" placeholder="Pesquisar">
                 <button type="submit"> <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa"> </button>
@@ -13,7 +13,7 @@
             <thead>
              <br>
                 <tr>
-                    <th scope="col">Numero do pedido</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Telefone/Celular</th>
                     <th scope="col">Endereço</th>
@@ -27,8 +27,7 @@
             </thead>
 
             <tbody>
-                @if(!empty($solicitacaos))
-                 @foreach($solicitacaos as $solicitacao)
+                @foreach(isset($results) ? $results : $solicitacaos as $solicitacao)
                 <tr>
                     <th>{{ $solicitacao ->id}}</th>
                     <th>{{ $solicitacao->usuario->nome }}</th>
@@ -49,8 +48,7 @@
                         </form>
                     </th>
                 </tr>
-                 @endforeach
-                @endif
+                @endforeach
             </tbody>
 
         </table>
