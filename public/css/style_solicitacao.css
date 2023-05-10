@@ -70,7 +70,7 @@ th{
 
 .table{
   height:18vh;
-  background:linear-gradient(#e8f5ff,#c3e3fd,#9acef8,#6eb8f5,#2196f3);
+  background:linear-gradient( #BBE06C,#7CB855,#469B4C,#3C6E57);
   box-shadow:0px 0px 10px #888888;
   border-radius:10px;
   margin-left:auto;
@@ -96,4 +96,36 @@ th{
 }
 .dados:hover{
   background:#e0e0e0;
+}
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.search-box{
+  position: absolute;
+  top: 27%;
+  left: 75%;
+  transform: translate(-50%,-50%);
+  background: #ffffff;
+  height: 25px;
+  padding: 10px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-txt{
+  border:none ;
+  background: none;
+  outline: none;
+  padding: 0;
+  color:#0b0c0c ;
+  font-size: 16px;
+  line-height: 40px;
+}
+  
+.lupa{
+  height: 20px;
+  width: 20px;
 }
