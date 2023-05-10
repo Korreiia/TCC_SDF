@@ -34,7 +34,7 @@ body {
     transition: 0.3s ;
   }
 
-  input[type=email]:hover, input[type=text]:hover, input[type=password]:hover {
+  input[type=email]:hover,input[type=text]:hover,input[type=password]:hover,input[type=number]:hover {
     background-color: #e0e0e0;
     transition: 0.3 ease;
   }

@@ -1,5 +1,8 @@
 body{
     background:linear-gradient( #EAE7B1,#A6BB8D,#61876E,#3C6255 );
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:contain;    
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
     

@@ -76,7 +76,7 @@
 
   a:hover{
     color:#008CBA;
-    background-color: rgb(224, 224, 224);
+    background-color: #e0e0e0;
   }
   ::-webkit-scrollbar{
     width:5.9px;

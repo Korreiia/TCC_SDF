@@ -4,12 +4,6 @@
     <h1>Lista de Solicitações</h1>
     <table class="table">
         <thead>
-        <div class="search-box">
- <input type="text" class="search-txt" placeholder="Pesquisar">
- <a href="#" class="search-btn">
- <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa">
- </a>
-    </div> 
         <br>
             <tr>
                 <th scope="col">Numero do pedido</th>
