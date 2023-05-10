@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\inventario;
 use Illuminate\Http\Request;
 use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
@@ -136,6 +137,16 @@ class usuarioController extends Controller
         $pesquisar = $request->input('pesquisar');
         $results = [];
 
-        return redirect('inventario', compact('results'));
+        if (!empty($pesquisar)) {
+            $results = inventario::where('id', 'like', '%'.$pesquisar.'%')
+                ->orWhere('estadofuncionamento', 'like', '%'.$pesquisar.'%')
+                ->orWhere('dataentrada', 'like', '%'.$pesquisar.'%')
+                ->orWhere('descricao', 'like', '%'.$pesquisar.'%')
+                ->orWhere('estadoconservacao', 'like', '%'.$pesquisar.'%')
+                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
+                ->get();
+        }
+
+        return view('inventario', compact('results'));
     }
 }
