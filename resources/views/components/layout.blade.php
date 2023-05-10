@@ -44,7 +44,11 @@
             <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
 
-                @if($usuario == null)
+            @if(!empty($usuario))
+                <th>Bem Vindo:{{ $usuario ->nome}}</th>
+            @endif
+
+            @if($usuario == null)
             <form action="/login">
                 <input class="bnt_login" type="submit" value="Login">
             </form>
