@@ -44,22 +44,32 @@
             <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
 
-            @if(!empty($usuario))
-                <th>Bem Vindo:{{ $usuario ->nome}}</th>
-            @endif
+            <div class="right"> <!-- lado do botão de login/logout e 'bem-vindo' -->
 
-            @if($usuario == null)
-            <form action="/login">
-                <input class="bnt_login" type="submit" value="Login">
-            </form>
-            @endif
+                <div class="bem_vindo">
+                    @if(!empty($usuario))
+                        <th>Bem Vindo:{{ $usuario ->nome}}</th>
+                    @endif
+                </div>
 
-            @if($usuario != null)
-            <form action="{{ route('fazer_logout') }}" method="post">
-                @csrf
-                <input class="bnt_login" type="submit" value="Logout">
-            </form>
-            @endif
+                <div class="login">
+                    
+                    @if($usuario == null)
+                    <form action="/login">
+                        <input class="bnt_login" type="submit" value="Login">
+                    </form>
+                    @endif
+
+                    @if($usuario != null)
+                    <form action="{{ route('fazer_logout') }}" method="post">
+                        @csrf
+                        <input class="bnt_login" type="submit" value="Logout">
+                    </form>
+                    @endif
+
+                </div>
+
+            </div>
 
         </nav>
 

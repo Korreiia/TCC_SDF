@@ -64,7 +64,7 @@ a:hover{
 .bnt_login{
     border:none;
     box-shadow:0px 0px 10px #888;
-    background:#a0e07f;/* <---- cor aqui ó */
+    background:#BBE06C;/* <---- cor aqui ó */
     border-radius:4px;
     padding:5px;
     padding-left:15px;
@@ -73,9 +73,9 @@ a:hover{
     transition:0.3s ease;
 }
 .bnt_login:hover{
-    background:#4cbb17 ;
-    padding-left:8px;
-    padding-right:8px;
+    background:#4cbb17;
+    color:#fff;
+    box-shadow:0px 0px 2px #fff;
 }
 .layout{
     background-color:#d0f0c0;
@@ -87,4 +87,14 @@ a:hover{
     flex-direction: row;
     justify-content: center;
 }
-    
+.bem_vindo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display:flex;
+    justify-content:right;
+}  
+.right{
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
