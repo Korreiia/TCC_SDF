@@ -163,16 +163,13 @@ class usuarioController extends Controller
 
         if (is_numeric($pesquisar))
         {
-            $results = solicitacao::where('id', $pesquisar)->get();
-            $results = solicitacao::where('quantidade', 'like', '%'.$pesquisar.'%')
-                ->orWhere('created_at', 'like', '%'.$pesquisar.'%')
+            $results = solicitacao::where('id', $pesquisar)
+                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
+                ->orWhereHas('usuario', function ($query) use ($pesquisar) {
+                    $query->where('telefone', 'like', '%'.$pesquisar.'%')
+                        ->orWhere('cpf', 'like', '%'.$pesquisar.'%');
+                })
                 ->get();
-
-            $resultsUsuario = usuario::where('telefone', 'like', '%'.$pesquisar.'%')
-                ->orWhere('cpf', 'like', '%'.$pesquisar.'%')
-                ->get();
-
-            $results = $results->merge($resultsUsuario);
         }
 
         else
@@ -180,11 +177,11 @@ class usuarioController extends Controller
             $results = usuario::where('nome', 'like', '%'.$pesquisar.'%')
                 ->orWhere('endereco', 'like', '%'.$pesquisar.'%')
                 ->orWhere('email', 'like', '%'.$pesquisar.'%')
+                ->orWhereHas('solicitacao', function ($query) use ($pesquisar) {
+                    $query->where('descpedido', 'like', '%'.$pesquisar.'%')
+                        ->orWhere('created_at', 'like', '%'.$pesquisar.'%');
+                })
                 ->get();
-
-            $resultsSolicitacao = solicitacao::where('descpedido', 'like', '%'.$pesquisar.'%')->get();
-
-            $results = $results->merge($resultsSolicitacao);
         }
 
         return view('solicitacaoADM', compact('results'));

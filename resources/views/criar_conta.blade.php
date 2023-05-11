@@ -21,7 +21,7 @@
             @endif
 
         <form action="/criar_conta" method="post">
-            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="nome" placeholder="Nome Completo" required>
             <input type="number" name="cpf" placeholder="CPF" required>
             <input type="number" name="telefone" placeholder="Telefone/Celular" required>
             <input type="text" name="endereco" placeholder="Endereço" required>
