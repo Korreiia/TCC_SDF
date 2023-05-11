@@ -24,9 +24,9 @@ class usuario extends Model
             'admin',
     ];
 
-    public function solicitacao(): HasMany
+    public function solicitacoes(): HasMany
     {
-        return $this->hasMany(solicitacao::class);
+        return $this->hasMany(solicitacao::class, 'id_usuario', 'id');
     }
 
     public function tipo_de_Usuario(): BelongsTo

@@ -18,6 +18,6 @@ class solicitacao extends Model
 
     public function usuario(): BelongsTo
     {
-        return $this->belongsTo(usuario::class, 'id_usuario');
+        return $this->belongsTo(usuario::class, 'id_usuario', 'id');
     }
 }
