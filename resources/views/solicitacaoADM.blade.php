@@ -1,6 +1,7 @@
 <x-layout>
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
+    <div class="layout2">
         <h1>Lista de Solicitações</h1>
         <table class="table">
 
@@ -52,5 +53,5 @@
             </tbody>
 
         </table>
-        
+    </div>    
 </x-layout>
