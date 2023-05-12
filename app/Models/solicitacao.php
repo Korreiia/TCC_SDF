@@ -10,6 +10,8 @@ class solicitacao extends Model
 {
     use HasFactory;
 
+    protected $table = 'solicitacaos';
+    
     protected $fillable = [
         'descpedido',
         'quantidade',

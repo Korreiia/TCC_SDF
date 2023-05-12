@@ -1,15 +1,27 @@
-.logoh1{
-    display:block;
-    margin-left:auto;
-    margin-right:300px;
-    width:20%;
-    height:120px;
+.layout2 {
+  background-color:#d0f0c0;
+  border-radius:0px 0px 10px 10px;
+  box-shadow:0px 4px 10px #888;
+  width:70%;
+  margin: auto;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-.saibamais{
-  font-weight: bold;
-  text-align: left;
+.logoh1{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 20%;
+height: 150px;
+}
+.resumo{
+  text-align: justify;
+  
+}
+.saibamais1{
   display: block;
+<<<<<<< HEAD
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -40,4 +52,10 @@ a:hover{
     justify-content: center;
     height:598px;
     box-shadow:0px 4px 10px #888;
+=======
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    height: 50%;
+>>>>>>> 40d16c5c72307c976f74ae768ad4e9506c7c3fc5
 }

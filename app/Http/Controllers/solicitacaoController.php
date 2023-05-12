@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\solicitacao;
+use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -112,4 +113,11 @@ class solicitacaoController extends Controller
         return redirect('solicitacaoADM');
     }
 
+    public function termo_de_doacao($id_solicitacao)
+    {
+        $solicitacao = solicitacao::find($id_solicitacao);
+        $usuario = usuario::find($solicitacao->id_usuario);
+
+        return view('termo_doacao', ['solicitacao' => $solicitacao, 'usuario' => $usuario]);
+    }
 }

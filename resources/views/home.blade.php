@@ -2,16 +2,17 @@
         <link rel="stylesheet" href="/css/style_home.css">
         
         <div class="layout2"> <!--conteudo-->  
-            {{-- <img class="logoh1" src="img/logoR.png" alt="logo">   --}}
-            <div>
+            {{-- <img class="logoh2" src="img/logoR.png" alt="logo">   --}}
+            <div class="botoes">
                 <a href="saibamais" class="saibamais">Saiba Mais</a>
             
                 <br>
-            
                 <a href="login" class="login">Faça uma conta</a>
             </div>
 
-            <pre>
+            <a href="saibamais" class="saibamais1">Saiba Mais</a>
+
+            <pre class="resumo">
 O ReciclaEtec é um projeto desenvolvido e coordenado pela Etec, 
 que tem como principal objetivo receber doaçoes de peças e equipamentos velhos,
 com o intuito de reclicar esses quipamentos,
