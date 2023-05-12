@@ -1,0 +1,99 @@
+.logos-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo1{
+  width: 25%;
+  height: 150px;
+  margin: 0 10px;
+}
+  
+.logo2{
+    width: 15%;
+    height: 150px;
+    margin: 0 10px; 
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    color: red;
+}
+
+.pre1{
+    text-align: center;
+    font-size: 20px;
+}
+
+h3{
+    position: relative;
+    left: 5%;
+}
+
+.pre2{
+    position: relative;
+    left: 5%;
+    font-size: 15px;
+}
+
+.p1{
+    text-align: center;
+    font-size: 15px;
+}
+
+.assifabio{
+    width: 15%;
+    height: 90px;
+    margin: 0 10px;
+    position: relative;
+    left: 10%;
+}
+
+.p2{
+    position: relative;
+    left: 10%;
+    font-size: 15px;
+}
+
+.pre3{
+    position: relative;
+    left: 10%;
+    font-size: 15px;
+}
+
+.p3{
+    position: relative;
+    left: 75%;
+    bottom: 260px;
+    font-size: 15px;
+}
+
+.pre4{
+    position: relative;
+    left: 75%;
+    bottom: 120px;
+    font-size: 15px;
+}
+
+.botao{
+    display: block;
+    margin: auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+.urlsite{
+    text-align: center;
+    font-size: 15px;
+}
+
+.rodape{
+    text-align: center;
+    font-size: 15px;
+}

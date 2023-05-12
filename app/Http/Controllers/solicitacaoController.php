@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\solicitacao;
+use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -112,4 +113,25 @@ class solicitacaoController extends Controller
         return redirect('solicitacaoADM');
     }
 
+    public function termo_de_doacao($id_solicitacao)
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringiradmAcesso()) {
+            return redirect('/');
+        }
+
+        $solicitacao = solicitacao::find($id_solicitacao);
+        $usuario = usuario::find($solicitacao->id_usuario);
+        $usuario = Session::get("login_usuario")->id;
+
+        if($solicitacao->id_usuario != $usuario)
+        {
+            return redirect('/');
+        }
+
+        return view('termo_doacao', ['solicitacao' => $solicitacao, 'usuario' => $usuario]);
+    }
 }

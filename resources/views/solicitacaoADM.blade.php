@@ -1,6 +1,7 @@
 <x-layout>
     <link rel="stylesheet" href="/css/style_solicitacao.css">
 
+    <div class="layout2">
         <h1>Lista de Solicitações</h1>
         <table class="table">
 
@@ -30,11 +31,11 @@
                 @foreach(isset($results) ? $results : $solicitacaos as $solicitacao)
                 <tr>
                     <th>{{ $solicitacao ->id}}</th>
-                    <th>{{ $solicitacao->usuario->nome }}</th>
-                    <th>{{ $solicitacao->usuario->telefone }}</th>
-                    <th>{{ $solicitacao->usuario->endereco }}</th>
-                    <th>{{ $solicitacao->usuario->cpf }}</th>
-                    <th>{{ $solicitacao->usuario->email }}</th>
+                    <th>{{ $solicitacao->usuario?->nome }}</th>
+                    <th>{{ $solicitacao->usuario?->telefone }}</th>
+                    <th>{{ $solicitacao->usuario?->endereco }}</th>
+                    <th>{{ $solicitacao->usuario?->cpf }}</th>
+                    <th>{{ $solicitacao->usuario?->email }}</th>
                     <th>{{ $solicitacao->descpedido }}</th>
                     <th>{{ $solicitacao->quantidade }}</th>
                     <th>{{ $solicitacao->created_at }}</th>
@@ -52,5 +53,5 @@
             </tbody>
 
         </table>
-        
+    </div>    
 </x-layout>
