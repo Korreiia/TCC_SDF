@@ -177,7 +177,7 @@ class usuarioController extends Controller
             $results = usuario::where('nome', 'like', '%'.$pesquisar.'%')
                 ->orWhere('endereco', 'like', '%'.$pesquisar.'%')
                 ->orWhere('email', 'like', '%'.$pesquisar.'%')
-                ->orWhereHas('solicitacao', function ($query) use ($pesquisar) {
+                ->orWhereHas('solicitacoes', function ($query) use ($pesquisar) {
                     $query->where('descpedido', 'like', '%'.$pesquisar.'%')
                         ->orWhere('created_at', 'like', '%'.$pesquisar.'%');
                 })

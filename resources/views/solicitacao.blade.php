@@ -24,6 +24,7 @@
                 <th>{{ $solicitacao->quantidade }}</th>
                 <th>{{ $solicitacao->created_at }}</th>
                 <th>
+                    <a href="{{ route('termo_de_doacao', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank">Termo de Doação</a>
                     <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}">Ver mais</a>
                 </th>
             </tr>
@@ -31,5 +32,4 @@
             @endif
         </tbody>
     </table>
-    
 </x-layout>

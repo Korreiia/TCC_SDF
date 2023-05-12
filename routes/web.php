@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
 use App\Http\Controllers\solicitacaoController;
 use App\Http\Controllers\inventarioController;
+use App\Models\solicitacao;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,4 +54,5 @@ Route::get('/criar_solicitacao', [solicitacaoController::class, 'criar_soliciVie
 Route::post('/usuarios/{id}/criar_solicitacao', [solicitacaoController::class, 'criarSolicitacao'])->name('criar_solicitacao');
 Route::get('/{id}/ver_solicitacao', [solicitacaoController::class, 'verSolicitacao'])->where('id', '[0-9]+')->name('verSolicitacao');
 Route::delete('/{id}/deletar_solicitacao', [solicitacaoController::class, 'deletarSolicitacao'])->where('id', '[0-9]+')->name('deletarSolicitacao');
+Route::get('/termo_de_doacao/{id_solicitacao}', [solicitacaoController::class, 'termo_de_doacao'])->name('termo_de_doacao');
 //
