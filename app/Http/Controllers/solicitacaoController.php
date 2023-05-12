@@ -115,8 +115,22 @@ class solicitacaoController extends Controller
 
     public function termo_de_doacao($id_solicitacao)
     {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringiradmAcesso()) {
+            return redirect('/');
+        }
+
         $solicitacao = solicitacao::find($id_solicitacao);
         $usuario = usuario::find($solicitacao->id_usuario);
+        $usuario = Session::get("login_usuario")->id;
+
+        if($solicitacao->id_usuario != $usuario)
+        {
+            return redirect('/');
+        }
 
         return view('termo_doacao', ['solicitacao' => $solicitacao, 'usuario' => $usuario]);
     }

@@ -173,16 +173,17 @@ class usuarioController extends Controller
         }
 
         else
+    {
+        $results = solicitacao::whereHas('usuario', function ($query) use ($pesquisar) 
         {
-            $results = usuario::where('nome', 'like', '%'.$pesquisar.'%')
+            $query->where('nome', 'like', '%'.$pesquisar.'%')
                 ->orWhere('endereco', 'like', '%'.$pesquisar.'%')
-                ->orWhere('email', 'like', '%'.$pesquisar.'%')
-                ->orWhereHas('solicitacoes', function ($query) use ($pesquisar) {
-                    $query->where('descpedido', 'like', '%'.$pesquisar.'%')
-                        ->orWhere('created_at', 'like', '%'.$pesquisar.'%');
-                })
-                ->get();
-        }
+                ->orWhere('email', 'like', '%'.$pesquisar.'%');
+        })
+            ->orWhere('descpedido', 'like', '%'.$pesquisar.'%')
+            ->orWhere('created_at', 'like', '%'.$pesquisar.'%')
+            ->get();
+    }
 
         return view('solicitacaoADM', compact('results'));
     }
