@@ -21,7 +21,7 @@
 Venho pelo presente instrumento de doação, de um lado a APM da ETEC ANTONIO DEVISATE, Av. Castro Alves nº 62 -
 Somenzari – Marília – SP, tendo a responsável, a diretor BENEDITO GOFFR4EDO e os Professores Fábio Henrique
 Zanella Moura, Coordenador do PROJETO RECICLAETEC, doravante denominado DOADOR, e de outro a entidade:
-{{ $usuario->nome }} portador(a) do CPF {{ $usuario->cpf }} {{ $usuario->endereco }}, doravante denominada RECEBEDOR. 
+{{ $solicitacao->usuario?->nome }} portador(a) do CPF {{ $solicitacao->usuario?->cpf }} {{ $solicitacao->usuario?->endereco }}, doravante denominada RECEBEDOR. 
         </pre>
 
         <h3>CLÁUSULA PRIMEIRA</h3>
@@ -61,8 +61,8 @@ qualquer ônus.
         <p class="p3">Recebedor:</p>
         <pre class="pre4">
 ________________________
-   {{ $usuario->nome }}
-    CPF:{{ $usuario->cpf }}
+{{ $solicitacao->usuario?->nome }}
+    CPF: {{ $solicitacao->usuario?->cpf }}
         </pre>
    
 

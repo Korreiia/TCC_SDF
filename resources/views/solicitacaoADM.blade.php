@@ -38,7 +38,7 @@
                     <td>{{ $solicitacao->quantidade }}</td>
                     <td>{{ $solicitacao->created_at }}</td>
                     <td>
-                        <a href="{{ route('termo_de_doacao', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank">Termo de Doação</a>
+                        <a href="{{ route('termo_de_doacaoADM', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank">Termo de Doação</a>
                         <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}">Ver mais</a>
 
                         <form action="{{ route('deletarSolicitacao', ['id'=>$solicitacao->id]) }}" method="post">

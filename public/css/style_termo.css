@@ -1,3 +1,7 @@
+body{
+    font-family: arial;
+}
+
 .logos-container{
   display: flex;
   justify-content: center;
@@ -73,19 +77,22 @@ h3{
 
 .p3{
     position: relative;
-    left: 69%;
+    left: 70%;
     bottom: 260px;
     font-size: 15px;
     font-family: arial;
-    width: fit-content;
+    margin: 0%;
+    display: inline;
 }
 
 .pre4{
     position: relative;
-    left: 69%;
+    left: 70%;
     bottom: 120px;
     font-family: arial;
     font-size: 15px;
+    margin: 0%;
+    width: fit-content;
 }
 
 .botao{

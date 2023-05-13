@@ -57,4 +57,5 @@ Route::post('/usuarios/{id}/criar_solicitacao', [solicitacaoController::class, '
 Route::get('/{id}/ver_solicitacao', [solicitacaoController::class, 'verSolicitacao'])->where('id', '[0-9]+')->name('verSolicitacao');
 Route::delete('/{id}/deletar_solicitacao', [solicitacaoController::class, 'deletarSolicitacao'])->where('id', '[0-9]+')->name('deletarSolicitacao');
 Route::get('/termo_de_doacao/{id_solicitacao}', [solicitacaoController::class, 'termo_de_doacao'])->name('termo_de_doacao');
+Route::get('/termo_de_doacaoADM/{id_solicitacao}', [solicitacaoController::class, 'termo_de_doacaoADM'])->name('termo_de_doacaoADM');
 //
