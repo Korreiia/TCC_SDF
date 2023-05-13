@@ -8,6 +8,11 @@
         <title>Termo de Doação</title>
 </head>
 <body>
+        <style>
+                body{
+                        font-family: arial;
+                }
+        </style>
         <div class="logos-container">
                 <img class="logo1" src="/img/reciclaetec.jpg">
                 <img class="logo2" src="/img/apm.jpg">
@@ -18,7 +23,7 @@
         <h2>RECICLAETEC - RECICLAGEM DO LIXO ELETRÔNICO</h2>
 
         <pre class="pre1">
-Venho pelo presente instrumento de doação, de um lado a APM da ETE ANTONIO DEVISATE, Av. Castro Alves nº 62 -
+Venho pelo presente instrumento de doação, de um lado a APM da ETEC ANTONIO DEVISATE, Av. Castro Alves nº 62 -
 Somenzari – Marília – SP, tendo a responsável, a diretor BENEDITO GOFFR4EDO e os Professores Fábio Henrique
 Zanella Moura, Coordenador do PROJETO RECICLAETEC, doravante denominado DOADOR, e de outro a entidade:
 {{ $usuario->nome }} portador(a) do CPF {{ $usuario->cpf }} {{ $usuario->endereco }}, doravante denominada RECEBEDOR. 
