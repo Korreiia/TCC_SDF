@@ -54,11 +54,11 @@
 
                 <div class="bem_vindo">
                     @if(!empty($usuario))
-                        <th>Bem Vindo:{{ $usuario ->nome}}</th>
+                        <th>Bem Vindo: {{ $usuario ->nome}}</th>
                     @endif
                 </div>
 
-                <div class="login">
+                <div class="logins">
                     
                     @if($usuario == null)
                     <form action="/login">

@@ -1,13 +1,3 @@
-.layout2 {
-  background-color:#d0f0c0;
-  border-radius:0px 0px 10px 10px;
-  box-shadow:0px 4px 10px #888;
-  width:70%;
-  margin: auto;  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .logoh1{
 display: block;
@@ -22,14 +12,6 @@ height: 150px;
   
 }
 
-.saibamais1{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  border-radius:5px; 
-}
-
 .login{
   font-weight: bold;
   text-align: right;
@@ -39,12 +21,20 @@ height: 150px;
   width: 85%;
   border-radius:5px;
 }
-
+.saibamais{
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  border-radius:5px;
+}
 a:hover{
   text-shadow:0px 0px 10px#888;
 }
 
-.layout2{
+/* .layout2{
     background-size:contain;
     background-attachment:fixed;
     background-color:#d0f0c0;
@@ -59,4 +49,18 @@ a:hover{
     justify-content: center;
     height:598px;
     box-shadow:0px 4px 10px #888;
+} */
+.layout2{
+  background-color:#d0f0c0;
+  border-radius:0px 0px 10px 10px;
+  width:70%;
+  margin: auto; 
+  height:598px;
+  justify-content: center;
+  box-shadow:0px 4px 10px #888; 
+  display:block;
 }
+pre{
+  display: inline-block;
+}
+
