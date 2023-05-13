@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Session;
 
 class usuarioController extends Controller
 {
+    public static function restringirAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        return ($usuarioLogado->id_tipo == 2);
+    }
+
+    public static function restringirnullAcesso() {
+        $usuarioLogado = Session::get("login_usuario");
+        return (!$usuarioLogado);
+    }
+
     public function loginView()
     {
         return view('login');
@@ -191,6 +201,31 @@ class usuarioController extends Controller
 
     public function notificacao()
     {
-        return view('notificacao');
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $solicitacoes_nao_lidas = solicitacao::whereNull('visto')->count();
+
+        $solicitacoes = solicitacao::whereNull('visto')->get();
+
+        $tem_notificacoes = $solicitacoes_nao_lidas > 0;
+
+        // $solicitacoes = solicitacao::whereHas('usuario', function ($query) {
+        //     $query->where('id_tipo', '=', 1);
+        // })->whereNull('visto')->take(20)->get();
+        if ($tem_notificacoes) {
+            $icon = "/img/bellnotificacao.png";
+        } 
+        
+        else {
+            $icon = "/img/bell.png";
+        }
+    
+        return view('notificacao', ['solicitacoes_nao_lidas' => $solicitacoes_nao_lidas,'solicitacoes' => $solicitacoes,'tem_notificacoes' => $tem_notificacoes,'icon' => $icon]);
     }
 }

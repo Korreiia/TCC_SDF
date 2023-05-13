@@ -40,7 +40,7 @@
             @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href="/notificacao"> <img class="icon" src="/img/bell.png" alt="">Notificação</a></div>
+            <div class="icon"><a href="/notificacao"> <img class="icon" src="{{ $icon }}" alt="">Notificação</a></div>
             @endif
 
             <!-- <div class="icon"><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div> -->
