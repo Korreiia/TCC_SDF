@@ -36,6 +36,7 @@ Route::delete('/{id}/deletar_usuario', [usuarioController::class, 'deletarUsuari
 Route::get('/saibamais', [usuarioController::class, 'saibamaisView']);
 Route::post('/procurarInventario', [usuarioController::class, 'procurarInventario']);
 Route::post('/procurarSolicitacao', [usuarioController::class, 'procurarSolicitacao']);
+Route::get('/notificacao', [usuarioController::class, 'notificacao']);
 //
 
 //
@@ -50,6 +51,7 @@ Route::delete('/{id}/deletar_inventario', [inventarioController::class, 'deletar
 //
 Route::get('/solicitacao', [solicitacaoController::class, 'soliciView']);
 Route::get('/solicitacaoADM', [solicitacaoController::class, 'soliciadmView']);
+Route::get('/solicitacaovertodosADM', [solicitacaoController::class, 'soliciadmtodosView']);
 Route::get('/criar_solicitacao', [solicitacaoController::class, 'criar_soliciView']);
 Route::post('/usuarios/{id}/criar_solicitacao', [solicitacaoController::class, 'criarSolicitacao'])->name('criar_solicitacao');
 Route::get('/{id}/ver_solicitacao', [solicitacaoController::class, 'verSolicitacao'])->where('id', '[0-9]+')->name('verSolicitacao');

@@ -140,8 +140,9 @@ class usuarioController extends Controller
 
         if (is_numeric($pesquisar))
         {
-            $results = inventario::where('id', $pesquisar)->get();
-            $results = inventario::where('quantidade', 'like', '%'.$pesquisar.'%')->get();
+            $results = inventario::where('id', $pesquisar)
+                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
+                ->get();
         }
 
         else
@@ -186,5 +187,10 @@ class usuarioController extends Controller
     }
 
         return view('solicitacaoADM', compact('results'));
+    }
+
+    public function notificacao()
+    {
+        return view('notificacao');
     }
 }

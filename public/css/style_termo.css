@@ -72,6 +72,7 @@ h3{
     left: 75%;
     bottom: 260px;
     font-size: 15px;
+    width: fit-content;
 }
 
 .pre4{
@@ -79,6 +80,7 @@ h3{
     left: 75%;
     bottom: 120px;
     font-size: 15px;
+    width: fit-content;
 }
 
 .botao{
