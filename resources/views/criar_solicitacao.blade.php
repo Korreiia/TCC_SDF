@@ -13,6 +13,12 @@
 
             <h1>Quantidade</h1>
             <input class="dados" type="number" name="quantidade">
+
+            <div class="checkbox">
+              <input type="checkbox" id="termo" required>
+              <label for="termo">Estou ciente que só posso fazer UM pedido de Computador</label>
+            </div>
+            
           <hr>
             <button class="bottom" type="submit">Salvar</button>
             @csrf

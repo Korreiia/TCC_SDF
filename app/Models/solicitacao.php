@@ -15,6 +15,7 @@ class solicitacao extends Model
     protected $fillable = [
         'descpedido',
         'quantidade',
+        'visto',
         'id_usuario',
     ];
 

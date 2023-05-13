@@ -52,9 +52,24 @@ class solicitacaoController extends Controller
             return redirect('/');
         }
 
-        $solicitacaos = Solicitacao::with('usuario')->get();
+        $solicitacaos = solicitacao::with('usuario')->orderBy('created_at', 'desc')->take(10)->get();
 
         return view('solicitacaoADM', compact('solicitacaos'), ['solicitacaos' => $solicitacaos]);
+    }
+
+    public function soliciadmtodosView()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $solicitacaos = solicitacao::with('usuario')->orderBy('created_at', 'desc')->get();
+
+        return view('solicitacaovertodosADM', compact('solicitacaos'), ['solicitacaos' => $solicitacaos]);
     }
 
     public function criar_soliciView()
@@ -96,6 +111,9 @@ class solicitacaoController extends Controller
         if($usuario->id_tipo == 1)
         {
             $solicitacao = solicitacao::where('id', $id)->first();
+            
+            $solicitacao->visto = now();
+            $solicitacao->save();
         }
 
         if($solicitacao == null)
@@ -116,10 +134,6 @@ class solicitacaoController extends Controller
     public function termo_de_doacao($id_solicitacao)
     {
         if ($this->restringirnullAcesso()) {
-            return redirect('/');
-        }
-
-        if ($this->restringiradmAcesso()) {
             return redirect('/');
         }
 

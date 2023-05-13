@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('descpedido', 1000);
             $table->string('quantidade', 1000);
+            $table->dateTime('visto')->nullable();
             $table->timestamps();
         });
 
@@ -27,6 +28,7 @@ return new class extends Migration
         DB::statement("
         ALTER TABLE solicitacaos ADD CONSTRAINT fk_usuario_id FOREIGN KEY (id_usuario) REFERENCES usuarios (id);
     ");
+
     }
 
     /**

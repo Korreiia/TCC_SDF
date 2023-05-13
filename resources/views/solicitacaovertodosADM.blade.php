@@ -11,8 +11,6 @@
                 <button type="submit"> <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa"> </button>
             </form> 
 
-            <a href="solicitacaovertodosADM">Ver todas Solicitações</a>
-
             <thead>
              <br>
                 <tr>

@@ -77,14 +77,15 @@ h3{
     bottom: 260px;
     font-size: 15px;
     font-family: arial;
+    width: fit-content;
 }
 
 .pre4{
     position: relative;
     left: 69%;
     bottom: 120px;
-    font-size: 15px;
     font-family: arial;
+    font-size: 15px;
 }
 
 .botao{
