@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hr{
+    background: linear-gradient( #CCF62C,#98C74E,#60A261,#357A5B);
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 10px #888;
+    display: inline-block;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+>>>>>>> 92b3e59f11a6fb9daa2e4c7539296f171b9a19a2
   .dados{
     background:#fff;
     border-radius:10px;
