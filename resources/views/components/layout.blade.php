@@ -27,9 +27,9 @@
             <div class="icon"><a href="/inventario"> <img class="icon" src="/img/icon_inven.png" alt="">Inventário</a></div>
             @endif
 
-            {{-- @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href=""> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div>
-            @endif --}}
+            @if(!empty($usuario) && $usuario->id_tipo == 1)
+            <div class="icon"><a href="/historico"> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div>
+            @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 2)
             <div class="icon"><a href="/solicitacao"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
@@ -43,10 +43,7 @@
             <div class="icon"><a href="/notificacao"> <img class="icon" src="{{ $icon }}" alt="">Notificação</a></div>
             @endif
 
-            <!-- <div class="icon"><a href=""> <img class="icon" src="/img/icon_calen.png" alt="">Calendário</a></div> -->
-
             @if($usuario != null)
-
             <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
             @endif
 

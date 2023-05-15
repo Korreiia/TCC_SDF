@@ -56,9 +56,10 @@ h3{
 .assifabio{
     width: 15%;
     height: 90px;
-    margin: 0 10px;
+    margin: 0%;
     position: relative;
-    left: 10%;
+    left: 12%;
+    top: 50px;
 }
 
 .p2{

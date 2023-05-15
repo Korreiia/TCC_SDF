@@ -51,7 +51,7 @@ qualquer ônus.
         <p class="p2">Doador:</p>
         <p class="p2">Marília,{{ $solicitacao->created_at }}.</p>
 
-        <img class="assifabio" src="/img/assi_fabio.jpg">
+        <img class="assifabio" src="/img/assi_fabio.png">
         <pre class="pre3">
   ________________________	                          	
    Fabio H. Zanella Moura                                        

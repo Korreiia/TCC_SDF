@@ -6,6 +6,7 @@ use App\Models\inventario;
 use App\Models\solicitacao;
 use Illuminate\Http\Request;
 use App\Models\usuario;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -227,5 +228,79 @@ class usuarioController extends Controller
         }
     
         return view('notificacao', ['solicitacoes_nao_lidas' => $solicitacoes_nao_lidas,'solicitacoes' => $solicitacoes,'tem_notificacoes' => $tem_notificacoes,'icon' => $icon]);
+    }
+
+    public function historico()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $inventariosAdicionados = inventario::orderBy('created_at', 'desc')->take(10)->get();
+        $inventariosEditados = inventario::whereNotNull('updated_at')->where('updated_at', '>', DB::raw('created_at'))->orderBy('updated_at', 'desc')->take(10)->get();;
+        $inventariosRemovidos = inventario::onlyTrashed()->orderBy('deleted_at', 'desc')->take(10)->get();
+        $solicitacoesRemovidos = solicitacao::onlyTrashed()->orderBy('deleted_at', 'desc')->take(10)->get();
+
+        return view('historico', ['inventariosAdicionados' => $inventariosAdicionados,'inventariosEditados' => $inventariosEditados,'inventariosRemovidos' => $inventariosRemovidos,'solicitacoesRemovidos' => $solicitacoesRemovidos]);
+    }
+
+    public function historicoADDALL()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $inventariosAdicionados = inventario::orderBy('created_at', 'desc')->get();
+        return view('historicoADDALL', ['inventariosAdicionados' => $inventariosAdicionados]);
+    }
+
+    public function historicoEDITALL()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $inventariosEditados = inventario::whereNotNull('updated_at')->where('updated_at', '>', DB::raw('created_at'))->orderBy('updated_at', 'desc')->get();;
+        return view('historicoEDITALL', ['inventariosEditados' => $inventariosEditados]);
+    }
+    
+    public function historicoREMOVEALL()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $inventariosRemovidos = inventario::onlyTrashed()->orderBy('deleted_at', 'desc')->get();
+        return view('historicoREMOVEALL', ['inventariosRemovidos' => $inventariosRemovidos]);
+    }
+
+    public function solicitacaoREMOVEALL()
+    {
+        if ($this->restringirnullAcesso()) {
+            return redirect('/');
+        }
+
+        if ($this->restringirAcesso()) {
+            return redirect('/');
+        }
+
+        $solicitacoesRemovidos = solicitacao::onlyTrashed()->orderBy('deleted_at', 'desc')->get();
+        return view('solicitacaoREMOVEALL', ['solicitacoesRemovidos' => $solicitacoesRemovidos]);
     }
 }

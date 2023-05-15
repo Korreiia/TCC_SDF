@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
 use App\Http\Controllers\solicitacaoController;
 use App\Http\Controllers\inventarioController;
-use App\Models\solicitacao;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +36,11 @@ Route::get('/saibamais', [usuarioController::class, 'saibamaisView']);
 Route::post('/procurarInventario', [usuarioController::class, 'procurarInventario']);
 Route::post('/procurarSolicitacao', [usuarioController::class, 'procurarSolicitacao']);
 Route::get('/notificacao', [usuarioController::class, 'notificacao']);
+Route::get('/historico', [usuarioController::class, 'historico']);
+Route::get('/historicoADDALL', [usuarioController::class, 'historicoADDALL']);
+Route::get('/historicoEDITALL', [usuarioController::class, 'historicoEDITALL']);
+Route::get('/historicoREMOVEALL', [usuarioController::class, 'historicoREMOVEALL']);
+Route::get('/solicitacaoREMOVEALL', [usuarioController::class, 'solicitacaoREMOVEALL']);
 //
 
 //
