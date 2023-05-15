@@ -5,10 +5,10 @@
             {{-- <img class="logoh2" src="img/logoR.png" alt="logo">   --}}
             <div class="botoes">
                 <a href="saibamais" class="saibamais">Saiba Mais</a>
-            
                 <br>
                 <a href="login" class="login">Faça uma conta</a>
             </div>
+            
             <div>
                 <pre class="resumo">
                     O ReciclaEtec é um projeto desenvolvido e coordenado pela Etec, 

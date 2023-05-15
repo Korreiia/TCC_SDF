@@ -11,7 +11,7 @@
                 </li>
             @endforeach
         @else
-            <li>Não há nenhuma atividade ainda...</li>
+            <li>Não há atividades ainda..</li>
         @endif
             <a href="/historicoADDALL">Todos registros</a>
     </ul>
@@ -29,7 +29,7 @@
                 </li>
             @endforeach
         @else
-            <li>Não há nenhuma atividade ainda...</li>
+            <li>Não há atividades ainda..</li>
         @endif
             <a href="/historicoEDITALL">Todos registros</a>
     </ul>
@@ -45,7 +45,7 @@
                 </li>
             @endforeach
         @else
-            <li>Não há nenhuma atividade ainda...</li>
+            <li>Não há atividades ainda..</li>
         @endif
             <a href="/historicoREMOVEALL">Todos registros</a>
     </ul>
@@ -61,7 +61,7 @@
                 </li>
             @endforeach
         @else
-            <li>Não há nenhuma atividade ainda...</li>
+            <li>Não há atividades ainda..</li>
         @endif
             <a href="/solicitacaoREMOVEALL">Todos registros</a>
     </ul>

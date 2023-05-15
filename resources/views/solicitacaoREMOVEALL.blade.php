@@ -8,7 +8,7 @@
                 </li>
             @endforeach
         @else
-            <li>Não há nenhuma atividade ainda...</li>
+            <li>Não há atividades ainda..</li>
         @endif
     </ul>
 </x-layout>
