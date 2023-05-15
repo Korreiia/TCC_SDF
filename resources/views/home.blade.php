@@ -6,7 +6,7 @@
             <div class="botoes">
                 <a href="saibamais" class="saibamais">Saiba Mais</a>
                 <br>
-                <a href="login" class="login">Faça uma conta</a>
+                <a href="criar_conta" class="criar_conta">Faça uma conta</a>
             </div>
             
             <div>
