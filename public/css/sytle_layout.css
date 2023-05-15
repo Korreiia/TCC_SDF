@@ -17,6 +17,24 @@ header{
 
 }
 
+.layout{
+    background-color:#ffffff;
+    border-radius:10px 10px 0px 0px;
+    box-shadow:0px 0px 10px #888;
+    width:70%;
+    margin: auto;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
 nav{
     background:linear-gradient(#BBE06C,#7CB855,#469B4C,#3C6E57);
     padding: 8px;
@@ -25,18 +43,10 @@ nav{
     
 }
 
-
 .icon{
     width: 3%;
     display: inline;
 }
-
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-  }
 
 a{
     text-decoration: none;
@@ -46,27 +56,34 @@ a{
     
 }
 
-
 a:hover{
     color: #fff;
     padding-right: 1.5%;
     padding-left: 1.5%; 
 }
 
-::-webkit-scrollbar{
-    background:#004524;
-    width:5.9px;
-    height: 9px;
-  }
-  ::-webkit-scrollbar-thumb{
-    border-radius:30px;
-    background:#76a954;
-    width:5.9px;
-    height: 9px;
-  }  
-  ::-webkit-scrollbar-thumb:hover{
-    background:#5f8744;
-  }
+.right{
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.bem_vindo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display:flex;
+    justify-content:right;
+}  
+
+.logins{
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    border-radius:5px;
+}
 
 .bnt_login{
     border:none;
@@ -79,42 +96,32 @@ a:hover{
     margin:5px;
     transition:0.3s ease;
 }
+
 .bnt_login:hover{
     background:#4cbb17;
     color:#fff;
     box-shadow:0px 0px 2px #fff;
 }
-.layout{
-    background-color:#ffffff;
-    border-radius:10px 10px 0px 0px;
-    box-shadow:0px 0px 10px #888;
-    width:70%;
-    margin: auto;  
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+::-webkit-scrollbar{
+    background:#004524;
+    width:5.9px;
+    height: 9px;
 }
-.bem_vindo{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display:flex;
-    justify-content:right;
+
+::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:#76a954;
+    width:5.9px;
+    height: 9px;
 }  
-.right{
-    display: inline-block;
-    width: 50%;
-    box-sizing: border-box;
-    padding: 10px;
+
+::-webkit-scrollbar-thumb:hover{
+    background:#5f8744;
 }
-.logins{
-    font-weight: bold;
-    text-align: right;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    border-radius:5px;
-}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* link:video do carlinhos dando a bunda e chupando homens */
