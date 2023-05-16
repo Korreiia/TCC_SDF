@@ -124,7 +124,7 @@ class usuarioController extends Controller
             'telefone' => $request->telefone,
             'endereco' => $request->endereco,
         ];
-
+        
         usuario::where('id',$id)->update($data);
 
         return redirect('home');
