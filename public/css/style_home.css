@@ -1,34 +1,54 @@
 
 .logoh1{
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 20%;
-height: 150px;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-radius:200px;
+  float: right;
+  top: 60%;
+    transform: translateY(-138%);
 }
 
 .resumo{
   text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
   
 }
 
 .login{
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 85%;
   border-radius:5px;
 }
+.logoh3{
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius:200px;
+  top: 50%;
+    transform: translateX(20%);
+}
 .saibamais{
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 85%;
   border-radius:5px;
+  bottom: 40%;
 }
 a:hover{
   text-shadow:0px 0px 10px#888;
@@ -61,6 +81,24 @@ a:hover{
   display:block;
 }
 pre{
-  display: inline-block;
+  display: block;
 }
+
+.criar_conta{
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  transform: translateX(260%);
+  top: 97%;
+  left: 26%;
+}
+.pre_botao {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  transform: translateX(260%);
+  top: 93%;
+  left: 23%;
+}
+
 
