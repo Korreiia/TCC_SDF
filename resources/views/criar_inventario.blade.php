@@ -9,34 +9,29 @@
       <div class="formulario">
         <form action="/criar_inventario" method="post">
 
-          <table class="table"></table>
-
-          <div class="hr">
-            <h1>Está Funcionando?</h1>
-            <input class="dados" type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
-          </div>
-
-          <div class="hr">
-          <h1>Data de Entrada</h1>
-          <input class="dados" type="date" name="dataentrada" required>
-          </div>
-
-          <div class="hr">
-          <h1>Descrição do item</h1>
-          <textarea class="dados" name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
-          </div>
-
-          <div class="hr">
-          <h1>Estado de Conservação</h1>
-          <input class="dados" type="text" name="estadoconservacao">
-          </div>
-
-          <div class="hr">
-          <h1>Quantidade</h1>
-          <input class="dados" type="number" name="quantidade" placeholder="Campo Obrigatório" required>
-          </div>
-
-          <button class="bottom" type="submit">Salvar</button>
+        <br>
+          <hr>
+              <h2>Está Funcionando?</h2>
+              <input class="dados" type="text" name="estadofuncionamento" placeholder="Campo Obrigatório" required>
+          
+        <br>
+            <h2>Data de Entrada</h2>
+            <input class="dados" type="date" name="dataentrada" required>
+          
+        <br>
+            <h2>Descrição do item</h2>
+            <textarea class="dados" name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+          
+        <br>
+            <h2>Estado de Conservação</h2>
+            <input class="dados" type="text" name="estadoconservacao">
+          
+        <br>
+            <h2>Quantidade</h2>
+            <input class="dados" type="number" name="quantidade" placeholder="Campo Obrigatório" required>
+          
+        <br>
+          <button type="submit">Salvar</button>
           @csrf
         </form>
       </div>

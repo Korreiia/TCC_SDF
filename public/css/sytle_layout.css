@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    background: linear-gradient(to bottom right,#E38B29,#F1A661,#FFD8A9,#FDEEDC);
+    background: linear-gradient(to bottom right,#FDEEDC,#FFD8A9,#F1A661,#E38B29);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
