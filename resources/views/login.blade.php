@@ -11,7 +11,7 @@
     <div class="container">
       <div class="login">
 
-        <img class="logo" src="img/logoR.png" alt="logo">
+        <img class="logo" src="/img/logoR.png" alt="logo">
             
             @if ($errors->any())
               <div class="alert alert-danger">
@@ -33,7 +33,7 @@
             <input type="email" name="email" placeholder="E-mail">
             <input type="password" name="senha" placeholder="Senha">
             <label for="senha"></label>
-              <i class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></i>
+              <script src="/js/olho.js" class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></script>
             <button type="submit">Login</button>
             @csrf
         </form>
