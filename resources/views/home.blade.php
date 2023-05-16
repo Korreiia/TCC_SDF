@@ -8,7 +8,6 @@
                 
             </div>
             
-            
                 <pre class="resumo">
                     O ReciclaEtec é um projeto desenvolvido e coordenado pela Etec, 
                     que tem como principal objetivo receber doaçoes de peças e equipamentos velhos,

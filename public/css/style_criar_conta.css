@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(#3C6255, #61876E, #A6BB8D, #EAE7B1);
+  background:linear-gradient(#A6BB8D,#61876E,#3C6255); 
   min-height: 100vh;
   margin: 0;
 }
