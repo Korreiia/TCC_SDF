@@ -5,7 +5,7 @@
         <hr>
         <br>
 
-        <h1>Dados Pessoais</h1>
+        <h2>Dados Pessoais</h2>
         <form action="{{ route('atualizarUsuario3',['id'=>$usuarios->id]) }}" method="post">
         @method('put')
             <input class="dados" type="text" name="nome" value="{{ $usuarios->nome }}" placeholder="Nome" required>
@@ -20,7 +20,7 @@
 
         <br>
 
-        <h1>Atualizar E-email</h1>
+        <h2>Atualizar E-email</h2>
         <form action="{{ route('atualizarUsuario1',['id'=>$usuarios->id]) }}" method="post">
         @method('put')
             <input class="dados" type="email" name="email" placeholder="E-mail" required>
@@ -32,7 +32,7 @@
 
         <br>
 
-        <h1>Atualizar Senha</h1>
+        <h2>Atualizar Senha</h2>
         <form action="{{ route('atualizarUsuario2',['id'=>$usuarios->id]) }}" method="post">
         @method('put')
             <input class="dados" type="password" name="senha" placeholder="Senha" required>
@@ -45,11 +45,11 @@
 
         <br>
 
-        <h1>Deletar Conta</h1>
+        <h2>Deletar Conta</h2>
         <form action="{{ route('deletarUsuario', ['id'=>$usuarios->id]) }}" method="post">           
             @csrf 
             @method('delete')
-            <button class="dados" type="submit">Deletar</button>
+            <button class="del" type="submit">Deletar</button>
         </form>
     </div>
 </x-layout>

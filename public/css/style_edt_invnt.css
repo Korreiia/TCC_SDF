@@ -1,32 +1,45 @@
-<<<<<<< HEAD
-=======
-h1{
+
+h1,h2{
     font-family: Arial, Helvetica, sans-serif;
+    padding-left:5%;
 }
 
-.hr{
-    background: linear-gradient( #CCF62C,#98C74E,#60A261,#357A5B);
-    padding: 10px;
-    border-radius: 14px;
-    box-shadow: 0px 0px 10px #888;
-    display: inline-block;
+hr{
+  background:#141414;
+  height:2px;
+  border:none;
+  box-shadow:0px 0px 15px #888;
+  width:90%;
 }
-.container{
-    display: flex;
-    align-items: center;
+
+.dados{
+  padding:8px;
+  border:none;
+  box-shadow:0px 0px 5px#888;
+  border-radius:10px;
+  margin:8px;
+  margin-left:5%;
+  transition:0.3s ease;
 }
->>>>>>> 92b3e59f11a6fb9daa2e4c7539296f171b9a19a2
-  .dados{
-    background:#fff;
-    border-radius:10px;
-    box-shadow:0px 0px 10px#888;
-    border: none;
-    trAnsition: 0.3s ease;
-  }
   .dados:hover{
     background:rgb(224, 224, 224);;
   }
-
+  button{
+    background:#aacb62;
+    color:#141414;
+    border-radius:4px;
+    padding:8px;
+    border:none;
+    box-shadow:0px 0px 5px#888;
+    margin:8px;
+    margin-left:5%;
+    transition:0.3s ease;
+  }
+  button:hover{
+    background:#4cbb17;
+    color:#fff;
+    transition:0.3s ease;
+  }
   .layout2{
     background-color:#d0f0c0;
     border-radius:0px 0px 10px 10px;
