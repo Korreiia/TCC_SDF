@@ -33,7 +33,7 @@
             <input type="email" name="email" placeholder="E-mail">
             <input type="password" name="senha" placeholder="Senha">
             <label for="senha"></label>
-            <i class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></i>
+              <i class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></i>
             <button type="submit">Login</button>
             @csrf
         </form>
