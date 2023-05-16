@@ -21,32 +21,33 @@
         <img class="logo" src="/img/logoR.png" alt="logo">
 
         <nav>
-            <div class="icon"><a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a></div>
+        <div class="left">
+            <a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a>
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href="/inventario"> <img class="icon" src="/img/icon_inven.png" alt="">Inventário</a></div>
+            <a href="/inventario"> <img class="icon" src="/img/icon_inven.png" alt="">Inventário</a>
             @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href="/historico"> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a></div>
+            <a href="/historico"> <img class="icon" src="/img/icon_hist.png" alt="">Histórico</a>
             @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 2)
-            <div class="icon"><a href="/solicitacao"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
+            <a href="/solicitacao"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a>
             @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href="/solicitacaoADM"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a></div>
+            <a href="/solicitacaoADM"> <img class="icon" src="/img/icon_solicit.png" alt="">Solicitação</a>
             @endif
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
-            <div class="icon"><a href="/notificacao"> <img class="icon" src="{{ $icon }}" alt="">Notificação</a></div>
+            <a href="/notificacao"> <img class="icon" src="{{ $icon }}" alt="">Notificação</a>
             @endif
 
             @if($usuario != null)
-            <div class="icon"><a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a></div>
+            <a href="{{ route('configView', ['id'=>$usuario->id]) }}"> <img class="icon" src="/img/icon_conf.png" alt="">Configurações</a>
             @endif
-
+        </div>
             <div class="right"> <!-- lado do botão de login/logout e 'bem-vindo' -->
 
                 <div class="bem_vindo">

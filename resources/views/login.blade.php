@@ -4,6 +4,7 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style_login.css">
+    <script src="/js/olho.js" ></script>
     <title>Doa ETEC</title>
   </head>
   <body>
@@ -31,9 +32,8 @@
             
         <form action="{{ route('fazerLogin') }}" method="post">
             <input type="email" name="email" placeholder="E-mail">
-            <input type="password" name="senha" placeholder="Senha">
-            <label for="senha"></label>
-              <script src="/js/olho.js" class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></script>
+            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <span class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></span>
             <button type="submit">Login</button>
             @csrf
         </form>

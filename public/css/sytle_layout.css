@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     background:linear-gradient( #EAE7B1,#A6BB8D,#61876E,#3C6255 );
     background-attachment:fixed;
@@ -37,14 +41,26 @@ header{
 
 nav{
     background:linear-gradient(#BBE06C,#7CB855,#469B4C,#3C6E57);
-    padding: 8px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #888;
-    
+    display: flex;
+}
+
+nav .left{
+    display: flex;
+    gap: 40px; 
+}
+
+nav .left a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .icon{
-    width: 3%;
+    width: 40px;
     display: inline;
 }
 

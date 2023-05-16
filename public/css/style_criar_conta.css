@@ -1,72 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(#3C6255,#61876E,#A6BB8D,#EAE7B1);
-  }
-  .container{
-    margin: auto;
-    height: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+  background: linear-gradient(#3C6255, #61876E, #A6BB8D, #EAE7B1);
+  min-height: 100vh;
+  margin: 0;
+}
 
-  .formulario {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px #888888;
-  }
-  
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-  }
-  
-  input[type=email], input[type="number"], input[type=text], input[type=password] {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #888888;
-    transition: 0.3s ;
-  }
+.container {
+  margin: auto;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-  input[type=email]:hover,input[type=text]:hover,input[type=password]:hover,input[type=number]:hover {
-    background-color: #e0e0e0;
-    transition: 0.3 ease;
-  }
-  
-  button[type=submit] {
-    background-color:#4cbb17;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0px 0px 10px #888888;
-  }
+.formulario {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #888888;
+}
 
-  button[type=submit]:hover{
-    background-color: #286b09;
-  }
-  
-  .logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  ::-webkit-scrollbar{
-    width:5.9px;
-    height: 9px;
-  }
-  ::-webkit-scrollbar-thumb{
-    border-radius:30px;
-    background:#34a54c;
-    width:5.9px;
-    height: 9px;
-  }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+input[type=email],
+input[type="number"],
+input[type=text],
+input[type=password] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #888888;
+  transition: 0.3s;
+}
+
+input[type=email]:hover,
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=number]:hover {
+  background-color: #e0e0e0;
+  transition: 0.3 ease;
+}
+
+button[type=submit] {
+  background-color: #4cbb17;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+button[type=submit]:hover {
+  background-color: #286b09;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+::-webkit-scrollbar {
+  width: 5.9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #34a54c;
+  width: 5.9px;
+  height: 9px;
+}
