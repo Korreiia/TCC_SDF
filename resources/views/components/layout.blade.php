@@ -16,8 +16,7 @@
 </head>
 
 <body>
-    <div class="layout">
-    <header>
+    <header class="layout">
         <img class="logo" src="/img/reciclaetecNs.png" alt="logo">
 
         <nav>
@@ -78,7 +77,6 @@
         </nav>
 
     </header>
-    </div>
 
     <div class="conteudo">
         {{ $slot }}
