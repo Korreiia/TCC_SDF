@@ -3,7 +3,7 @@
 }
 
 body{
-    background:linear-gradient( #EAE7B1,#A6BB8D,#61876E,#3C6255 );
+    background:linear-gradient(#A6BB8D,#61876E,#3C6255 );
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-size:contain;    
@@ -13,7 +13,7 @@ body{
 }
 
 header{
-    background: linear-gradient(to bottom right,#FDEEDC,#FFD8A9,#F1A661,#E38B29);
+    background: (#ffffff);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
@@ -40,7 +40,7 @@ header{
 }
 
 nav{
-    background:linear-gradient(#BBE06C,#7CB855,#469B4C,#3C6E57);
+    background:linear-gradient(#ffffff);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #888;
@@ -102,7 +102,7 @@ a:hover{
 .bnt_login{
     border:none;
     box-shadow:0px 0px 10px #888;
-    background:#BBE06C;/* <---- cor aqui ó */
+    background:#f0080877;/* <---- cor aqui ó */
     border-radius:4px;
     padding:5px;
     padding-left:15px;

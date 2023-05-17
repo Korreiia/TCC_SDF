@@ -15,7 +15,7 @@
                     para fazer novos computadores para pessoas sem condicao.
                 </pre>
             
-            <img class="logoh1" src="img/logoR.png" alt="logo">
+            <img class="logoh1" src="img/reciclaetecN.png" alt="logo">
             <img class="logoh3" src="img/logoR.png" alt="logo">
             <a href="saibamais" class="saibamais">Saiba Mais</a>
             <pre class="pre_botao">Já tem uma conta?</pre>
