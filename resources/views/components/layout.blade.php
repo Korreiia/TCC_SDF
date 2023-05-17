@@ -67,7 +67,7 @@
                     @if($usuario != null)
                     <form action="{{ route('fazer_logout') }}" method="post">
                         @csrf
-                        <input class="bnt_login" type="submit" value="Logout">
+                        <input class="bnt_logout" type="submit" value="Logout">
                     </form>
                     @endif
 
@@ -79,7 +79,8 @@
 
     </header>
     </div>
-    <div>
+
+    <div class="conteudo">
         {{ $slot }}
     </div>
 

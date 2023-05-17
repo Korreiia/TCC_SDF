@@ -1,6 +1,6 @@
 <x-layout>
     <link rel="stylesheet" href="/css/style_config.css">
-    <div class="layout2">
+
         <h1>Meu Perfil</h1>
         <hr>
         <br>
@@ -51,5 +51,4 @@
             @method('delete')
             <button class="del" type="submit">Deletar</button>
         </form>
-    </div>
 </x-layout>

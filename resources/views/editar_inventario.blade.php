@@ -2,8 +2,6 @@
 
 <link rel="stylesheet" href="/css/style_edt_invnt.css">
 
-  <div class="layout2">  
-
     <h1>Editar Inventario</h1>
 
         <div class="formulario">
@@ -29,5 +27,4 @@
               @csrf
           </form>
         </div>
-  </div>
 </x-layout>

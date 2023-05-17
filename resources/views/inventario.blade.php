@@ -1,8 +1,6 @@
 <x-layout>
     <link rel="stylesheet" href="/css/style_inventario.css">
 
-    <div class="layout2">
-
         <a class="criar_cadastro" href="/criar_inventario">Criar novo cadastro</a>
         
         <form class="search-box" action="/procurarInventario" method="post">
@@ -49,7 +47,6 @@
 
                             </th>
                         </tr>
-    </div>
                     @endforeach
             </tbody>
 

@@ -1,8 +1,8 @@
-  body{
-    background:linear-gradient(#A6BB8D,#61876E,#3C6255); 
+  body {
+    background: linear-gradient(#A6BB8D, #61876E, #3C6255);
   }
-  
-  .container{
+
+  .container {
     margin: auto;
     height: 800px;
     display: flex;
@@ -16,29 +16,33 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px #888888;
+    box-shadow: 0px 0px 5px #888888;
   }
-  
+
   form {
     display: flex;
     flex-direction: column;
     margin: 20px;
   }
-  
-  input[type=email], input[type=password], input[type=text] {
+
+  input[type=email],
+  input[type=password],
+  input[type=text] {
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 5px #888888;
-    transition: 0.3s ;
+    transition: 0.3s;
   }
 
-  input[type=email]:hover, input[type=password]:hover, input[type=]:hover {
+  input[type=email]:hover,
+  input[type=password]:hover,
+  input[type=]:hover {
     background-color: rgb(224, 224, 224);
     transition: 0.3 ease;
   }
-  
+
   button[type=submit] {
     background-color: #4cbb17;
     color: #fff;
@@ -46,53 +50,52 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition:0.3s ease;
-    box-shadow: 0px 0px 10px #888888;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 5px #888888;
   }
 
-  button[type=submit]:hover{
-    background-color: #286b09;
+  button[type=submit]:hover {
+    background-color: #33860c;
   }
 
-  .logo{
+  .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
 
-  a{
+  .login a {
     text-decoration: none;
-    color:#0077ff;   
+    color: #1680f8;
     padding: 5px;
-    padding-left:6%;
-    padding-right:6%;
+    padding-left: 6%;
+    padding-right: 6%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 1s;
-
   }
 
-  a:hover{
-    color:#008CBA;
+  a:hover {
+    color: #1680f8;
     background-color: #e0e0e0;
   }
 
-  ::-webkit-scrollbar{
-    width:5.9px;
-    height: 9px;
+  ::-webkit-scrollbar {
+    width: 15px;
+    height: 20px;
   }
 
-  ::-webkit-scrollbar-thumb{
-    border-radius:30px;
-    background:#34a54c;
-    width:5.9px;
-    height: 9px;
+  ::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: #34a54c;
+    width: 15px;
+    height: 20px;
   }
 
-  .fa-eye{
-    position:absolute;
+  .fa-eye {
+    position: absolute;
     top: 425px;
     right: 44%;
     cursor: pointer;

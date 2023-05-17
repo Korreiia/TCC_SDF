@@ -2,17 +2,17 @@
     box-sizing: border-box;
 }
 
-body{
-    background:linear-gradient(#A6BB8D,#61876E,#3C6255 );
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-size:contain;    
+body {
+    background: linear-gradient(#A6BB8D, #61876E, #3C6255);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
-    
+
 }
 
-header{
+header {
     background: (#ffffff);
     padding: 10px;
     margin: 10px;
@@ -21,121 +21,149 @@ header{
 
 }
 
-.layout{
-    background-color:#ffffff;
-    border-radius:10px 10px 0px 0px;
-    box-shadow:0px 0px 10px #888;
-    width:70%;
-    margin: auto;  
+.layout {
+    background-color: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 10px #888;
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.logo{
+.logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
 }
 
-nav{
-    background:linear-gradient(#ffffff);
+nav {
+    background: linear-gradient(#ffffff);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #888;
     display: flex;
 }
 
-nav .left{
+nav .left {
     display: flex;
-    gap: 40px; 
+    gap: 40px;
 }
 
-nav .left a{
+nav .left a {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
 }
 
-.icon{
+.icon {
     width: 40px;
     display: inline;
 }
 
-a{
+a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #141414;
-    transition: 0.6s; 
-    
+    transition: 0.6s;
+
 }
 
-a:hover{
+a:hover {
     color: #fff;
 }
 
-.right{
+.right {
     display: inline-block;
     width: 50%;
     box-sizing: border-box;
     padding: 10px;
 }
 
-.bem_vindo{
+.bem_vindo {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display:flex;
-    justify-content:right;
-}  
+    display: flex;
+    justify-content: right;
+}
 
-.logins{
+.logins {
     font-weight: bold;
     text-align: right;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 85%;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
-.bnt_login{
-    border:none;
-    box-shadow:0px 0px 10px #888;
-    background:#f0080877;/* <---- cor aqui ó */
-    border-radius:4px;
-    padding:5px;
-    padding-left:15px;
-    padding-right:15px;
-    margin:5px;
-    transition:0.3s ease;
+.bnt_login {
+    border: none;
+    box-shadow: 0px 0px 2px #888;
+    background: #2cee1bb4;/* <---- cor aqui ó */
+    border-radius: 4px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    transition: 0.3s ease;
 }
 
-.bnt_login:hover{
-    background:#4cbb17;
-    color:#fff;
-    box-shadow:0px 0px 2px #fff;
+.bnt_login:hover {
+    background: #2cee1b9a;
+    color: #fff;
+    box-shadow: 0px 0px 2px #fff;
 }
 
-::-webkit-scrollbar{
-    background:#004524;
-    width:5.9px;
-    height: 9px;
+.bnt_logout {
+    border: none;
+    box-shadow: 0px 0px 2px #888;
+    background: #c90909b2;/* <---- cor aqui ó */
+    border-radius: 4px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    transition: 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb{
-    border-radius:30px;
-    background:#76a954;
-    width:5.9px;
-    height: 9px;
-}  
-
-::-webkit-scrollbar-thumb:hover{
-    background:#5f8744;
+.bnt_logout:hover {
+    background: rgba(240, 8, 8, 0.452);
+    color: #fff;
+    box-shadow: 0px 0px 2px #fff;
 }
 
-h1{
+::-webkit-scrollbar {
+    background: #004524;
+    width: 15px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: #76a954;
+    width: 15px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5f8744;
+}
+
+h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* link:video do carlinhos dando a bunda e chupando homens */
+.conteudo {
+    background-color: #ffff;
+    border-radius: 0px 0px 10px 10px;
+    width: 80%;
+    margin: auto;
+    min-height: 600px;
+    box-shadow: 0px 4px 10px #888;
+    display: block;
+}
+
+/* link:video do carlinhos dando a bunda e chupando homens BY:Lian */

@@ -1,8 +1,6 @@
 <x-layout>
 
   <link rel="stylesheet" href="/css/style_edt_invnt.css">
-  
-    <div class="layout2">
 
       <h1>Adicionar Novo Item</h1>
 
@@ -35,7 +33,5 @@
           @csrf
         </form>
       </div>
-
-    </div>
 
 </x-layout>
