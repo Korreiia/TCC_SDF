@@ -1,5 +1,5 @@
 <x-layout>
-
+    <link rel="stylesheet" href="/css/style_notificacao.css">
     <h1>Notificações</h1>
     <ul>
         @if ($solicitacoes->count() > 0)

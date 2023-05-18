@@ -28,13 +28,13 @@
                     <tbody>
                     @foreach(isset($results) ? $results : $inventarios as $inventario)
                         <tr class="tr">
-                            <th>{{ $inventario ->id }}</th>
-                            <th>{{ $inventario ->estadofuncionamento }}</th>
-                            <th>{{ $inventario ->dataentrada }}</th>
-                            <th>{{ $inventario ->descricao }}</th>
-                            <th>{{ $inventario ->estadoconservacao }}</th>
-                            <th>{{ $inventario ->quantidade }}</th>
-                            <th>
+                            <th class="th">{{ $inventario ->id }}</th>
+                            <th class="th">{{ $inventario ->estadofuncionamento }}</th>
+                            <th class="th">{{ $inventario ->dataentrada }}</th>
+                            <th class="th">{{ $inventario ->descricao }}</th>
+                            <th class="th">{{ $inventario ->estadoconservacao }}</th>
+                            <th class="th">{{ $inventario ->quantidade }}</th>
+                            <th class="th">
                                 <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}">Editar</a>
 
                                 <form action="{{ route('deletarInventario', ['id'=>$inventario->id]) }}" method="post">

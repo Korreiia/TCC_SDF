@@ -1,5 +1,6 @@
 <x-layout>
-
+    <link rel="stylesheet" href="/css/style_historico.css">
+    <a class="todosR" href="/historicoADDALL">Todos registros</a>
     <h1>Item Adicionados</h1>
     <ul>
         @if ($inventariosAdicionados->count() > 0)
@@ -13,11 +14,11 @@
         @else
             <li>Não há atividades ainda..</li>
         @endif
-            <a href="/historicoADDALL">Todos registros</a>
     </ul>
 
     <hr>
 
+    <a class="todosR" href="/historicoEDITALL">Todos registros</a>
     <h1>Item Editados</h1>
     <ul>
         @if ($inventariosEditados->count() > 0)
@@ -31,11 +32,11 @@
         @else
             <li>Não há atividades ainda..</li>
         @endif
-            <a href="/historicoEDITALL">Todos registros</a>
     </ul>
 
     <hr>
 
+    <a class="todosR" href="/historicoREMOVEALL">Todos registros</a>
     <h1>Item Removidos</h1>
     <ul>
         @if ($inventariosRemovidos->count() > 0)
@@ -47,11 +48,11 @@
         @else
             <li>Não há atividades ainda..</li>
         @endif
-            <a href="/historicoREMOVEALL">Todos registros</a>
     </ul>
 
     <hr>
 
+    <a class="todosR" href="/solicitacaoREMOVEALL">Todos registros</a>
     <h1>Solicitações Removidas</h1>
     <ul>
         @if ($solicitacoesRemovidos->count() > 0)
@@ -63,7 +64,6 @@
         @else
             <li>Não há atividades ainda..</li>
         @endif
-            <a href="/solicitacaoREMOVEALL">Todos registros</a>
     </ul>
 
 </x-layout>

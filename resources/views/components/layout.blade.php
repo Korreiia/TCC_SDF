@@ -16,11 +16,14 @@
 </head>
 
 <body>
-    <header class="layout">
-        <img class="logo" src="/img/reciclaetecNs.png" alt="logo">
+    <div class="layout">
+    <header>
+        
 
         <nav>
         <div class="left">
+            <img class="logo" src="/img/reciclaetecNs.png" alt="logo">
+
             <a href="/home"> <img class="icon" src="/img/icone_home.png" alt=""> Home </a>
 
             @if(!empty($usuario) && $usuario->id_tipo == 1)
@@ -85,6 +88,7 @@
     <footer>
 
     </footer>
+    </div>
 </body>
 
 </html>

@@ -32,7 +32,7 @@
             <input type="password" name="senha" placeholder="Senha" required>
             <span class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></span>
             <input type="password" name="senha1" placeholder="Repita a senha" required>
-            <span class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></span>
+            <span class="fa fa-eye2" aria-hidden="true" onclick="mostrarSenha()"></span>
             <button type="submit">Criar Conta</button>
             @csrf
         </form>
