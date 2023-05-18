@@ -1,4 +1,5 @@
 <x-layout>
+    <link rel="stylesheet" href="/css/style_historico.css">
     <h1>Solicitações Removidas</h1>
     <ul>
         @if ($solicitacoesRemovidos->count() > 0)

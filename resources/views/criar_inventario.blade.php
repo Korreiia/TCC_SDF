@@ -18,7 +18,7 @@
           
         <br>
             <h2>Descrição do item</h2>
-            <textarea class="dados" name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+            <textarea class="dados" name="descricao" id="" cols="25" rows="3" placeholder="Campo Obrigatório" required></textarea>
           
         <br>
             <h2>Estado de Conservação</h2>

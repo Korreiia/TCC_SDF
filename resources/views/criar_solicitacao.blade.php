@@ -9,7 +9,7 @@
             <input type="hidden" name="id_usuario" value="{{ $usuario->id }}">
             
             <h1>Descrição do Pedido</h1>
-            <textarea class="dados" name="descpedido" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+            <textarea class="dados" name="descpedido" id="" cols="25" rows="3" placeholder="Campo Obrigatório" required></textarea>
 
             <h1>Quantidade</h1>
             <input class="dados" type="number" name="quantidade">

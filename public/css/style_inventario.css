@@ -1,43 +1,42 @@
 .criar_cadastro {
-    padding: 8px;
+    padding: 10px;
     color: #141414;
     border-radius: 10px;
     background-color: #98fb98;
     box-shadow: 0px 0px 5px #888;
-
+    left: 50%;
+    position: absolute;
 }
 
 .criar_cadastro:hover {
     background-color: #479b47;
     color: #fff;
-    margin: 10px;
-
 }
 
 .th {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     background: #f8f8f8;
     border-radius: 8px;
     height: 6vh;
-    padding: 10px;
+    padding: 15px;
     width: 25%;
-
 }
 
 .tr {
-    width: 15%;
+    width: 10%;
+    background: #f8f8f8;
 }
 
 .table {
-    height: 18vh;
-    background: linear-gradient(#CCF62C, #98C74E, #60A261, #357A5B);
+    background: linear-gradient(#A6BB8D, #61876E, #3C6255);
     box-shadow: 0px 0px 10px #888888;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
     border-spacing: 10px;
-    width: 25%;
+    width: 90%;
 }
 
 .container {
@@ -47,7 +46,7 @@
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 8px;
+    padding-left: 5%;
 }
 
 body {
@@ -58,11 +57,11 @@ body {
 
 .search-box {
     position: absolute;
-    top: 35%;
+    top: 145px;
     left: 75%;
     transform: translate(-50%, -50%);
-    background: #ffffff;
-    height: 25px;
+    background: #8381817a;
+    height: 40px;
     padding: 10px;
     border-radius: 40px;
     display: flex;
@@ -75,12 +74,13 @@ body {
     background: none;
     outline: none;
     padding: 0;
-    color: #0b0c0c;
+    color: #ffffff;
     font-size: 16px;
     line-height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .lupa {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px
 }
