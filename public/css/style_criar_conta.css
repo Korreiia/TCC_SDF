@@ -93,7 +93,7 @@ button[type=submit]:hover {
 .fa-eye{
   position: absolute;
   top: 500px;
-  right: 43%;
+  right: 45%;
   cursor: pointer;
   color: rgb(20, 20, 20);
 }

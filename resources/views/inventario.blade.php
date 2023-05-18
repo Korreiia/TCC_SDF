@@ -35,13 +35,13 @@
                             <th class="th">{{ $inventario ->estadoconservacao }}</th>
                             <th class="th">{{ $inventario ->quantidade }}</th>
                             <th class="th">
-                                <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}">Editar</a>
+                                <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}"><img class="penicon" src="/img/pen.png" alt=""></a>
 
                                 <form action="{{ route('deletarInventario', ['id'=>$inventario->id]) }}" method="post">
 
                                 @csrf 
                                 @method('delete')
-                                <button type="submit">Deletar</button>
+                                <button type="submit"><img class="lixoicon" src="/img/lixo.png" alt=""></button>
 
                                 </form>
 
