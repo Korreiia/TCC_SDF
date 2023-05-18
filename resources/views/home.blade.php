@@ -12,10 +12,10 @@
             <img class="logoh3" src="img/logoR.png" alt="logo">
             <a href="saibamais" class="saibamais">Saiba Mais</a>
 
-            <p class="p_botao">Já tem uma conta?</p>
+            <p class="p_botao1">Já tem uma conta?</p>
             <a href="login" class="login">Faça Login</a>
             
-            <p class="p_botao">Não tem uma conta ainda?</p>
+            <p class="p_botao2">Não tem uma conta ainda?</p>
             <a href="criar_conta" class="criar_conta">Faça uma conta</a>
 
     </x-layout>
