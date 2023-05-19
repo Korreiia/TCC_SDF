@@ -9,7 +9,7 @@
             <button type="submit"> <img src="/img/icons8-pesquisar-50.png" alt="Lupa" class="lupa"> </button>
         </form> 
 
-        <h1>Inventario</h1>
+        <h1>Inventario / Produto</h1>
                 <table class="table">
                     
                 <thead>
@@ -35,13 +35,13 @@
                             <th class="th">{{ $inventario ->estadoconservacao }}</th>
                             <th class="th">{{ $inventario ->quantidade }}</th>
                             <th class="th">
-                                <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}"><img class="penicon" src="/img/pen.png" alt=""></a>
+                                <a href="{{ route('editarInventario', ['id'=>$inventario->id]) }}"><img class="penicon" src="/img/pen.png" alt="">Editar</a>
 
                                 <form action="{{ route('deletarInventario', ['id'=>$inventario->id]) }}" method="post">
 
                                 @csrf 
                                 @method('delete')
-                                <button type="submit"><img class="lixoicon" src="/img/lixo.png" alt=""></button>
+                                <button type="submit"><img class="lixoicon" src="/img/lixo.png" alt="">Deletar</button>
 
                                 </form>
 

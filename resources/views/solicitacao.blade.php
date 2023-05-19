@@ -24,7 +24,6 @@
                     <th class="th">{{ $solicitacao->quantidade }}</th>
                     <th class="th">{{ $solicitacao->created_at }}</th>
                     <th class="th">
-                        <a href="{{ route('termo_de_doacao', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank"><img class="termoicon" src="/img/termo.png" alt="Termo"></a>
                         <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}"><img class="eyeicon" src="/img/eye.png" alt="Ver Mais"></a>
                     </th>
                 </tr>

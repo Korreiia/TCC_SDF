@@ -38,13 +38,13 @@
                     {{-- <td>{{ $solicitacao->quantidade }}</td> --}}
                     <th class="th">{{ $solicitacao->created_at }}</th>
                     <th class="th">
-                        <a href="{{ route('termo_de_doacaoADM', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank"><img class="termoicon" src="/img/termo.png" alt="Termo"></a>
-                        <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}"><img class="eyeicon" src="/img/eye.png" alt="Ver Mais"></a>
+                        <a href="{{ route('termo_de_doacaoADM', ['id_solicitacao' => $solicitacao->id]) }}" target="_blank"><img class="termoicon" src="/img/termo.png">Termo</a>
+                        <a href="{{ route('verSolicitacao', ['id'=>$solicitacao->id]) }}"><img class="eyeicon" src="/img/eye.png">Ver</a>
 
                         <form action="{{ route('deletarSolicitacao', ['id'=>$solicitacao->id]) }}" method="post">
                          @csrf 
                           @method('delete')
-                            <button type="submit"><img class="lixoicon" src="/img/lixo.png" alt="Deletar"></button>
+                            <button type="submit"><img class="lixoicon" src="/img/lixo.png">Deletar</button>
                         </form>
                     </th>
                 </tr>

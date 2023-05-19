@@ -2,7 +2,7 @@
 
   <link rel="stylesheet" href="/css/style_edt_invnt.css">
 
-      <h1>Adicionar Novo Item</h1>
+      <h1>Adicionar Novo Item / Produto</h1>
 
       <div class="formulario">
         <form action="/criar_inventario" method="post">

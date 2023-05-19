@@ -26,8 +26,7 @@ Zanella Moura, Coordenador do PROJETO RECICLAETEC, doravante denominado DOADOR, 
 
         <h3>CLÁUSULA PRIMEIRA</h3>
         <pre class="pre2">
-Constitui objeto do presente Contrato a doação os seguintes equipamentos eletrônicos: 
-{{ $solicitacao->descpedido }}.
+Constitui objeto do presente Contrato a doação os seguintes equipamentos eletrônicos:
         </pre>
 
         <h3>CLÁUSULA SEGUNDA</h3>
