@@ -99,9 +99,9 @@ button[type=submit]:hover {
 }
 
 .fa-eye2{
-  position:absolute;
+  position: absolute;
   top: 425px;
-  right: 44%;
+  right: 45%;
   cursor: pointer;
   color: rgb(20, 20, 20);
 }
