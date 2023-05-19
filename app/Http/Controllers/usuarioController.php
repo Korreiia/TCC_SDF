@@ -35,8 +35,8 @@ class usuarioController extends Controller
             $senha = $request->input('senha');
 
             $usuario =usuario::where('email', '=', $email)
-                            ->where('senha', '=', $senha)
-                            ->first();
+                             ->where('senha', '=', $senha)
+                             ->first();
 
         if($usuario == null)
         {

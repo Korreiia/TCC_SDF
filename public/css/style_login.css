@@ -99,9 +99,9 @@
   }
 
   .fa-eye {
-    position: absolute;
-    top: 420px;
-    right: 44%;
+    margin-top: -50px;
+    margin-bottom: 28px;
+    margin-left: 219px;
     cursor: pointer;
     color: rgb(20, 20, 20);
   }

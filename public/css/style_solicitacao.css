@@ -89,7 +89,7 @@ input[type="checkbox"] {
   font-size: 15px;
 }
 
-button {
+/* button {
   background: #aacb62;
   color: #141414;
   border-radius: 4px;
@@ -105,7 +105,7 @@ button:hover {
   background: #4cbb17;
   color: #fff;
   transition: 0.3s ease;
-}
+} */
 
 .dados:hover {
   background: #e0e0e0;
