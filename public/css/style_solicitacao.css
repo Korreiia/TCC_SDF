@@ -59,10 +59,52 @@ h1{
 }
 
 .dados {
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px#888;
+  padding: 8px;
   border: none;
-  trAnsition: 0.3s ease;
+  box-shadow: 0px 0px 5px#888;
+  border-radius: 10px;
+  margin: 8px;
+  margin-left: 5%;
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+hr {
+  background: #141414;
+  height: 2px;
+  border: none;
+  box-shadow: 0px 0px 15px #888;
+  width: 90%;
+}
+
+input[type="checkbox"] {
+  margin-left: 5%;
+  width: 20px;
+  height: 20px;
+}
+
+.textoC{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+button {
+  background: #aacb62;
+  color: #141414;
+  border-radius: 4px;
+  padding: 8px;
+  border: none;
+  box-shadow: 0px 0px 5px#888;
+  margin: 8px;
+  margin-left: 5%;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #4cbb17;
+  color: #fff;
+  transition: 0.3s ease;
 }
 
 .dados:hover {

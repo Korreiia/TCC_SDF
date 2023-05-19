@@ -16,7 +16,7 @@
 
             <div class="checkbox">
               <input type="checkbox" id="termo" required>
-              <label for="termo">Estou ciente que só posso fazer UM pedido de Computador</label>
+              <label class="textoC" for="termo">Estou ciente que só posso fazer UM pedido de Computador</label>
             </div>
             
           <hr>
