@@ -48,7 +48,7 @@ h1{
 }
 
 .table {
-  background: linear-gradient(#A6BB8D, #61876E, #3C6255);
+  background: linear-gradient(#22833f, #53a12f);
   box-shadow: 0px 0px 10px #888888;
   border-radius: 10px;
   margin-left: auto;
@@ -88,24 +88,6 @@ input[type="checkbox"] {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
-
-/* button {
-  background: #aacb62;
-  color: #141414;
-  border-radius: 4px;
-  padding: 8px;
-  border: none;
-  box-shadow: 0px 0px 5px#888;
-  margin: 8px;
-  margin-left: 5%;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  background: #4cbb17;
-  color: #fff;
-  transition: 0.3s ease;
-} */
 
 .dados:hover {
   background: #e0e0e0;

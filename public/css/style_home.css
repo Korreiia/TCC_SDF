@@ -14,7 +14,7 @@
 .resumo{
   padding-left: 2%;
   position: relative;
-  top: 45px;
+  top: 20px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 26px;
@@ -38,7 +38,7 @@
   text-align: center;
   font-weight: bold;
   position: absolute;
-  top: 33%;
+  top: 38%;
   left: 15%;
   font-size: 26px;
 }
