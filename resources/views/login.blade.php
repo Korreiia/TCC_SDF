@@ -12,7 +12,7 @@
     <div class="container">
       <div class="login">
 
-        <img class="logo" src="/img/logoR.png" alt="logo">
+        <img class="logo" src="/img/reciclaetecNs.png" alt="logo">
             
             @if ($errors->any())
               <div class="alert alert-danger">

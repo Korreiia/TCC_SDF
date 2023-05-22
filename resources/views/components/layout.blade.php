@@ -18,7 +18,7 @@
 <body>
     <div class="layout">
     <header>
-        <img class="logo" src="/img/logoR.png" alt="logo">
+        <img class="logo" src="/img/reciclaetecNs.png" alt="logo">
 
         <nav>
         <div class="left">

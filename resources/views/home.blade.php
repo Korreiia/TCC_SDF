@@ -9,7 +9,6 @@
                 
             </div>
             
-            
                 <pre class="resumo">
                     O ReciclaEtec é um projeto desenvolvido e coordenado pela Etec, 
                     que tem como principal objetivo receber doaçoes de peças e equipamentos velhos,
@@ -18,19 +17,7 @@
                 </pre>
             
             <img class="logoh1" src="img/logoR.png" alt="logo">
-            <div class="flexSlider">
-        <div class="flexSliderBody">
-            <a href="#"><img src="/img"></a>
-            <a href="#"><img src=""></a>
-            <a href="#"><img src=""></a>
-            <a href="#"><img src=""></a>
-            <a href="#"><img src=""></a>
-        </div>
-    
-        <span class="flexSliderBtnBack" onclick="FlexSlider.back(this)">&lsaquo;</span>
-        <span class="flexSliderBtnNext" onclick="FlexSlider.next(this)">&rsaquo;</span>
-    </div>
-
+            <img class="logoh3" src="img/logoR.png" alt="logo">
             <a href="saibamais" class="saibamais">Saiba Mais</a>
             <pre class="pre_botao">Já tem uma conta?</pre>
             <a href="criar_conta" class="criar_conta">Faça uma conta</a>
