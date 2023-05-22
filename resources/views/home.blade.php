@@ -1,5 +1,6 @@
     <x-layout>
         <link rel="stylesheet" href="/css/style_home.css">
+        <script src="flex-slider.js"></script>
             
                 <pre class="resumo">
 O ReciclaEtec é um projeto desenvolvido e coordenado pela Etec, 
@@ -8,7 +9,7 @@ com o intuito de reclicar esses quipamentos,
 para fazer novos computadores para pessoas sem condicao.
                 </pre>
             
-            <img class="logoh3" src="img/logoR.png" alt="logo">
+            <img class="logoh3" src="img/banner.png" alt="logo">
             <a href="saibamais" class="saibamais">Saiba Mais</a>
 
             <p class="p_botao1">Já tem uma conta?</p>
