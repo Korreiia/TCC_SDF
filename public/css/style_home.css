@@ -1,26 +1,35 @@
-.logoh1{
+.logoh1 {
   font-weight: bold;
   text-align: right;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
-  border-radius:200px;
+  border-radius: 200px;
   float: right;
   top: 60%;
   transform: translateY(-138%);
 }
 
-.resumo{
+.resumo {
   padding-left: 2%;
   position: relative;
   top: 20px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 20px;
 }
 
-.logoh3{
+.historia {
+  padding-left: 2%;
+  position: relative;
+  top: 20px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.logoh3 {
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -29,13 +38,13 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  border-radius:200px;
+  border-radius: 200px;
   top: 50%;
   transform: translateX(20%);
   left: 15%;
 }
 
-.saibamais{
+.saibamais {
   text-align: center;
   font-weight: bold;
   position: absolute;
@@ -44,15 +53,15 @@
   font-size: 26px;
 }
 
-a:hover{
-  text-shadow:0px 0px 10px#888;
+a:hover {
+  text-shadow: 0px 0px 10px#888;
 }
 
-pre{
+pre {
   display: block;
 }
 
-.criar_conta{
+.criar_conta {
   text-align: center;
   font-weight: bold;
   position: absolute;
@@ -62,7 +71,7 @@ pre{
   font-size: 26px;
 }
 
-.login{
+.login {
   text-align: center;
   font-weight: bold;
   position: absolute;
@@ -90,4 +99,8 @@ pre{
   top: 80%;
   left: 10%;
   font-size: 26px;
+}
+
+h1 {
+  padding-left: 2%;
 }

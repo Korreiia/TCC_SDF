@@ -139,11 +139,6 @@ class usuarioController extends Controller
         return redirect('home');
     }
 
-    public function saibamaisView()
-    {
-        return view('saibamais');
-    }
-
     public function procurarInventario(Request $request)
     {
         $pesquisar = $request->input('pesquisar');

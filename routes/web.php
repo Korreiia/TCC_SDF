@@ -32,7 +32,6 @@ Route::put('/{id}/atualizar_usuario1', [usuarioController::class, 'atualizarUsua
 Route::put('/{id}/atualizar_usuario2', [usuarioController::class, 'atualizarUsuario2'])->where('id', '[0-9]+')->name('atualizarUsuario2');
 Route::put('/{id}/atualizar_usuario3', [usuarioController::class, 'atualizarUsuario3'])->where('id', '[0-9]+')->name('atualizarUsuario3');
 Route::delete('/{id}/deletar_usuario', [usuarioController::class, 'deletarUsuario'])->where('id', '[0-9]+')->name('deletarUsuario');
-Route::get('/saibamais', [usuarioController::class, 'saibamaisView']);
 Route::post('/procurarInventario', [usuarioController::class, 'procurarInventario']);
 Route::post('/procurarSolicitacao', [usuarioController::class, 'procurarSolicitacao']);
 Route::get('/notificacao', [usuarioController::class, 'notificacao']);
