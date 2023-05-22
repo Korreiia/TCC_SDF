@@ -29,10 +29,10 @@
             <input type="number" name="telefone" placeholder="Telefone/Celular" required>
             <input type="text" name="endereco" placeholder="Endereço" required>
             <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha" id= "senha" placeholder="Senha" required>
             <span class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></span>
-            <input type="password" name="senha1" placeholder="Repita a senha" required>
-            <span class="fa fa-eye" aria-hidden="true" onclick="mostrarSenha()"></span>
+            <input type="password" name="senha1" id= "senha1" placeholder="Repita a senha" required>
+            <span class="fa fa-eye2" aria-hidden="true" onclick="mostrarSenha()"></span>
             <button type="submit">Criar Conta</button>
             @csrf
         </form>

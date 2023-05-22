@@ -1,4 +1,5 @@
 <x-layout>
+    <link rel="stylesheet" href="/css/style_historico.css">
     <h1>Item Removidos</h1>
     <ul>
         @if ($inventariosRemovidos->count() > 0)

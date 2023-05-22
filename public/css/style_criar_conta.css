@@ -3,7 +3,7 @@
 }
 
 body {
-  background:linear-gradient(#A6BB8D,#61876E,#3C6255); 
+  background:linear-gradient(#22833f, #53a12f, #b0c981); 
   min-height: 100vh;
   margin: 0;
 }
@@ -86,10 +86,22 @@ button[type=submit]:hover {
   height: 9px;
 }
 
+.fa{
+  font-size: 25px;
+}
+
 .fa-eye{
-  position:absolute;
+  position: absolute;
+  top: 500px;
+  right: 45%;
+  cursor: pointer;
+  color: rgb(20, 20, 20);
+}
+
+.fa-eye2{
+  position: absolute;
   top: 425px;
-  right: 44%;
+  right: 45%;
   cursor: pointer;
   color: rgb(20, 20, 20);
 }

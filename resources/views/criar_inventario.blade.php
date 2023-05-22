@@ -1,10 +1,8 @@
 <x-layout>
 
   <link rel="stylesheet" href="/css/style_edt_invnt.css">
-  
-    <div class="layout2">
 
-      <h1>Adicionar Novo Item</h1>
+      <h1>Adicionar Novo Item / Produto</h1>
 
       <div class="formulario">
         <form action="/criar_inventario" method="post">
@@ -20,7 +18,7 @@
           
         <br>
             <h2>Descrição do item</h2>
-            <textarea class="dados" name="descricao" id="" cols="40" rows="5" placeholder="Campo Obrigatório" required></textarea>
+            <textarea class="dados" name="descricao" id="" cols="25" rows="3" placeholder="Campo Obrigatório" required></textarea>
           
         <br>
             <h2>Estado de Conservação</h2>
@@ -35,7 +33,5 @@
           @csrf
         </form>
       </div>
-
-    </div>
 
 </x-layout>

@@ -35,8 +35,8 @@ class usuarioController extends Controller
             $senha = $request->input('senha');
 
             $usuario =usuario::where('email', '=', $email)
-                            ->where('senha', '=', $senha)
-                            ->first();
+                             ->where('senha', '=', $senha)
+                             ->first();
 
         if($usuario == null)
         {
@@ -151,18 +151,12 @@ class usuarioController extends Controller
 
         if (is_numeric($pesquisar))
         {
-            $results = inventario::where('id', $pesquisar)
-                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
-                ->get();
+            $results = inventario::where('id', $pesquisar)->get();
         }
 
         else
         {
-            $results = inventario::where('estadofuncionamento', 'like', '%'.$pesquisar.'%')
-                ->orWhere('dataentrada', 'like', '%'.$pesquisar.'%')
-                ->orWhere('descricao', 'like', '%'.$pesquisar.'%')
-                ->orWhere('estadoconservacao', 'like', '%'.$pesquisar.'%')
-                ->get();
+            $results = inventario::where('descricao', 'like', '%'.$pesquisar.'%')->get();
         }
 
         return view('inventario', compact('results'));
@@ -175,27 +169,17 @@ class usuarioController extends Controller
 
         if (is_numeric($pesquisar))
         {
-            $results = solicitacao::where('id', $pesquisar)
-                ->orWhere('quantidade', 'like', '%'.$pesquisar.'%')
-                ->orWhereHas('usuario', function ($query) use ($pesquisar) {
-                    $query->where('telefone', 'like', '%'.$pesquisar.'%')
-                        ->orWhere('cpf', 'like', '%'.$pesquisar.'%');
-                })
-                ->get();
+            $results = solicitacao::where('id', $pesquisar)->get();
         }
 
         else
-    {
+        {
         $results = solicitacao::whereHas('usuario', function ($query) use ($pesquisar) 
         {
-            $query->where('nome', 'like', '%'.$pesquisar.'%')
-                ->orWhere('endereco', 'like', '%'.$pesquisar.'%')
-                ->orWhere('email', 'like', '%'.$pesquisar.'%');
+            $query->where('nome', 'like', '%'.$pesquisar.'%');
         })
-            ->orWhere('descpedido', 'like', '%'.$pesquisar.'%')
-            ->orWhere('created_at', 'like', '%'.$pesquisar.'%')
             ->get();
-    }
+        }
 
         return view('solicitacaoADM', compact('results'));
     }
