@@ -14,7 +14,6 @@
 .resumo {
   padding-left: 2%;
   position: relative;
-  top: 20px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -23,7 +22,6 @@
 .historia {
   padding-left: 2%;
   position: relative;
-  top: 20px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -42,15 +40,6 @@
   top: 50%;
   transform: translateX(20%);
   left: 15%;
-}
-
-.saibamais {
-  text-align: center;
-  font-weight: bold;
-  position: absolute;
-  top: 32%;
-  left: 13%;
-  font-size: 26px;
 }
 
 a:hover {
