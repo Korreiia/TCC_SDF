@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style_login.css">
     <script src="/js/olho.js" ></script>
-    <title>Doa ETEC</title>
+    <title>Login</title>
   </head>
   <body>
     
