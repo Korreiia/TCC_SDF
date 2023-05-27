@@ -1,5 +1,5 @@
     <x-layout>
-    <link rel="stylesheet" href="/css/style_solicitacao.css">
+    <link rel="stylesheet" href="/css/style_criar_solicitacao.css">
 
     <h1>Nova Solicitação</h1>
 
