@@ -1,4 +1,9 @@
-    <x-layout>
+<?php
+    use Illuminate\Support\Facades\Session;
+
+    $usuario = Session::get('login_usuario');
+?>
+<x-layout>
         <link rel="stylesheet" href="/css/style_home.css">
         <script src="flex-slider.js"></script>
 
@@ -21,12 +26,12 @@ alunos e a população solicitar um computador pelo site para receber a doação
             
             <img class="logoh3" src="img/banner.png" alt="logo">
             
-
+            @if($usuario == null)
             <p class="p_botao1">Já tem uma conta?</p>
             <a href="login" class="login">Faça Login</a>
 
             <p class="p_botao2">Não tem uma conta ainda?</p>
             <a href="criar_conta" class="criar_conta">Faça uma conta</a>
-
+            @endif
 </x-layout>
     
